@@ -1,0 +1,6 @@
+.Button {
+	&::after {
+		@apply text-red;
+		content: ' ';
+	}
+}
