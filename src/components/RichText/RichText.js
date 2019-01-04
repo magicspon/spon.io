@@ -1,27 +1,10 @@
 import React from 'react'
-import { 
-  array, 
-  object,  
-  bool,  
-  func,  
-  number,  
-  string,  
-  symbol,  
-  node,  
-  element,
-  shape
-} from 'prop-types'
-import styles from './RichText.module.css'
+import { string } from 'prop-types'
 
-const RichText = () => {
-  return (
-    <div>
-      Hello RichText!
-    </div>
-  )
+const RichText = ({ text }) => <div>Hello RichText!</div>
+
+RichText.propTypes = {
+	text: string.isRequired
 }
-
-RichText.defaultProps = {}
-RichText.propTypes = {}
 
 export default RichText

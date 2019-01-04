@@ -1,26 +1,16 @@
 import React from 'react'
-import { 
-  array, 
-  object,  
-  bool,  
-  func,  
-  number,  
-  string,  
-  symbol,  
-  node,  
-  element,
-  shape
-} from 'prop-types'
+import { object, string, shape } from 'prop-types'
 
-const WorkItem = () => {
-  return (
-    <div>
-      Hello WorkItem!
-    </div>
-  )
-}
+const WorkItem = ({ title, text, image }) => <div>Hello WorkItem!</div>
 
 WorkItem.defaultProps = {}
-WorkItem.propTypes = {}
+
+WorkItem.propTypes = {
+	title: string.isRequired,
+	text: string.isRequired,
+	image: shape({
+		fluid: object
+	}).isRequired
+}
 
 export default WorkItem

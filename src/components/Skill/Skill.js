@@ -1,26 +1,12 @@
 import React from 'react'
-import { 
-  array, 
-  object,  
-  bool,  
-  func,  
-  number,  
-  string,  
-  symbol,  
-  node,  
-  element,
-  shape
-} from 'prop-types'
+import { string, arrayOf } from 'prop-types'
 
-const Skill = () => {
-  return (
-    <div>
-      Hello Skill!
-    </div>
-  )
-}
+const Skill = ({ category, skills }) => <div>Hello Skill!</div>
 
 Skill.defaultProps = {}
-Skill.propTypes = {}
+Skill.propTypes = {
+	category: string.isRequired,
+	skills: arrayOf(string).isRequired
+}
 
 export default Skill

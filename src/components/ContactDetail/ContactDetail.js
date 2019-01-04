@@ -1,27 +1,14 @@
 import React from 'react'
-import { 
-  array, 
-  object,  
-  bool,  
-  func,  
-  number,  
-  string,  
-  symbol,  
-  node,  
-  element,
-  shape
-} from 'prop-types'
-import styles from './ContactDetail.module.css'
+import { string, oneOf } from 'prop-types'
 
-const ContactDetail = () => {
-  return (
-    <div>
-      Hello ContactDetail!
-    </div>
-  )
+const ContactDetail = ({ type, label, value }) => (
+	<div>Hello ContactDetail!</div>
+)
+
+ContactDetail.propTypes = {
+	type: oneOf(['web', 'email', 'tel', 'text']).isRequired,
+	label: string.isRequired,
+	value: string.isRequired
 }
-
-ContactDetail.defaultProps = {}
-ContactDetail.propTypes = {}
 
 export default ContactDetail

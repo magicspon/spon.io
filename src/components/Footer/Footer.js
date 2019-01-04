@@ -1,26 +1,11 @@
 import React from 'react'
-import { 
-  array, 
-  object,  
-  bool,  
-  func,  
-  number,  
-  string,  
-  symbol,  
-  node,  
-  element,
-  shape
-} from 'prop-types'
+import { number, string } from 'prop-types'
 
-const Footer = () => {
-  return (
-    <div>
-      Hello Footer!
-    </div>
-  )
+const Footer = ({ year, text }) => <div>Hello Footer!</div>
+
+Footer.propTypes = {
+	year: number.isRequired,
+	text: string.isRequired
 }
-
-Footer.defaultProps = {}
-Footer.propTypes = {}
 
 export default Footer
