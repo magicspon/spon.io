@@ -1,27 +1,11 @@
 import React from 'react'
-import { 
-  array, 
-  object,  
-  bool,  
-  func,  
-  number,  
-  string,  
-  symbol,  
-  node,  
-  element,
-  shape
-} from 'prop-types'
-import styles from './Logo.module.css'
+import VisuallyHidden from '@/helpers/VisuallyHidden'
 
-const Logo = () => {
-  return (
-    <div>
-      Hello Logo!
-    </div>
-  )
-}
-
-Logo.defaultProps = {}
-Logo.propTypes = {}
+const Logo = () => (
+	<div>
+		Hello Logo!
+		<VisuallyHidden>Spon.io</VisuallyHidden>
+	</div>
+)
 
 export default Logo

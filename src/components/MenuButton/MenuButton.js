@@ -1,27 +1,19 @@
 import React from 'react'
-import { 
-  array, 
-  object,  
-  bool,  
-  func,  
-  number,  
-  string,  
-  symbol,  
-  node,  
-  element,
-  shape
-} from 'prop-types'
-import styles from './MenuButton.module.css'
+import { bool } from 'prop-types'
+// import styles from './MenuButton.module.css'
+import VisuallyHidden from '@/helpers/VisuallyHidden'
 
-const MenuButton = () => {
-  return (
-    <div>
-      Hello MenuButton!
-    </div>
-  )
+const MenuButton = ({ open }) => (
+	<button data-state={open ? 'on' : ''} type="button">
+		<span data-state={open ? 'on' : ''} />
+		<span data-state={open ? 'on' : ''} />
+		<span data-state={open ? 'on' : ''} />
+		<VisuallyHidden>Menu button</VisuallyHidden>
+	</button>
+)
+
+MenuButton.propTypes = {
+	open: bool.isRequired
 }
-
-MenuButton.defaultProps = {}
-MenuButton.propTypes = {}
 
 export default MenuButton
