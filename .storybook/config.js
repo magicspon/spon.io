@@ -5,7 +5,7 @@ import { withOptions } from '@storybook/addon-options'
 // import { configureViewport } from '@storybook/addon-viewport'
 import JSXAddon from 'storybook-addon-jsx'
 
-import '../src/styles/style.css'
+import '@/styles/style.css'
 
 const req = require.context('../src', true, /.story.[jt]sx?$/)
 function loadStories() {

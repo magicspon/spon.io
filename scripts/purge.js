@@ -2,7 +2,9 @@ const glob = require('glob')
 const path = require('path')
 
 module.exports = {
-	paths: glob.sync(path.join(__dirname, '../src/**/*.js'), { nodir: true }),
+	paths: glob.sync(path.join(__dirname, '../src/**/**/**/*.js'), {
+		nodir: true
+	}),
 	extractors: [
 		{
 			extractor: class {

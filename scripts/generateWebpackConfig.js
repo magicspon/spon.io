@@ -22,21 +22,30 @@ const generateWebpackConfig = (config, overwrite) => {
 		module: {
 			rules: [
 				{
-					test: /\.svg$/,
+					test: /\.(ttf|woff|woff2|eot|svg)$/,
+					use: 'file-loader?name=[name].[ext]',
+					exclude: /\.inline.svg$/
+				},
+				{
+					test: /\.inline.svg$/,
 					use: [
 						{ loader: 'babel-loader' },
 						{
 							loader: 'react-svg-loader',
 							options: {
-								es5: true
+								jsx: true
 							}
 						}
 					]
 				},
 				...overwrite.rules
 			]
-		}
+		},
+
+		plugins: overwrite.plugins
 	}
+
+	console.log(overwrite.plugins)
 
 	return merge(config, base)
 }

@@ -1,3 +1,7 @@
 @tailwind preflight;
 @tailwind utilities;
 @tailwind screens;
+
+body {
+	@apply font-serif bg-accent text-white text-base leading-normal;
+}

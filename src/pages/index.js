@@ -2,12 +2,13 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import '@/styles/style.css'
-import styles from './index.module.css'
+// import styles from './index.module.css'
+// import Button from '@/components/Button/Button'
 
 function BlogIndex() {
 	return (
 		<div style={{ fontFamily: `'Roboto Slab', serif` }} className="text-lg">
-			<span className={styles.test}>wip!</span>
+			hello
 		</div>
 	)
 }
