@@ -4,10 +4,11 @@ const path = require('path')
 /**
  *
  * @param {object} config
- * @param {object} overwrite
+ * @param {object} overwrites
  * @return {object}
  */
-const generateWebpackConfig = (config, overwrite) => {
+
+const generateWebpackConfig = (config, { rules = [], plugins = [] }) => {
 	const base = {
 		output: {
 			globalObject: 'this' // required for webworkers
@@ -38,14 +39,12 @@ const generateWebpackConfig = (config, overwrite) => {
 						}
 					]
 				},
-				...overwrite.rules
+				...rules
 			]
 		},
 
-		plugins: overwrite.plugins
+		plugins
 	}
-
-	console.log(overwrite.plugins)
 
 	return merge(config, base)
 }
