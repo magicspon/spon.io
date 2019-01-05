@@ -3,5 +3,41 @@
 @tailwind screens;
 
 body {
-	@apply font-serif bg-accent text-white text-base leading-normal;
+	@apply font-serif bg-accent text-white text-rg leading-normal;
+}
+
+body::after {
+	@apply absolute invisible;
+
+	content: 'root';
+}
+
+@screen sm {
+	body::after {
+		content: 'sm';
+	}
+}
+
+@screen md {
+	body::after {
+		content: 'md';
+	}
+}
+
+@screen lg {
+	body::after {
+		content: 'lg';
+	}
+}
+
+@screen xl {
+	body::after {
+		content: 'xl';
+	}
+}
+
+a {
+	@apply text-brand;
+
+	text-decoration: none;
 }

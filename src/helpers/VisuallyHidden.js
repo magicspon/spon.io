@@ -8,3 +8,6 @@ function VisuallyHidden({ children }) {
 VisuallyHidden.propTypes = {
 	children: element.isRequired
 }
+
+
+export default VisuallyHidden

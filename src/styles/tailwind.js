@@ -19,13 +19,13 @@ const opacity = {
 }
 
 const space = {
-	'2': px2rem('2px'),
-	'4': px2rem('4px'),
-	'8': px2rem('8px'),
-	'16': px2rem('16px'),
-	'24': px2rem('24px'),
-	'36': px2rem('36px'),
-	'64': px2rem('64px')
+	'1': px2rem('2px'),
+	'2': px2rem('4px'),
+	'3': px2rem('8px'),
+	'4': px2rem('16px'),
+	'5': px2rem('24px'),
+	'6': px2rem('36px'),
+	'7': px2rem('64px')
 }
 
 module.exports = {
@@ -83,7 +83,7 @@ module.exports = {
 	textSizes: {
 		xs: px2rem(10),
 		sm: px2rem(14),
-		base: px2rem(16),
+		rg: px2rem(18),
 		md: px2rem(20),
 		lg: px2rem(30),
 		xl: px2rem(38),
@@ -572,6 +572,8 @@ module.exports = {
 			},
 			alpha: opacity
 		}),
+
+		require('tailwindcss-visuallyhidden')(),
 
 		function({ addVariant }) {
 			addVariant('on', ({ modifySelectors, separator }) => {
