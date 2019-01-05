@@ -33,8 +33,15 @@ const Credits = ({ visit, stack, details = {} }) => (
 
 		<div className="flex mb-4">
 			<dt>Stack:&nbsp;</dt>
-			<dd>
-				<a href={visit.link}>{visit.name}</a>
+			<dd className="flex">
+				{stack.map((item, index) => (
+					<div key={item}>
+						{item}{' '}
+						{!isLast(index, stack) && (
+							<span className="text-brand">/&nbsp;</span>
+						)}
+					</div>
+				))}
 			</dd>
 		</div>
 	</dl>
