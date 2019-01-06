@@ -1,4 +1,4 @@
-// const path = require(`path`)
+const path = require(`path`)
 const PurgeCssPlugin = require('purgecss-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const purgeConfig = require('./scripts/purge')

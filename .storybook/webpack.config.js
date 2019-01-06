@@ -28,7 +28,8 @@ module.exports = (storybookBaseConfig, configType) => {
 				{
 					loader: 'css-loader',
 					options: {
-						importLoaders: 1
+						importLoaders: 1,
+						localIdentName: 'mod-[hash:base64:8]'
 					}
 				},
 				'postcss-loader'

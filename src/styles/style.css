@@ -7,9 +7,24 @@ body {
 }
 
 body::after {
-	@apply absolute invisible;
-
+	@apply visuallyhidden;
 	content: 'root';
+}
+
+a {
+	@apply text-brand;
+
+	text-decoration: none;
+}
+
+img,
+svg {
+	display: block;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }
 
 @screen sm {
@@ -34,10 +49,4 @@ body::after {
 	body::after {
 		content: 'xl';
 	}
-}
-
-a {
-	@apply text-brand;
-
-	text-decoration: none;
 }

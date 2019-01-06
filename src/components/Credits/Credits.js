@@ -1,8 +1,7 @@
 import React from 'react'
 import { string, arrayOf, objectOf, shape } from 'prop-types'
 import classNames from 'classnames'
-
-const isLast = (index, arr) => index === arr.length - 1
+import { isLast } from '@/utils'
 
 const Credits = ({ visit, stack, details = {} }) => (
 	<dl>

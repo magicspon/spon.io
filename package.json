@@ -12,6 +12,7 @@
 		"gatsby": "^2.0.76",
 		"gatsby-image": "^2.0.22",
 		"gatsby-plugin-manifest": "^2.0.5",
+		"gatsby-plugin-module-local-ident-name": "^0.0.6",
 		"gatsby-plugin-offline": "^2.0.5",
 		"gatsby-plugin-react-helmet": "^3.0.0",
 		"gatsby-plugin-sharp": "^2.0.6",

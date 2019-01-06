@@ -16,5 +16,5 @@ module.exports = {
 		}
 	],
 	whitelist: [''],
-	whitelistPatterns: [/headroom/]
+	whitelistPatterns: [/headroom/, /mod-/]
 }

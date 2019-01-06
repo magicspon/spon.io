@@ -12,7 +12,8 @@ const colors = {
 const opacity = {
 	'0': '0',
 	'25': '.25',
-	'30': '.30',
+	'30': '.3',
+	'40': '.4',
 	'50': '.5',
 	'75': '.75',
 	'100': '1'
@@ -568,7 +569,8 @@ module.exports = {
 		require('tailwindcss-alpha')({
 			modules: {
 				backgroundColors: true,
-				textColors: true
+				textColors: true,
+				borderColors: true
 			},
 			alpha: opacity
 		}),
@@ -590,6 +592,20 @@ module.exports = {
 						`.action${separator}${className}[data-state="action"]`
 				)
 			})
+		},
+
+		function({ addUtilities }) {
+			addUtilities(
+				{
+					'.perf-fixed': {
+						position: 'fixed',
+						transform: 'translateZ(0)'
+					}
+				},
+				{
+					variants: ['responsive']
+				}
+			)
 		}
 	],
 

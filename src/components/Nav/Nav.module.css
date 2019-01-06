@@ -1,0 +1,15 @@
+.nav {
+	@apply list-reset bg-brand perf-fixed pin flex flex-col justify-center items-center;
+}
+
+@screen md {
+	.nav {
+		@apply flex-row ml-auto relative bg-transparent;
+	}
+}
+
+@screen lg {
+	.nav {
+		@apply mr-7;
+	}
+}

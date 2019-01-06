@@ -19,6 +19,7 @@ module.exports = {
 				postCssPlugins: plugins
 			}
 		},
+
 		// {
 		// 	resolve: `gatsby-plugin-manifest`,
 		// 	options: {

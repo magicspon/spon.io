@@ -7173,6 +7173,13 @@ gather-stream@^1.0.0:
   resolved "https://registry.yarnpkg.com/gather-stream/-/gather-stream-1.0.0.tgz#b33994af457a8115700d410f317733cbe7a0904b"
   integrity sha1-szmUr0V6gRVwDUEPMXczy+egkEs=
 
+gatsby-1-config-css-modules@^1.0.5:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/gatsby-1-config-css-modules/-/gatsby-1-config-css-modules-1.0.11.tgz#5a102c6b11f9a6963b3892ecc959511e1688e525"
+  integrity sha1-WhAsaxH5ppY7OJLsyVlRHhaI5SU=
+  dependencies:
+    babel-runtime "^6.26.0"
+
 gatsby-cli@^2.4.8:
   version "2.4.8"
   resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.4.8.tgz#6f02e5076e1710aade0ad8e7524b1ec2cf2ee76f"
@@ -7225,6 +7232,13 @@ gatsby-plugin-manifest@^2.0.5:
     "@babel/runtime" "^7.0.0"
     bluebird "^3.5.0"
     sharp "^0.21.0"
+
+gatsby-plugin-module-local-ident-name@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-module-local-ident-name/-/gatsby-plugin-module-local-ident-name-0.0.6.tgz#87659e25b556f2b6fe4fa41ffeb5152acd9b3d83"
+  integrity sha512-w6zURMjLnzb2+7HyZYyP0e6E4AUysshDdn3w2bfGcLJOZ6/UWqpRip0in9RoNuUafdOBZNTSHaj51EYQ1NCU3A==
+  dependencies:
+    gatsby-1-config-css-modules "^1.0.5"
 
 gatsby-plugin-offline@^2.0.5:
   version "2.0.20"
