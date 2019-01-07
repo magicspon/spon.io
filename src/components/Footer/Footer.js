@@ -3,7 +3,7 @@ import { number, string } from 'prop-types'
 import Social from '@/components/Social/Social'
 
 const Footer = ({ year, text }) => (
-	<div className="bg-black p-6 md:flex justify-between items-center flex-row-reverse">
+	<div className="bg-dark p-6 md:flex justify-between items-center flex-row-reverse">
 		<div className="mb-7 md:mb-0">
 			<Social linkedin="#0" github="#0" />
 		</div>

@@ -1,0 +1,11 @@
+.content {
+	@apply text-white text-rg;
+
+	* {
+		@apply mb-4;
+	}
+
+	*:last-child {
+		@apply mb-0;
+	}
+}

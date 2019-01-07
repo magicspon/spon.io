@@ -1,10 +1,13 @@
 import React from 'react'
-import { string } from 'prop-types'
+import { node } from 'prop-types'
+import styles from './RichText.module.css'
 
-const RichText = ({ text }) => <div>Hello RichText!</div>
+const RichText = ({ children }) => (
+	<div className={styles.content}>{children}</div>
+)
 
 RichText.propTypes = {
-	text: string.isRequired
+	children: node.isRequired
 }
 
 export default RichText

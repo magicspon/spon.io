@@ -22,7 +22,18 @@ addDecorator(
 		url: '#0'
 	})
 )
-addDecorator(story => story())
+addDecorator(story => {
+	const vh = window.innerHeight * 0.01
+	// Then we set the value in the --vh custom property to the root of the document
+	document.documentElement.style.setProperty('--vh', `${vh}px`)
+	window.addEventListener('resize', () => {
+		document.documentElement.style.setProperty(
+			'--vh',
+			`${window.innerHeight * 0.01}px`
+		)
+	})
+	return story()
+})
 
 configure(loadStories, module)
 

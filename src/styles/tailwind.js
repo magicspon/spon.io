@@ -2,7 +2,8 @@ const { px2rem } = require('./utils')
 
 const colors = {
 	transparent: 'transparent',
-	black: '#070E25',
+	black: '#010206',
+	dark: '#070E25',
 	brand: '#35D3DB',
 	accent: '#141C39',
 	light: '#D8D8D8',
@@ -16,6 +17,7 @@ const opacity = {
 	'40': '.4',
 	'50': '.5',
 	'75': '.75',
+	'85': '.85',
 	'100': '1'
 }
 
@@ -86,6 +88,7 @@ module.exports = {
 		sm: px2rem(14),
 		rg: px2rem(18),
 		md: px2rem(20),
+		'md-lg': px2rem(24),
 		lg: px2rem(30),
 		xl: px2rem(38),
 		xxl: px2rem(42)
@@ -278,7 +281,8 @@ module.exports = {
 		px: '1px',
 		...space,
 		full: '100%',
-		screen: '100vh'
+		screen: '100vh',
+		'1vh': 'var(--vh)'
 	},
 
 	/*

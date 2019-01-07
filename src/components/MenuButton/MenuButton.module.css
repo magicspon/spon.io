@@ -1,11 +1,36 @@
-.MenuButton {
+.container {
+	width: 2.5rem; /* 40px */
+	height: 2.5rem; /* 40px */
 }
 
-.top {
+.line {
+	height: 0.125rem; /* 2px */
+	width: 2.25rem; /* 36px */
+	transform-origin: 50% 50%;
+	transition: transform 300ms ease-in-out, opacity 300ms ease;
 }
 
-.middle {
+.top-closed {
+	transform: translateY(-11px);
 }
 
-.bottom {
+.top-open {
+	transform: rotate(45deg);
+}
+
+.middle-open {
+	transform: scale(0, 1);
+	opacity: 0;
+}
+
+.bottom-closed {
+	transform: translateY(11px);
+}
+
+.bottom-open {
+	transform: rotate(-45deg);
+}
+
+.test-hello {
+	display: block;
 }

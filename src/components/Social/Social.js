@@ -7,13 +7,13 @@ import VisuallyHidden from '@/helpers/VisuallyHidden'
 const Social = ({ linkedin, github }) => (
 	<ul className="list-reset flex items-center justify-center">
 		<li className="mx-3">
-			<a href={linkedin} className="text-white-40">
+			<a href={linkedin} className="text-white lg:text-white-40">
 				<Linkedin className="fill-current" />
 				<VisuallyHidden>LinkedIn</VisuallyHidden>
 			</a>
 		</li>
 		<li className="mx-3">
-			<a href={github} className="text-white-40">
+			<a href={github} className="text-white lg:text-white-40">
 				<Github className="fill-current" />
 				<VisuallyHidden>github</VisuallyHidden>
 			</a>
