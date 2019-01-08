@@ -63,7 +63,6 @@ module.exports = (storybookBaseConfig, configType) => {
 	]
 
 	if (isProduction) {
-		console.log(isProduction)
 		plugins.push(
 			new PurgeCssPlugin(purgeConfig),
 			new OptimizeCSSAssetsPlugin({})

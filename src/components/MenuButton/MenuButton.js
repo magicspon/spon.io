@@ -4,8 +4,6 @@ import classNames from 'classnames'
 import styles from './MenuButton.module.css'
 import VisuallyHidden from '@/helpers/VisuallyHidden'
 
-console.log(styles)
-
 const MenuButton = ({ open = true }) => (
 	<button
 		type="button"
@@ -47,5 +45,3 @@ MenuButton.propTypes = {
 }
 
 export default MenuButton
-
-
