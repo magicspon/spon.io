@@ -17,7 +17,8 @@ const generateWebpackConfig = (config, { rules = [], plugins = [] }) => {
 		resolve: {
 			alias: {
 				'@': path.resolve(__dirname, '../src/')
-			}
+			},
+			mainFields: ['browser', 'module', 'main']
 		},
 
 		module: {
