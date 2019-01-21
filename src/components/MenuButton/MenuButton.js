@@ -1,15 +1,16 @@
 import React from 'react'
-import { bool } from 'prop-types'
+import { bool, string } from 'prop-types'
 import classNames from 'classnames'
 import styles from './MenuButton.module.css'
 import VisuallyHidden from '@/helpers/VisuallyHidden'
 
-const MenuButton = ({ open = true }) => (
+const MenuButton = ({ open = true, className }) => (
 	<button
 		type="button"
 		className={classNames(
 			styles.container,
-			'absolute flex flex-col items-center justify-center pin-r mr-4'
+			'absolute flex flex-col items-center justify-center pin-r mr-4',
+			className
 		)}
 	>
 		<span
@@ -40,8 +41,13 @@ const MenuButton = ({ open = true }) => (
 	</button>
 )
 
+MenuButton.defaultProps = {
+	className: undefined
+}
+
 MenuButton.propTypes = {
-	open: bool.isRequired
+	open: bool.isRequired,
+	className: string
 }
 
 export default MenuButton

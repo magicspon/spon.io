@@ -7,7 +7,7 @@ const Header = () => (
 	<header className="p-4 lg:p-6 h-7 flex items-center justify-start w-full border-b border-light-30">
 		<Logo />
 		<Nav />
-		<MenuButton />
+		<MenuButton className="md:hidden" />
 	</header>
 )
 

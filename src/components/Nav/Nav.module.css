@@ -13,7 +13,7 @@
 
 @screen md {
 	.nav {
-		@apply flex-row ml-auto relative bg-transparent h-auto;
+		@apply flex-row ml-auto relative bg-transparent h-auto pin-t;
 	}
 }
 

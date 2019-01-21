@@ -1,3 +1,5 @@
+/* eslint-disable no-param-reassign */
+
 const path = require('path')
 const webpack = require('webpack')
 const PurgeCssPlugin = require('purgecss-webpack-plugin')
@@ -68,6 +70,13 @@ module.exports = (storybookBaseConfig, configType) => {
 			new OptimizeCSSAssetsPlugin({})
 		)
 	}
+
+	// defaultConfig.module.rules[0].exclude = [/node_modules\/(?!(gatsby)\/)/]
+
+	// defaultConfig.module.rules[0].use[0].options.plugins = [
+	// 	require.resolve('@babel/plugin-proposal-class-properties'),
+	// 	require.resolve('babel-plugin-remove-graphql-queries')
+	// ]
 
 	// Return the altered config
 	return generateWebpackConfig(storybookBaseConfig, {

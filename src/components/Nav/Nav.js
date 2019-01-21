@@ -3,6 +3,7 @@
 import React from 'react'
 import { string, bool } from 'prop-types'
 import classNames from 'classnames'
+import { Link } from 'gatsby'
 import Social from '@/components/Social/Social'
 import styles from './Nav.module.css'
 
@@ -12,9 +13,9 @@ const Item = ({ title, last = false }) => (
 			'mb-6 md:mb-0': !last
 		})}
 	>
-		<a href="#0" className="text-accent md:text-white">
+		<Link to="#0" className="text-accent md:text-white">
 			{title}
-		</a>
+		</Link>
 		{!last && <span className="hidden md:inline text-brand mx-4">/</span>}
 	</li>
 )
@@ -26,7 +27,7 @@ Item.propTypes = {
 
 const Nav = () => (
 	<div className={styles.nav}>
-		<ul className="list-reset">
+		<ul className="list-reset md:flex">
 			<Item title="About" />
 			<Item title="Work" />
 			<Item title="Skills" />
