@@ -2,10 +2,6 @@
 
 const path = require('path')
 const webpack = require('webpack')
-// const PurgeCssPlugin = require('purgecss-webpack-plugin')
-// const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
-// const generateWebpackConfig = require('../scripts/generateWebpackConfig')
-// const purgeConfig = require('../scripts/purge')
 
 // Export a function. Accept the base config as the only param.
 module.exports = (storybookBaseConfig, configType) => {

@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import '@/styles/style.css'
-import Logo from '@/components/Logo/Logo'
+import Logo from '@/components/Logo/'
 
 function BlogIndex() {
 	return (

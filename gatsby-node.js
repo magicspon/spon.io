@@ -1,15 +1,66 @@
-// const path = require(`path`)
+const path = require(`path`)
+const glob = require('glob')
+const merge = require('webpack-merge')
 const PurgeCssPlugin = require('purgecss-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
-const purgeConfig = require('./scripts/purge')
-const generateWebpackConfig = require('./scripts/generateWebpackConfig')
 const { createFilePath } = require(`gatsby-source-filesystem`)
+
+const purgeConfig = {
+	paths: glob.sync(path.join(__dirname, '/src/**/**/**/*.js'), {
+		nodir: true
+	}),
+	extractors: [
+		{
+			extractor: class {
+				static extract(content) {
+					return content.match(/[A-Za-z0-9-_:/]+/g) || []
+				}
+			},
+			extensions: ['js']
+		}
+	],
+	whitelist: [''],
+	whitelistPatterns: [/headroom/, /module--/]
+}
 
 exports.onCreateWebpackConfig = ({ actions, stage, getConfig }) => {
 	const prevConfig = getConfig()
 
 	actions.replaceWebpackConfig(
-		generateWebpackConfig(prevConfig, { rules: [], plugins: [] })
+		merge(prevConfig, {
+			output: {
+				globalObject: 'this' // required for webworkers
+			},
+
+			resolve: {
+				alias: {
+					'@': path.resolve(__dirname, '/src/')
+				},
+				mainFields: ['browser', 'module', 'main']
+			},
+
+			module: {
+				rules: [
+					{
+						test: /\.(ttf|woff|woff2|eot|svg)$/,
+						use: 'file-loader?name=[name].[ext]',
+						exclude: /\.inline.svg$/
+					},
+					{
+						test: /\.inline.svg$/,
+						use: [
+							{ loader: 'babel-loader' },
+							{
+								loader: 'react-svg-loader',
+								options: {
+									jsx: true
+								}
+							}
+						]
+					}
+				]
+			}
+		})
 	)
 
 	// Add PurgeCSS in production
