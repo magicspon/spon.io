@@ -1,11 +1,8 @@
 /* eslint-disable no-underscore-dangle */
 
-import { configure, addDecorator, setAddon } from '@storybook/react'
-import { themes } from '@storybook/components'
+import { configure, addDecorator } from '@storybook/react'
 import { withNotes } from '@storybook/addon-notes'
-import { withOptions } from '@storybook/addon-options'
 // import { configureViewport } from '@storybook/addon-viewport'
-import JSXAddon from 'storybook-addon-jsx'
 
 import '@/styles/style.css'
 
@@ -15,15 +12,7 @@ function loadStories() {
 }
 
 addDecorator(withNotes)
-addDecorator(
-	withOptions({
-		theme: themes.dark,
-		hierarchySeparator: /\//,
-		hierarchyRootSeparator: /\|/,
-		name: 'PES Design System',
-		url: '#0'
-	})
-)
+
 addDecorator(story => {
 	const vh = window.innerHeight * 0.01
 	// Then we set the value in the --vh custom property to the root of the document
@@ -59,4 +48,4 @@ configure(loadStories, module)
 // })
 
 // https://github.com/storybooks/addon-jsx
-setAddon(JSXAddon)
+// setAddon(JSXAddon)

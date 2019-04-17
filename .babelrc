@@ -3,7 +3,6 @@
 		[
 			"@babel/preset-env",
 			{
-				"useBuiltIns": "usage",
 				"targets": {
 					"browsers": [">0.25%", "not ie 11", "not op_mini all"]
 				},
@@ -18,6 +17,7 @@
 		"@babel/plugin-transform-runtime",
 		"@babel/plugin-transform-async-to-generator",
 		"babel-plugin-styled-components",
+		"inline-react-svg",
 		[
 			"module-resolver",
 			{
