@@ -25,6 +25,10 @@ module.exports = async ({ config, mode }) => {
 		require.resolve('babel-plugin-remove-graphql-queries')
 	]
 
+	config.module.rules = config.module.rules.filter(
+		f => f.test.toString() !== '/\\.css$/'
+	)
+
 	config.module.rules.push(
 		{
 			test: /\.(ttf|woff|woff2|eot|svg)$/,
@@ -36,31 +40,45 @@ module.exports = async ({ config, mode }) => {
 			loader: 'file-loader',
 			include: path.resolve(__dirname, '../static/')
 		},
+
 		{
 			test: /\.css$/,
+			exclude: /\.module\.css$/,
 			use: [
+				'style-loader',
 				{
-					loader: 'postcss-loader',
+					loader: 'css-loader',
 					options: {
-						sourceMap: true
+						importLoaders: 1,
+						localIdentName: 'mod-[hash:base64:8]'
 					}
-				}
+				},
+				'postcss-loader'
 			],
+			include: path.resolve(__dirname, '../src')
+		},
 
+		{
+			test: /\.module\.css$/,
+			use: [
+				'style-loader',
+				{
+					loader: 'css-loader',
+					options: {
+						importLoaders: 1,
+						modules: true,
+						localIdentName: '[local]-[hash:base64:5]'
+					}
+				},
+				'postcss-loader'
+			],
 			include: path.resolve(__dirname, '../src')
 		}
 		// {
 		// 	test: /\.module\.css$/,
 		// 	use: [
 		// 		'style-loader',
-		// 		{
-		// 			loader: 'css-loader',
-		// 			options: {
-		// 				importLoaders: 1,
-		// 				modules: true,
-		// 				localIdentName: '[local]-[hash:base64:5]'
-		// 			}
-		// 		},
+
 		// 		'postcss-loader'
 		// 	],
 		// 	include: path.resolve(__dirname, '../src')
