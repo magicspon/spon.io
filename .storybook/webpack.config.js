@@ -74,15 +74,6 @@ module.exports = async ({ config, mode }) => {
 			],
 			include: path.resolve(__dirname, '../src')
 		}
-		// {
-		// 	test: /\.module\.css$/,
-		// 	use: [
-		// 		'style-loader',
-
-		// 		'postcss-loader'
-		// 	],
-		// 	include: path.resolve(__dirname, '../src')
-		// }
 	)
 
 	config.plugins.push(
