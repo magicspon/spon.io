@@ -1,7 +1,7 @@
 /* eslint-disable react/require-default-props */
 
-import React, { useEffect, useRef, forwardRef, useContext } from 'react'
-import { string, bool, func } from 'prop-types'
+import React, { useEffect, useRef, forwardRef, useContext, memo } from 'react'
+import { string, bool } from 'prop-types'
 import classNames from 'classnames'
 import { Link } from 'gatsby'
 import Social from '@/components/Social/Social'
@@ -9,28 +9,32 @@ import { DeviceContext } from '@/helpers/Device'
 import { MenuStatus } from '@/container/Layout'
 import styles from './Nav.module.css'
 
-const Item = forwardRef(({ title, last = false }, ref) => (
-	<li
-		className={classNames('text-lg md:text-rg text-center', {
-			'mb-6 md:mb-0': !last
-		})}
-	>
-		<Link ref={ref} to="#0" className="text-accent md:text-white">
-			{title}
-		</Link>
-		{!last && <span className="hidden md:inline text-brand mx-4">/</span>}
-	</li>
-))
+const Item = forwardRef(({ title, last = false }, ref) => {
+	return (
+		<li
+			className={classNames('text-lg md:text-rg text-center', {
+				'mb-6 md:mb-0': !last
+			})}
+		>
+			<Link ref={ref} to="/" className="text-accent md:text-white">
+				{title}
+			</Link>
+			{!last && <span className="hidden md:inline text-brand mx-4">/</span>}
+		</li>
+	)
+})
 
 Item.propTypes = {
 	title: string.isRequired,
 	last: bool
 }
 
+const MemoItem = memo(Item)
+
 function Nav() {
 	const { isOpen, setOpen } = useContext(MenuStatus)
 	const $firstNode = useRef(null)
-	const { width } = useContext(DeviceContext)
+	const { mq } = useContext(DeviceContext)
 
 	useEffect(() => {
 		if (isOpen) {
@@ -39,10 +43,10 @@ function Nav() {
 	}, [isOpen])
 
 	useEffect(() => {
-		if (width >= 768 && isOpen) {
+		if (window.innerWidth >= 768 && isOpen) {
 			setOpen(false)
 		}
-	}, [width])
+	}, [mq])
 
 	return (
 		<nav
@@ -50,10 +54,10 @@ function Nav() {
 			className={classNames(styles.nav, { [styles.isOpen]: isOpen })}
 		>
 			<ul className="list-reset md:flex md:mr-6">
-				<Item ref={$firstNode} title="About" />
-				<Item title="Work" />
-				<Item title="Skills" />
-				<Item title="Contact" last />
+				<MemoItem ref={$firstNode} title="About" />
+				<MemoItem title="Work" />
+				<MemoItem title="Skills" />
+				<MemoItem title="Contact" last />
 			</ul>
 
 			<aside className="mt-auto">

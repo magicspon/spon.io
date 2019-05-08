@@ -1,10 +1,11 @@
 /* eslint-disable no-underscore-dangle */
-
+import React from 'react'
 import { configure, addDecorator } from '@storybook/react'
 import { withNotes } from '@storybook/addon-notes'
 // import { configureViewport } from '@storybook/addon-viewport'
 
 import '@/styles/style.css'
+import { Wrapper } from '@/container/Layout'
 
 const req = require.context('../src', true, /.story.[jt]sx?$/)
 function loadStories() {
@@ -25,6 +26,8 @@ addDecorator(story => {
 	})
 	return story()
 })
+
+addDecorator(story => <Wrapper>{story()}</Wrapper>)
 
 // Gatsby's Link overrides:
 // Gatsby defines a global called ___loader to prevent its method calls from creating console errors you override it here

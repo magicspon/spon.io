@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useMemo } from 'react'
+import React, { useState, useEffect, useRef, useMemo, Fragment } from 'react'
 import { node } from 'prop-types'
 import {
 	disableBodyScroll,
@@ -11,7 +11,7 @@ import Device from '@/helpers/Device'
 
 export const MenuStatus = React.createContext()
 
-function Layout({ children }) {
+export function Wrapper({ children }) {
 	const [isOpen, setOpen] = useState(false)
 	const $body = useRef(null)
 
@@ -37,12 +37,24 @@ function Layout({ children }) {
 	return (
 		<Device>
 			<MenuStatus.Provider value={value}>
-				<div ref={$body}>
-					<Header />
-					{children}
-				</div>
+				<div ref={$body}>{children}</div>
 			</MenuStatus.Provider>
 		</Device>
+	)
+}
+
+Wrapper.propTypes = {
+	children: node.isRequired
+}
+
+function Layout({ children }) {
+	return (
+		<Fragment>
+			<Wrapper>
+				<Header />
+				{children}
+			</Wrapper>
+		</Fragment>
 	)
 }
 

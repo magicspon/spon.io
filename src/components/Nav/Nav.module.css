@@ -6,7 +6,7 @@
 	transition: opacity 300ms ease, visibility 0ms 300ms;
 }
 
-.is-open {
+.isOpen {
 	@apply visible opacity-100;
 
 	transition-delay: 0ms;

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { bool, string, func } from 'prop-types'
+import { string } from 'prop-types'
 import classNames from 'classnames'
 import styles from './MenuButton.module.css'
 import VisuallyHidden from '@/helpers/VisuallyHidden'
