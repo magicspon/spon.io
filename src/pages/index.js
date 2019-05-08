@@ -1,14 +1,16 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-
+import Layout from '@/container/Layout'
 import '@/styles/style.css'
 import Logo from '@/components/Logo/'
 
 function BlogIndex() {
 	return (
-		<div className="flex items-center justify-center h-screen">
-			<Logo />
-		</div>
+		<Layout>
+			<div className="flex items-center justify-center h-screen">
+				<Logo />
+			</div>
+		</Layout>
 	)
 }
 

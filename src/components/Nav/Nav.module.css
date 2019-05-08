@@ -1,8 +1,15 @@
 .nav {
-	@apply list-reset bg-brand perf-fixed pin-x pin-b h-screen flex flex-col justify-between py-6 items-center;
+	@apply list-reset bg-brand perf-fixed pin-x pin-b h-screen flex flex-col justify-between py-6 items-center invisible opacity-0;
 
 	top: config('height.7');
 	height: calc(config('height.1vh') * 100 - config('height.7'));
+	transition: opacity 300ms ease, visibility 0ms 300ms;
+}
+
+.is-open {
+	@apply visible opacity-100;
+
+	transition-delay: 0ms;
 }
 
 @screen sm {
@@ -13,12 +20,12 @@
 
 @screen md {
 	.nav {
-		@apply flex-row ml-auto relative bg-transparent h-auto pin-t;
+		@apply flex-row ml-auto relative bg-transparent h-auto pin-t py-0 visible opacity-100;
 	}
 }
 
-@screen lg {
+/* @screen lg {
 	.nav {
 		@apply mr-7;
 	}
-}
+} */

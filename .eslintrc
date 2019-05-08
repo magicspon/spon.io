@@ -1,6 +1,6 @@
 {
 	"extends": ["airbnb", "plugin:jest/recommended", "prettier"],
-	"plugins": ["react", "jsx-a11y", "import"],
+	"plugins": ["react", "jsx-a11y", "import", "react-hooks"],
 	"rules": {
 		"no-nested-ternary": "off",
 		"consistent-return": "off",

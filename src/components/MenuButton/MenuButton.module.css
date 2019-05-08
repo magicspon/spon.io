@@ -10,24 +10,24 @@
 	transition: transform 300ms ease-in-out, opacity 300ms ease;
 }
 
-.top-closed {
+.topClosed {
 	transform: translateY(-11px);
 }
 
-.top-open {
+.topOpen {
 	transform: rotate(45deg);
 }
 
-.middle-open {
+.middleOpen {
 	transform: scale(0, 1);
 	opacity: 0;
 }
 
-.bottom-closed {
+.bottomClosed {
 	transform: translateY(11px);
 }
 
-.bottom-open {
+.bottomOpen {
 	transform: rotate(-45deg);
 }
 
