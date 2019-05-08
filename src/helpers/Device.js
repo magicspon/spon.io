@@ -1,6 +1,6 @@
 import React, { createContext, useState, useMemo } from 'react'
 import { node } from 'prop-types'
-import throttle from 'raf-throttle'
+import { debounce } from '@/utils'
 
 export const DeviceContext = createContext()
 
@@ -15,13 +15,13 @@ function Device({ children }) {
 
 	let style
 
-	const handle = throttle(() => {
+	const handle = debounce(() => {
 		setWidth(window.innerWidth)
 		setHeight(window.innerHeight)
 
 		const query = getCurrentBreakpoint(style)
 		setMq(query)
-	})
+	}, 100)
 
 	const value = useMemo(() => {
 		return {

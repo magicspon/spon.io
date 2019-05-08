@@ -33,8 +33,8 @@ const MemoItem = memo(Item)
 
 function Nav() {
 	const { isOpen, setOpen } = useContext(MenuStatus)
+	const { mq, width } = useContext(DeviceContext)
 	const $firstNode = useRef(null)
-	const { mq } = useContext(DeviceContext)
 
 	useEffect(() => {
 		if (isOpen) {
@@ -43,7 +43,7 @@ function Nav() {
 	}, [isOpen])
 
 	useEffect(() => {
-		if (window.innerWidth >= 768 && isOpen) {
+		if (width >= 768 && isOpen) {
 			setOpen(false)
 		}
 	}, [mq])
@@ -67,4 +67,4 @@ function Nav() {
 	)
 }
 
-export default Nav
+export default memo(Nav)

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { string } from 'prop-types'
 import Linkedin from '@/icons/linkedin.inline.svg'
 import Github from '@/icons/github.inline.svg'
@@ -27,4 +27,4 @@ Social.propTypes = {
 	github: string.isRequired
 }
 
-export default Social
+export default memo(Social)

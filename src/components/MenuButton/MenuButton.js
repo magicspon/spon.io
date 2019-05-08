@@ -45,7 +45,7 @@ function MenuButton({ className }) {
 					'bg-brand absolute pin-y my-auto'
 				)}
 			/>
-			<VisuallyHidden>MclassNames(enu button</VisuallyHidden>
+			<VisuallyHidden>Menu</VisuallyHidden>
 		</button>
 	)
 }
