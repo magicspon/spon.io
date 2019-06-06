@@ -1176,7 +1176,7 @@ exports[`Storyshots WorkItem default 1`] = `
         className="h-1 w-7 bg-brand my-4"
       />
       <p>
-        Frontend web development
+        Web development
       </p>
     </div>
   </div>

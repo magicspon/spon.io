@@ -58,6 +58,7 @@
 		"@storybook/addon-viewport": "^5.0.8",
 		"@storybook/addons": "^5.0.8",
 		"@storybook/react": "^5.0.8",
+		"@testing-library/cypress": "^4.0.3",
 		"@testing-library/react": "^8.0.1",
 		"autoprefixer": "^9.5.1",
 		"babel-alias-quokka-plugin": "^1.0.9",
@@ -75,8 +76,9 @@
 		"eslint": "^5.16.0",
 		"eslint-config-airbnb": "^17.1.0",
 		"eslint-config-prettier": "^4.1.0",
+		"eslint-plugin-cypress": "^2.2.1",
 		"eslint-plugin-import": "^2.17.1",
-		"eslint-plugin-jest": "^22.4.1",
+		"eslint-plugin-jest": "^22.6.4",
 		"eslint-plugin-jsx-a11y": "^6.2.1",
 		"eslint-plugin-react": "^7.12.4",
 		"eslint-plugin-react-hooks": "^1.6.0",
@@ -117,7 +119,7 @@
 	"scripts": {
 		"dev": "gatsby develop",
 		"start": "npm run dev",
-		"storybook": "start-storybook -s ./static -p 9001",
+		"storybook": "start-storybook -s ./static -p 6006",
 		"storybook:build": "build-storybook -s ./static -c .storybook -o docs/storybook",
 		"build": "gatsby build",
 		"test": "jest",
@@ -125,6 +127,8 @@
 		"coverage": "jest --coverage",
 		"lint:js": "eslint --ext src/js/** .",
 		"lint:css": "stylelint './src/**/*.js'",
-		"pretty": "prettier 'src/**/*.{js,jsx}' --write"
+		"pretty": "prettier 'src/**/*.{js,jsx}' --write",
+		"cy:run": "cypress run",
+		"cy:open": "cypress open"
 	}
 }
