@@ -4,7 +4,7 @@ import Heading from '@/components/Heading/Heading'
 
 const WorkItem = ({ title, text, image }) => (
 	<div className="relative">
-		<img src={image} alt={title} />
+		{image && <img src={image} alt={title} />}
 		<div className="absolute pin flex flex-col items-center justify-center bg-dark-85">
 			<Heading>{title}</Heading>
 			<div className="h-1 w-7 bg-brand my-4" />
@@ -20,7 +20,7 @@ WorkItem.propTypes = {
 	text: string.isRequired,
 	image: shape({
 		fluid: object
-	}).isRequired
+	})
 }
 
 export default WorkItem

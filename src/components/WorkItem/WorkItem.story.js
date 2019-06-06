@@ -5,5 +5,5 @@ import WorkItem from './WorkItem.js'
 import img from '../../../static/straightline_cover.png'
 
 storiesOf('WorkItem', module).add('default', () => (
-	<WorkItem title="straightline" text="Frontend web development" image={img} />
+	<WorkItem title="straightline" text="Web development" image={img} />
 ))

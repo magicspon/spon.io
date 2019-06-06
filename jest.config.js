@@ -2,17 +2,21 @@ module.exports = {
 	displayName: 'calculator',
 	testEnvironment: 'jsdom',
 	testURL: 'http://localhost',
-	setupFilesAfterEnv: [require.resolve('./jest.setup.js')],
+	setupFilesAfterEnv: [require.resolve('./scripts/jest.setup.js')],
 	moduleNameMapper: {
 		// module must come first
 		'\\.module\\.css$': 'identity-obj-proxy',
-		'\\.css$': require.resolve('./__tests__/mocks/style-mock.js'),
-		'\\.png$': require.resolve('./__tests__/mocks/style-mock.js')
+		'\\.css$': require.resolve('./scripts/style-mock.js'),
+		'\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': require.resolve(
+			'./scripts/style-mock.js'
+		)
+
 		// can also map files that are loaded by webpack with the file-loader
 	},
 
 	testMatch: ['/**/?(*.)(spec|test).js?(x)'],
 	testPathIgnorePatterns: ['/node_modules/', '/cypress/']
+
 	// normally you'd put this here
 	// collectCoverageFrom: ['**/src/**/*.js'],
 }

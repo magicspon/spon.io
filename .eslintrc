@@ -17,6 +17,7 @@
 		"react/jsx-indent": "off",
 		"no-unused-vars": "warn",
 		"react/jsx-indent-props": "off",
+		"react/require-default-props": "off",
 		"react/jsx-one-expression-per-line": "off",
 		"react/jsx-wrap-multilines": "off",
 		"react/no-array-index-key": "warn",
