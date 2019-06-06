@@ -11,7 +11,6 @@ function Device({ children }) {
 	const [width, setWidth] = useState(null)
 	const [height, setHeight] = useState(null)
 	const [mq, setMq] = useState(null)
-	const [isRunning, setRunning] = useState(false)
 
 	let style
 
@@ -32,21 +31,17 @@ function Device({ children }) {
 	}, [width, height, mq])
 
 	useMemo(() => {
-		if (!isRunning) {
-			setRunning(true)
-			window.addEventListener('resize', handle)
+		window.addEventListener('resize', handle)
 
-			style = window.getComputedStyle(document.body, '::after')
+		style = window.getComputedStyle(document.body, '::after')
 
-			const query = getCurrentBreakpoint(style)
-			setMq(query)
-		}
+		const query = getCurrentBreakpoint(style)
+		setMq(query)
 
 		return () => {
 			window.removeEventListener('resize', handle)
-			setRunning(false)
 		}
-	}, [isRunning])
+	}, [])
 
 	return (
 		<DeviceContext.Provider value={value}>{children}</DeviceContext.Provider>
