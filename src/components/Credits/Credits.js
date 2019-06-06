@@ -13,6 +13,7 @@ const Credits = ({ visit, stack, details = {} }) => (
 		</div>
 		{Object.entries(details).map(([key, value], index, arr) => (
 			<div
+				key={value.name}
 				className={classNames(
 					'flex',
 					{

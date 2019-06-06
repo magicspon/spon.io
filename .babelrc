@@ -41,7 +41,8 @@
 					}
 				],
 				"@babel/preset-react"
-			]
+			],
+			"plugins": ["require-context-hook"]
 		}
 	}
 }

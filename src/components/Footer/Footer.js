@@ -9,7 +9,7 @@ const Footer = ({ year, text }) => (
 		</div>
 
 		<p className="m-0 text-white-40 text-sm text-center md:text-left">
-			&copy; 2018 - Dave Stockley, Frontend Web Developer based in Bristol
+			&copy; {year} - {text}
 		</p>
 	</div>
 )

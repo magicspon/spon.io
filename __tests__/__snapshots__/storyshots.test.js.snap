@@ -1,0 +1,1184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots BackToTop default 1`] = `
+<div>
+  <button
+    className="flex m-auto flex-col items-center justify-center"
+    type="button"
+  >
+    <svg
+      className="pb-3"
+      viewBox="0 0 23 20"
+      width={20}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M.818 19.818h6.234l4.652-13.135h.136l4.744 13.135h6.234L14.431.182H9.227L.818 19.815z"
+        fill="#35D3DB"
+        fillRule="evenodd"
+      />
+    </svg>
+    <span
+      className="text-sm text-white"
+    >
+      Back to top
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots ContactDetail email 1`] = `
+<div>
+  <dt
+    className="visuallyhidden"
+  >
+    email
+  </dt>
+  <dd>
+    <span
+      aria-hidden="true"
+    >
+      &lt;
+      email
+      &gt;
+    </span>
+    <a
+      className="text-brand"
+      href="mailto:hello@spon.io"
+    >
+      hello@spon.io
+    </a>
+    <span
+      aria-hidden="true"
+      className="hidden sm:inline"
+    >
+      &lt;/
+      email
+      &gt;
+    </span>
+  </dd>
+</div>
+`;
+
+exports[`Storyshots ContactDetail github 1`] = `
+<div>
+  <dt
+    className="visuallyhidden"
+  >
+    github
+  </dt>
+  <dd>
+    <span
+      aria-hidden="true"
+    >
+      &lt;
+      github
+      &gt;
+    </span>
+    <a
+      className="text-brand"
+      href="https://github.com/magicspon"
+    >
+      github.com/magicspon
+    </a>
+    <span
+      aria-hidden="true"
+      className="hidden sm:inline"
+    >
+      &lt;/
+      github
+      &gt;
+    </span>
+  </dd>
+</div>
+`;
+
+exports[`Storyshots ContactDetail mobile 1`] = `
+<div>
+  <dt
+    className="visuallyhidden"
+  >
+    mobile
+  </dt>
+  <dd>
+    <span
+      aria-hidden="true"
+    >
+      &lt;
+      mobile
+      &gt;
+    </span>
+    <a
+      className="text-brand"
+      href="tel:07807781379"
+    >
+      07807781379
+    </a>
+    <span
+      aria-hidden="true"
+      className="hidden sm:inline"
+    >
+      &lt;/
+      mobile
+      &gt;
+    </span>
+  </dd>
+</div>
+`;
+
+exports[`Storyshots ContactDetail web developer 1`] = `
+<div>
+  <dt
+    className="visuallyhidden"
+  >
+    web_developer
+  </dt>
+  <dd>
+    <span
+      aria-hidden="true"
+    >
+      &lt;
+      web_developer
+      &gt;
+    </span>
+    <span
+      className="text-brand"
+    >
+      dave_stockley
+    </span>
+    <span
+      aria-hidden="true"
+      className="hidden sm:inline"
+    >
+      &lt;/
+      web_developer
+      &gt;
+    </span>
+  </dd>
+</div>
+`;
+
+exports[`Storyshots ContactDetail website 1`] = `
+<div>
+  <dt
+    className="visuallyhidden"
+  >
+    website
+  </dt>
+  <dd>
+    <span
+      aria-hidden="true"
+    >
+      &lt;
+      website
+      &gt;
+    </span>
+    <a
+      className="text-brand"
+      href="https://spon.io"
+    >
+      spon.io
+    </a>
+    <span
+      aria-hidden="true"
+      className="hidden sm:inline"
+    >
+      &lt;/
+      website
+      &gt;
+    </span>
+  </dd>
+</div>
+`;
+
+exports[`Storyshots Credits default 1`] = `
+<div>
+  <dl>
+    <div
+      className="flex mb-4"
+    >
+      <dt>
+        Visit: 
+      </dt>
+      <dd>
+        <a
+          href="https://wearestraightline.com"
+        >
+          wearestraightline.com
+        </a>
+      </dd>
+    </div>
+    <div
+      className="flex mb-1"
+    >
+      <dt>
+        Client
+        : 
+      </dt>
+      <dd>
+        <a
+          href="#0"
+        >
+          National Prison Radio
+        </a>
+      </dd>
+    </div>
+    <div
+      className="flex mb-1"
+    >
+      <dt>
+        Branding
+        : 
+      </dt>
+      <dd>
+        <a
+          href="#0"
+        >
+          Supple Studios
+        </a>
+      </dd>
+    </div>
+    <div
+      className="flex mb-4"
+    >
+      <dt>
+        Agency/Design
+        : 
+      </dt>
+      <dd>
+        <a
+          href="#0"
+        >
+          Mud
+        </a>
+      </dd>
+    </div>
+    <div
+      className="flex mb-4"
+    >
+      <dt>
+        Stack: 
+      </dt>
+      <dd
+        className="flex"
+      >
+        <div>
+          Craft
+           
+          <span
+            className="text-brand"
+          >
+            / 
+          </span>
+        </div>
+        <div>
+          React
+           
+          <span
+            className="text-brand"
+          >
+            / 
+          </span>
+        </div>
+        <div>
+          Craftql
+           
+          <span
+            className="text-brand"
+          >
+            / 
+          </span>
+        </div>
+        <div>
+          Gatsby
+           
+        </div>
+      </dd>
+    </div>
+  </dl>
+</div>
+`;
+
+exports[`Storyshots Footer default 1`] = `
+<div>
+  <div
+    className="bg-dark p-6 md:flex justify-between items-center flex-row-reverse"
+  >
+    <div
+      className="mb-7 md:mb-0"
+    >
+      <ul
+        className="list-reset flex items-center justify-center"
+      >
+        <li
+          className="mx-3"
+        >
+          <a
+            className="text-white md:text-white-40"
+            href="#0"
+          >
+            <svg
+              className="fill-current"
+              height="25"
+              viewBox="0 0 25 25"
+              width="25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.064 19.78H16.74v-5.927c0-1.377-.482-2.317-1.684-2.317-.918 0-1.465.634-1.705 1.247-.087.218-.11.525-.11.83v6.168H9.916v-7.283c0-1.334-.043-2.448-.086-3.412h2.886l.153 1.487h.066c.437-.7 1.51-1.728 3.303-1.728 2.187 0 3.826 1.466 3.826 4.615v6.32zM6.244 7.776c-1.05 0-1.73-.744-1.73-1.663 0-.94.702-1.66 1.773-1.66s1.728.72 1.75 1.66c0 .919-.679 1.663-1.794 1.663zM4.601 19.781h3.325V9.086H4.602v10.695zM22.216 0H2.49A2.493 2.493 0 0 0 0 2.499V22.5A2.494 2.494 0 0 0 2.49 25h19.726c1.375 0 2.49-1.12 2.49-2.499V2.5A2.495 2.495 0 0 0 22.217 0z"
+                fillRule="evenodd"
+              />
+            </svg>
+            <span
+              className="visuallyhidden"
+            >
+              LinkedIn
+            </span>
+          </a>
+        </li>
+        <li
+          className="mx-3"
+        >
+          <a
+            className="text-white md:text-white-40"
+            href="#0"
+          >
+            <svg
+              className="fill-current"
+              height="25"
+              viewBox="0 0 26 25"
+              width="26"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.17 20.055c-.07.078-.04.224.071.328.11.105.26.126.33.049.076-.077.042-.224-.07-.328-.11-.104-.261-.126-.331-.049m-.575-.752c-.08.055-.08.191-.003.305.081.114.21.166.287.111.08-.057.08-.193.002-.308-.08-.114-.207-.162-.286-.108m-.52-.648c-.062.057-.046.178.037.266.081.09.2.116.262.06.064-.057.048-.177-.036-.267-.085-.09-.2-.115-.264-.059m-.553-.406c-.032.063.02.15.113.192.091.044.192.025.22-.04.033-.064-.02-.151-.114-.192-.092-.045-.193-.025-.22.04M12.819 0C5.738 0 0 5.737 0 12.816c0 5.663 3.673 10.468 8.765 12.162.641.12.876-.278.876-.617 0-.304-.012-1.315-.018-2.386-3.566.776-4.318-1.513-4.318-1.513-.582-1.48-1.423-1.874-1.423-1.874-1.163-.795.087-.78.087-.78 1.288.092 1.965 1.322 1.965 1.322 1.144 1.958 3 1.392 3.73 1.065.116-.828.448-1.394.815-1.715-2.848-.324-5.84-1.422-5.84-6.333 0-1.399.501-2.542 1.32-3.44-.133-.324-.571-1.627.125-3.393 0 0 1.075-.343 3.524 1.315a12.286 12.286 0 0 1 3.21-.431c1.09.005 2.185.147 3.21.43 2.447-1.657 3.52-1.314 3.52-1.314.7 1.766.26 3.07.127 3.393.821.898 1.32 2.041 1.32 3.44 0 4.923-3 6.006-5.853 6.323.46.399.869 1.179.869 2.374 0 1.715-.016 3.096-.016 3.517 0 .342.232.741.882.615 5.089-1.695 8.757-6.5 8.757-12.16C25.634 5.736 19.895 0 12.818 0M6.996 20.687c-.03.101.066.218.21.263.145.042.29-.004.32-.104.031-.103-.064-.219-.209-.262-.146-.046-.29.002-.321.103m1.03.245c0 .104.124.19.278.187.152-.002.275-.09.271-.195 0-.106-.125-.19-.277-.188-.153.004-.273.09-.273.196m.982-.077c.02.103.157.166.306.14.15-.03.257-.135.24-.238-.02-.105-.156-.166-.308-.141-.15.028-.257.134-.238.24"
+                fillRule="evenodd"
+              />
+            </svg>
+            <span
+              className="visuallyhidden"
+            >
+              github
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <p
+      className="m-0 text-white-40 text-sm text-center md:text-left"
+    >
+      © 
+      2018
+       - 
+      Dave Stockley, Frontend Web Developer based in Bristol
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Header default 1`] = `
+<div>
+  <header
+    className="p-4 md:p-6 h-7 flex items-center justify-start w-full border-b border-light-30"
+  >
+    <a
+      className="Logo"
+      href="/"
+    >
+      <svg
+        height="27"
+        viewBox="0 0 154 27"
+        width={140}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fillRule="evenodd"
+        >
+          <path
+            d="M0 11.314v4.352l16.507 7.036v-5.214L5.464 13.596v-.116l11.043-3.969V4.297zM136.596 9.512l11.042 3.893v.114l-11.042 3.969v5.214l16.505-7.016v-4.353l-16.505-7.036zM93.513 8.055l-.079-.098c-.036-.044-.072-.088-.11-.131l-.047-.048-.056-.058a8.598 8.598 0 0 0-.398-.402 8.449 8.449 0 0 0-2.733-1.751c-.102-.042-.206-.07-.31-.107l-9.534 13.13c.068.089.118.188.19.274a8.483 8.483 0 0 0 2.447 2.04c.33.188.68.331 1.008.464.113.045.228.078.341.119l9.515-13.105c-.08-.108-.147-.222-.234-.327"
+            fill="#35D3DB"
+          />
+          <path
+            d="M94.71 16.92a8.94 8.94 0 0 1-.163.344l-.08.158a8.89 8.89 0 0 1-.768 1.2l.005.007a.215.215 0 0 0-.044.044 8.443 8.443 0 0 1-5.392 3.185 7.957 7.957 0 0 1-1.34.114 8.12 8.12 0 0 1-3.046-.598 8.256 8.256 0 0 1-1.008-.463 8.525 8.525 0 0 1-2.45-2.04 8.506 8.506 0 0 1-1.95-5.404c0-4.682 3.806-8.493 8.486-8.493 1.07 0 2.12.201 3.121.599a8.419 8.419 0 0 1 2.733 1.752c.155.149.279.273.397.402l.057.059.047.046c.04.043.073.087.109.133l.08.098c2.1 2.522 2.553 5.904 1.206 8.856m1.834-12.8A13.212 13.212 0 0 0 92.9 1.502 13.318 13.318 0 0 0 87 .132h-.002c-7.364.002-13.361 5.971-13.37 13.308-.004 3.551 1.338 6.89 3.778 9.4a13.217 13.217 0 0 0 3.634 2.636A13.34 13.34 0 0 0 87 26.867c7.363 0 13.36-5.964 13.366-13.297.003-3.576-1.354-6.932-3.822-9.45M127.19.132h-4.651a.264.264 0 0 0-.214.11L119.4 4.27l-.23.308a.264.264 0 0 0 .21.423h3.157v13.284L109.481.241a.264.264 0 0 0-.213-.109h-4.402a.265.265 0 0 0-.265.265v26.206c0 .146.117.265.265.265h4.388a.266.266 0 0 0 .265-.265V8.683l13.056 18.052a.267.267 0 0 0 .227.133h4.389a.266.266 0 0 0 .265-.265V.397a.266.266 0 0 0-.265-.265M61.496 14.263a38.65 38.65 0 0 1-2.288.065c-.581 0-1.146-.01-1.74-.022-.596-.011-1.222-.022-1.93-.024V5.116a94.89 94.89 0 0 0 1.89-.03 75.49 75.49 0 0 1 1.729-.025c.963 0 1.79.036 2.676.118 2.1.193 3.663 2.332 3.56 4.868-.089 2.205-1.838 4.096-3.897 4.216M60.91.163c-1.778-.022-3.345-.03-4.908-.03-.912 0-1.823.002-2.772.007a.225.225 0 0 0-.057-.008h-2.662a.266.266 0 0 0-.215.11l-2.926 4.03-.23.308a.264.264 0 1 0 .211.423h3.16v21.6c0 .146.118.265.265.265h4.4a.265.265 0 0 0 .264-.265V19.21c.725.003 1.354.011 1.947.019.588.007 1.142.014 1.717.014.618 0 1.26-.008 2-.033 5.307-.176 9.268-4.424 9.213-9.88-.05-4.992-4.269-9.104-9.407-9.167M36.885 11.199l-3.63-.684c-1.693-.318-2.664-1.297-2.664-2.685 0-1.905 1.97-3.043 3.873-3.043 2.843 0 4.201 1.74 4.525 3.367a.268.268 0 0 0 .26.213.257.257 0 0 0 .075-.01L43.74 7.03a.266.266 0 0 0 .183-.31C43.587 5.143 41.905 0 34.429 0c-5.103 0-9.254 3.674-9.254 8.19 0 3.824 2.61 6.63 6.98 7.502l3.629.719c1.876.368 2.995 1.427 2.995 2.83 0 1.783-1.578 2.934-4.019 2.934-1.65 0-3.032-.482-4.002-1.394-.83-.783-1.356-1.896-1.48-3.136a.265.265 0 0 0-.331-.229l-4.56 1.188a.266.266 0 0 0-.196.287C24.846 24.492 29.953 27 34.72 27c4.646 0 9.586-2.833 9.586-8.082 0-3.89-2.845-6.848-7.422-7.72"
+            fill="#FFF"
+          />
+        </g>
+      </svg>
+      <span
+        className="visuallyhidden"
+      >
+        Spon.io
+      </span>
+    </a>
+    <nav
+      aria-hidden={false}
+      className="nav"
+    >
+      <ul
+        className="list-reset md:flex md:mr-6"
+      >
+        <li
+          className="text-lg md:text-rg text-center mb-6 md:mb-0"
+        >
+          <a
+            aria-current="page"
+            className="text-accent md:text-white"
+            href="/"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            style={Object {}}
+          >
+            About
+          </a>
+          <span
+            className="hidden md:inline text-brand mx-4"
+          >
+            /
+          </span>
+        </li>
+        <li
+          className="text-lg md:text-rg text-center mb-6 md:mb-0"
+        >
+          <a
+            aria-current="page"
+            className="text-accent md:text-white"
+            href="/"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            style={Object {}}
+          >
+            Work
+          </a>
+          <span
+            className="hidden md:inline text-brand mx-4"
+          >
+            /
+          </span>
+        </li>
+        <li
+          className="text-lg md:text-rg text-center mb-6 md:mb-0"
+        >
+          <a
+            aria-current="page"
+            className="text-accent md:text-white"
+            href="/"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            style={Object {}}
+          >
+            Skills
+          </a>
+          <span
+            className="hidden md:inline text-brand mx-4"
+          >
+            /
+          </span>
+        </li>
+        <li
+          className="text-lg md:text-rg text-center"
+        >
+          <a
+            aria-current="page"
+            className="text-accent md:text-white"
+            href="/"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            style={Object {}}
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
+      <aside
+        className="mt-auto"
+      >
+        <ul
+          className="list-reset flex items-center justify-center"
+        >
+          <li
+            className="mx-3"
+          >
+            <a
+              className="text-white md:text-white-40"
+              href="#0"
+            >
+              <svg
+                className="fill-current"
+                height="25"
+                viewBox="0 0 25 25"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.064 19.78H16.74v-5.927c0-1.377-.482-2.317-1.684-2.317-.918 0-1.465.634-1.705 1.247-.087.218-.11.525-.11.83v6.168H9.916v-7.283c0-1.334-.043-2.448-.086-3.412h2.886l.153 1.487h.066c.437-.7 1.51-1.728 3.303-1.728 2.187 0 3.826 1.466 3.826 4.615v6.32zM6.244 7.776c-1.05 0-1.73-.744-1.73-1.663 0-.94.702-1.66 1.773-1.66s1.728.72 1.75 1.66c0 .919-.679 1.663-1.794 1.663zM4.601 19.781h3.325V9.086H4.602v10.695zM22.216 0H2.49A2.493 2.493 0 0 0 0 2.499V22.5A2.494 2.494 0 0 0 2.49 25h19.726c1.375 0 2.49-1.12 2.49-2.499V2.5A2.495 2.495 0 0 0 22.217 0z"
+                  fillRule="evenodd"
+                />
+              </svg>
+              <span
+                className="visuallyhidden"
+              >
+                LinkedIn
+              </span>
+            </a>
+          </li>
+          <li
+            className="mx-3"
+          >
+            <a
+              className="text-white md:text-white-40"
+              href="#0"
+            >
+              <svg
+                className="fill-current"
+                height="25"
+                viewBox="0 0 26 25"
+                width="26"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.17 20.055c-.07.078-.04.224.071.328.11.105.26.126.33.049.076-.077.042-.224-.07-.328-.11-.104-.261-.126-.331-.049m-.575-.752c-.08.055-.08.191-.003.305.081.114.21.166.287.111.08-.057.08-.193.002-.308-.08-.114-.207-.162-.286-.108m-.52-.648c-.062.057-.046.178.037.266.081.09.2.116.262.06.064-.057.048-.177-.036-.267-.085-.09-.2-.115-.264-.059m-.553-.406c-.032.063.02.15.113.192.091.044.192.025.22-.04.033-.064-.02-.151-.114-.192-.092-.045-.193-.025-.22.04M12.819 0C5.738 0 0 5.737 0 12.816c0 5.663 3.673 10.468 8.765 12.162.641.12.876-.278.876-.617 0-.304-.012-1.315-.018-2.386-3.566.776-4.318-1.513-4.318-1.513-.582-1.48-1.423-1.874-1.423-1.874-1.163-.795.087-.78.087-.78 1.288.092 1.965 1.322 1.965 1.322 1.144 1.958 3 1.392 3.73 1.065.116-.828.448-1.394.815-1.715-2.848-.324-5.84-1.422-5.84-6.333 0-1.399.501-2.542 1.32-3.44-.133-.324-.571-1.627.125-3.393 0 0 1.075-.343 3.524 1.315a12.286 12.286 0 0 1 3.21-.431c1.09.005 2.185.147 3.21.43 2.447-1.657 3.52-1.314 3.52-1.314.7 1.766.26 3.07.127 3.393.821.898 1.32 2.041 1.32 3.44 0 4.923-3 6.006-5.853 6.323.46.399.869 1.179.869 2.374 0 1.715-.016 3.096-.016 3.517 0 .342.232.741.882.615 5.089-1.695 8.757-6.5 8.757-12.16C25.634 5.736 19.895 0 12.818 0M6.996 20.687c-.03.101.066.218.21.263.145.042.29-.004.32-.104.031-.103-.064-.219-.209-.262-.146-.046-.29.002-.321.103m1.03.245c0 .104.124.19.278.187.152-.002.275-.09.271-.195 0-.106-.125-.19-.277-.188-.153.004-.273.09-.273.196m.982-.077c.02.103.157.166.306.14.15-.03.257-.135.24-.238-.02-.105-.156-.166-.308-.141-.15.028-.257.134-.238.24"
+                  fillRule="evenodd"
+                />
+              </svg>
+              <span
+                className="visuallyhidden"
+              >
+                github
+              </span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+    </nav>
+    <button
+      className="container absolute flex flex-col items-center justify-center pin-r mr-4 md:hidden"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="line topClosed bg-brand absolute pin-y my-auto"
+      />
+      <span
+        className="line middleClosed bg-brand absolute pin-y my-auto"
+      />
+      <span
+        className="line bottomClosed bg-brand absolute pin-y my-auto"
+      />
+      <span
+        className="visuallyhidden"
+      >
+        Menu
+      </span>
+    </button>
+  </header>
+</div>
+`;
+
+exports[`Storyshots Heading default 1`] = `
+<div>
+  <h2
+    className="text-md-lg text-white"
+  >
+    <span
+      className="text-brand"
+    >
+      &lt; 
+    </span>
+    Skills
+    <span
+      className="text-brand"
+    >
+       &gt;
+    </span>
+  </h2>
+</div>
+`;
+
+exports[`Storyshots Intro default 1`] = `
+<div>
+  <div
+    className="content"
+  >
+    <h2>
+      Evening... morning... whatever
+    </h2>
+    <p>
+      Dave Stockley, who is writing this copy, will stop referring to himself in the third person now. I am freelance front-end web developer based in Bristol with 7 years experience. A fan of simple, slick design with a buttery smooth user experience.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Logo default 1`] = `
+<div>
+  <a
+    className="Logo"
+    href="/"
+  >
+    <svg
+      height="27"
+      viewBox="0 0 154 27"
+      width={140}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill="none"
+        fillRule="evenodd"
+      >
+        <path
+          d="M0 11.314v4.352l16.507 7.036v-5.214L5.464 13.596v-.116l11.043-3.969V4.297zM136.596 9.512l11.042 3.893v.114l-11.042 3.969v5.214l16.505-7.016v-4.353l-16.505-7.036zM93.513 8.055l-.079-.098c-.036-.044-.072-.088-.11-.131l-.047-.048-.056-.058a8.598 8.598 0 0 0-.398-.402 8.449 8.449 0 0 0-2.733-1.751c-.102-.042-.206-.07-.31-.107l-9.534 13.13c.068.089.118.188.19.274a8.483 8.483 0 0 0 2.447 2.04c.33.188.68.331 1.008.464.113.045.228.078.341.119l9.515-13.105c-.08-.108-.147-.222-.234-.327"
+          fill="#35D3DB"
+        />
+        <path
+          d="M94.71 16.92a8.94 8.94 0 0 1-.163.344l-.08.158a8.89 8.89 0 0 1-.768 1.2l.005.007a.215.215 0 0 0-.044.044 8.443 8.443 0 0 1-5.392 3.185 7.957 7.957 0 0 1-1.34.114 8.12 8.12 0 0 1-3.046-.598 8.256 8.256 0 0 1-1.008-.463 8.525 8.525 0 0 1-2.45-2.04 8.506 8.506 0 0 1-1.95-5.404c0-4.682 3.806-8.493 8.486-8.493 1.07 0 2.12.201 3.121.599a8.419 8.419 0 0 1 2.733 1.752c.155.149.279.273.397.402l.057.059.047.046c.04.043.073.087.109.133l.08.098c2.1 2.522 2.553 5.904 1.206 8.856m1.834-12.8A13.212 13.212 0 0 0 92.9 1.502 13.318 13.318 0 0 0 87 .132h-.002c-7.364.002-13.361 5.971-13.37 13.308-.004 3.551 1.338 6.89 3.778 9.4a13.217 13.217 0 0 0 3.634 2.636A13.34 13.34 0 0 0 87 26.867c7.363 0 13.36-5.964 13.366-13.297.003-3.576-1.354-6.932-3.822-9.45M127.19.132h-4.651a.264.264 0 0 0-.214.11L119.4 4.27l-.23.308a.264.264 0 0 0 .21.423h3.157v13.284L109.481.241a.264.264 0 0 0-.213-.109h-4.402a.265.265 0 0 0-.265.265v26.206c0 .146.117.265.265.265h4.388a.266.266 0 0 0 .265-.265V8.683l13.056 18.052a.267.267 0 0 0 .227.133h4.389a.266.266 0 0 0 .265-.265V.397a.266.266 0 0 0-.265-.265M61.496 14.263a38.65 38.65 0 0 1-2.288.065c-.581 0-1.146-.01-1.74-.022-.596-.011-1.222-.022-1.93-.024V5.116a94.89 94.89 0 0 0 1.89-.03 75.49 75.49 0 0 1 1.729-.025c.963 0 1.79.036 2.676.118 2.1.193 3.663 2.332 3.56 4.868-.089 2.205-1.838 4.096-3.897 4.216M60.91.163c-1.778-.022-3.345-.03-4.908-.03-.912 0-1.823.002-2.772.007a.225.225 0 0 0-.057-.008h-2.662a.266.266 0 0 0-.215.11l-2.926 4.03-.23.308a.264.264 0 1 0 .211.423h3.16v21.6c0 .146.118.265.265.265h4.4a.265.265 0 0 0 .264-.265V19.21c.725.003 1.354.011 1.947.019.588.007 1.142.014 1.717.014.618 0 1.26-.008 2-.033 5.307-.176 9.268-4.424 9.213-9.88-.05-4.992-4.269-9.104-9.407-9.167M36.885 11.199l-3.63-.684c-1.693-.318-2.664-1.297-2.664-2.685 0-1.905 1.97-3.043 3.873-3.043 2.843 0 4.201 1.74 4.525 3.367a.268.268 0 0 0 .26.213.257.257 0 0 0 .075-.01L43.74 7.03a.266.266 0 0 0 .183-.31C43.587 5.143 41.905 0 34.429 0c-5.103 0-9.254 3.674-9.254 8.19 0 3.824 2.61 6.63 6.98 7.502l3.629.719c1.876.368 2.995 1.427 2.995 2.83 0 1.783-1.578 2.934-4.019 2.934-1.65 0-3.032-.482-4.002-1.394-.83-.783-1.356-1.896-1.48-3.136a.265.265 0 0 0-.331-.229l-4.56 1.188a.266.266 0 0 0-.196.287C24.846 24.492 29.953 27 34.72 27c4.646 0 9.586-2.833 9.586-8.082 0-3.89-2.845-6.848-7.422-7.72"
+          fill="#FFF"
+        />
+      </g>
+    </svg>
+    <span
+      className="visuallyhidden"
+    >
+      Spon.io
+    </span>
+  </a>
+</div>
+`;
+
+exports[`Storyshots MenuButton default 1`] = `
+<div>
+  <button
+    className="container absolute flex flex-col items-center justify-center pin-r mr-4"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="line topClosed bg-brand absolute pin-y my-auto"
+    />
+    <span
+      className="line middleClosed bg-brand absolute pin-y my-auto"
+    />
+    <span
+      className="line bottomClosed bg-brand absolute pin-y my-auto"
+    />
+    <span
+      className="visuallyhidden"
+    >
+      Menu
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Nav default 1`] = `
+<div>
+  <nav
+    aria-hidden={false}
+    className="nav"
+  >
+    <ul
+      className="list-reset md:flex md:mr-6"
+    >
+      <li
+        className="text-lg md:text-rg text-center mb-6 md:mb-0"
+      >
+        <a
+          aria-current="page"
+          className="text-accent md:text-white"
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          style={Object {}}
+        >
+          About
+        </a>
+        <span
+          className="hidden md:inline text-brand mx-4"
+        >
+          /
+        </span>
+      </li>
+      <li
+        className="text-lg md:text-rg text-center mb-6 md:mb-0"
+      >
+        <a
+          aria-current="page"
+          className="text-accent md:text-white"
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          style={Object {}}
+        >
+          Work
+        </a>
+        <span
+          className="hidden md:inline text-brand mx-4"
+        >
+          /
+        </span>
+      </li>
+      <li
+        className="text-lg md:text-rg text-center mb-6 md:mb-0"
+      >
+        <a
+          aria-current="page"
+          className="text-accent md:text-white"
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          style={Object {}}
+        >
+          Skills
+        </a>
+        <span
+          className="hidden md:inline text-brand mx-4"
+        >
+          /
+        </span>
+      </li>
+      <li
+        className="text-lg md:text-rg text-center"
+      >
+        <a
+          aria-current="page"
+          className="text-accent md:text-white"
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          style={Object {}}
+        >
+          Contact
+        </a>
+      </li>
+    </ul>
+    <aside
+      className="mt-auto"
+    >
+      <ul
+        className="list-reset flex items-center justify-center"
+      >
+        <li
+          className="mx-3"
+        >
+          <a
+            className="text-white md:text-white-40"
+            href="#0"
+          >
+            <svg
+              className="fill-current"
+              height="25"
+              viewBox="0 0 25 25"
+              width="25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.064 19.78H16.74v-5.927c0-1.377-.482-2.317-1.684-2.317-.918 0-1.465.634-1.705 1.247-.087.218-.11.525-.11.83v6.168H9.916v-7.283c0-1.334-.043-2.448-.086-3.412h2.886l.153 1.487h.066c.437-.7 1.51-1.728 3.303-1.728 2.187 0 3.826 1.466 3.826 4.615v6.32zM6.244 7.776c-1.05 0-1.73-.744-1.73-1.663 0-.94.702-1.66 1.773-1.66s1.728.72 1.75 1.66c0 .919-.679 1.663-1.794 1.663zM4.601 19.781h3.325V9.086H4.602v10.695zM22.216 0H2.49A2.493 2.493 0 0 0 0 2.499V22.5A2.494 2.494 0 0 0 2.49 25h19.726c1.375 0 2.49-1.12 2.49-2.499V2.5A2.495 2.495 0 0 0 22.217 0z"
+                fillRule="evenodd"
+              />
+            </svg>
+            <span
+              className="visuallyhidden"
+            >
+              LinkedIn
+            </span>
+          </a>
+        </li>
+        <li
+          className="mx-3"
+        >
+          <a
+            className="text-white md:text-white-40"
+            href="#0"
+          >
+            <svg
+              className="fill-current"
+              height="25"
+              viewBox="0 0 26 25"
+              width="26"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.17 20.055c-.07.078-.04.224.071.328.11.105.26.126.33.049.076-.077.042-.224-.07-.328-.11-.104-.261-.126-.331-.049m-.575-.752c-.08.055-.08.191-.003.305.081.114.21.166.287.111.08-.057.08-.193.002-.308-.08-.114-.207-.162-.286-.108m-.52-.648c-.062.057-.046.178.037.266.081.09.2.116.262.06.064-.057.048-.177-.036-.267-.085-.09-.2-.115-.264-.059m-.553-.406c-.032.063.02.15.113.192.091.044.192.025.22-.04.033-.064-.02-.151-.114-.192-.092-.045-.193-.025-.22.04M12.819 0C5.738 0 0 5.737 0 12.816c0 5.663 3.673 10.468 8.765 12.162.641.12.876-.278.876-.617 0-.304-.012-1.315-.018-2.386-3.566.776-4.318-1.513-4.318-1.513-.582-1.48-1.423-1.874-1.423-1.874-1.163-.795.087-.78.087-.78 1.288.092 1.965 1.322 1.965 1.322 1.144 1.958 3 1.392 3.73 1.065.116-.828.448-1.394.815-1.715-2.848-.324-5.84-1.422-5.84-6.333 0-1.399.501-2.542 1.32-3.44-.133-.324-.571-1.627.125-3.393 0 0 1.075-.343 3.524 1.315a12.286 12.286 0 0 1 3.21-.431c1.09.005 2.185.147 3.21.43 2.447-1.657 3.52-1.314 3.52-1.314.7 1.766.26 3.07.127 3.393.821.898 1.32 2.041 1.32 3.44 0 4.923-3 6.006-5.853 6.323.46.399.869 1.179.869 2.374 0 1.715-.016 3.096-.016 3.517 0 .342.232.741.882.615 5.089-1.695 8.757-6.5 8.757-12.16C25.634 5.736 19.895 0 12.818 0M6.996 20.687c-.03.101.066.218.21.263.145.042.29-.004.32-.104.031-.103-.064-.219-.209-.262-.146-.046-.29.002-.321.103m1.03.245c0 .104.124.19.278.187.152-.002.275-.09.271-.195 0-.106-.125-.19-.277-.188-.153.004-.273.09-.273.196m.982-.077c.02.103.157.166.306.14.15-.03.257-.135.24-.238-.02-.105-.156-.166-.308-.141-.15.028-.257.134-.238.24"
+                fillRule="evenodd"
+              />
+            </svg>
+            <span
+              className="visuallyhidden"
+            >
+              github
+            </span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </nav>
+</div>
+`;
+
+exports[`Storyshots RichText default 1`] = `
+<div>
+  <div
+    className="content"
+  >
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo aliquam metus, et finibus nisl consectetur ac. Nulla mattis suscipit commodo. Aenean vel urna maximus, pretium nisi ac, malesuada est. In ultricies mi vitae lacus mattis euismod. Fusce id volutpat diam, volutpat pretium lorem. In risus est, ultricies eget odio sed, consectetur elementum libero. Donec in augue tortor.
+       
+      <a
+        href="#0"
+      >
+        Pellentesque habitant morbi
+      </a>
+       tristique senectus et netus et malesuada fames ac.
+    </p>
+    <p>
+      Fusce id volutpat diam, volutpat pretium lorem. In risus est, ultricies eget odio sed, consectetur elementum libero. Donec in augue tortor tristique senectus et netus et malesuada fames ac.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Skill default 1`] = `
+<div>
+  <div>
+    <ul
+      className="list-reset flex flex-wrap justify-center"
+    >
+      <li
+        className="mr-3 text-brand"
+      >
+        Languages
+        _
+      </li>
+      <li
+        className="whitespace-no-wrap"
+      >
+        HTML
+         
+        <span
+          className="text-brand mx-2"
+        >
+          /
+        </span>
+      </li>
+      <li
+        className="whitespace-no-wrap"
+      >
+        JS
+         
+        <span
+          className="text-brand mx-2"
+        >
+          /
+        </span>
+      </li>
+      <li
+        className="whitespace-no-wrap"
+      >
+        NODE
+         
+        <span
+          className="text-brand mx-2"
+        >
+          /
+        </span>
+      </li>
+      <li
+        className="whitespace-no-wrap"
+      >
+        CSS
+         
+        <span
+          className="text-brand mx-2"
+        >
+          /
+        </span>
+      </li>
+      <li
+        className="whitespace-no-wrap"
+      >
+        SCSS
+         
+      </li>
+    </ul>
+    <ul
+      className="list-reset flex flex-wrap justify-center"
+    >
+      <li
+        className="mr-3 text-brand"
+      >
+        Frameworks/Libraries
+        _
+      </li>
+      <li
+        className="whitespace-no-wrap"
+      >
+        React
+         
+        <span
+          className="text-brand mx-2"
+        >
+          /
+        </span>
+      </li>
+      <li
+        className="whitespace-no-wrap"
+      >
+        Gatsby
+         
+        <span
+          className="text-brand mx-2"
+        >
+          /
+        </span>
+      </li>
+      <li
+        className="whitespace-no-wrap"
+      >
+        Vue
+         
+        <span
+          className="text-brand mx-2"
+        >
+          /
+        </span>
+      </li>
+      <li
+        className="whitespace-no-wrap"
+      >
+        Redux
+         
+        <span
+          className="text-brand mx-2"
+        >
+          /
+        </span>
+      </li>
+      <li
+        className="whitespace-no-wrap"
+      >
+        Ramda
+         
+        <span
+          className="text-brand mx-2"
+        >
+          /
+        </span>
+      </li>
+      <li
+        className="whitespace-no-wrap"
+      >
+        jQuery
+         
+      </li>
+    </ul>
+    <ul
+      className="list-reset flex flex-wrap justify-center"
+    >
+      <li
+        className="mr-3 text-brand"
+      >
+        Tools
+        _
+      </li>
+      <li
+        className="whitespace-no-wrap"
+      >
+        Gulp
+         
+        <span
+          className="text-brand mx-2"
+        >
+          /
+        </span>
+      </li>
+      <li
+        className="whitespace-no-wrap"
+      >
+        Webpack
+         
+        <span
+          className="text-brand mx-2"
+        >
+          /
+        </span>
+      </li>
+      <li
+        className="whitespace-no-wrap"
+      >
+        Backstop.js
+         
+        <span
+          className="text-brand mx-2"
+        >
+          /
+        </span>
+      </li>
+      <li
+        className="whitespace-no-wrap"
+      >
+        Fractal
+         
+        <span
+          className="text-brand mx-2"
+        >
+          /
+        </span>
+      </li>
+      <li
+        className="whitespace-no-wrap"
+      >
+        Storybook
+         
+      </li>
+    </ul>
+    <ul
+      className="list-reset flex flex-wrap justify-center"
+    >
+      <li
+        className="mr-3 text-brand"
+      >
+        CMS
+        _
+      </li>
+      <li
+        className="whitespace-no-wrap"
+      >
+        Craft CMS
+         
+        <span
+          className="text-brand mx-2"
+        >
+          /
+        </span>
+      </li>
+      <li
+        className="whitespace-no-wrap"
+      >
+        ExpressionEngine
+         
+        <span
+          className="text-brand mx-2"
+        >
+          /
+        </span>
+      </li>
+      <li
+        className="whitespace-no-wrap"
+      >
+        Netlify CMS
+         
+        <span
+          className="text-brand mx-2"
+        >
+          /
+        </span>
+      </li>
+      <li
+        className="whitespace-no-wrap"
+      >
+        Wordpress
+         
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Social default 1`] = `
+<div>
+  <ul
+    className="list-reset flex items-center justify-center"
+  >
+    <li
+      className="mx-3"
+    >
+      <a
+        className="text-white md:text-white-40"
+        href="#0"
+      >
+        <svg
+          className="fill-current"
+          height="25"
+          viewBox="0 0 25 25"
+          width="25"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M20.064 19.78H16.74v-5.927c0-1.377-.482-2.317-1.684-2.317-.918 0-1.465.634-1.705 1.247-.087.218-.11.525-.11.83v6.168H9.916v-7.283c0-1.334-.043-2.448-.086-3.412h2.886l.153 1.487h.066c.437-.7 1.51-1.728 3.303-1.728 2.187 0 3.826 1.466 3.826 4.615v6.32zM6.244 7.776c-1.05 0-1.73-.744-1.73-1.663 0-.94.702-1.66 1.773-1.66s1.728.72 1.75 1.66c0 .919-.679 1.663-1.794 1.663zM4.601 19.781h3.325V9.086H4.602v10.695zM22.216 0H2.49A2.493 2.493 0 0 0 0 2.499V22.5A2.494 2.494 0 0 0 2.49 25h19.726c1.375 0 2.49-1.12 2.49-2.499V2.5A2.495 2.495 0 0 0 22.217 0z"
+            fillRule="evenodd"
+          />
+        </svg>
+        <span
+          className="visuallyhidden"
+        >
+          LinkedIn
+        </span>
+      </a>
+    </li>
+    <li
+      className="mx-3"
+    >
+      <a
+        className="text-white md:text-white-40"
+        href="#0"
+      >
+        <svg
+          className="fill-current"
+          height="25"
+          viewBox="0 0 26 25"
+          width="26"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.17 20.055c-.07.078-.04.224.071.328.11.105.26.126.33.049.076-.077.042-.224-.07-.328-.11-.104-.261-.126-.331-.049m-.575-.752c-.08.055-.08.191-.003.305.081.114.21.166.287.111.08-.057.08-.193.002-.308-.08-.114-.207-.162-.286-.108m-.52-.648c-.062.057-.046.178.037.266.081.09.2.116.262.06.064-.057.048-.177-.036-.267-.085-.09-.2-.115-.264-.059m-.553-.406c-.032.063.02.15.113.192.091.044.192.025.22-.04.033-.064-.02-.151-.114-.192-.092-.045-.193-.025-.22.04M12.819 0C5.738 0 0 5.737 0 12.816c0 5.663 3.673 10.468 8.765 12.162.641.12.876-.278.876-.617 0-.304-.012-1.315-.018-2.386-3.566.776-4.318-1.513-4.318-1.513-.582-1.48-1.423-1.874-1.423-1.874-1.163-.795.087-.78.087-.78 1.288.092 1.965 1.322 1.965 1.322 1.144 1.958 3 1.392 3.73 1.065.116-.828.448-1.394.815-1.715-2.848-.324-5.84-1.422-5.84-6.333 0-1.399.501-2.542 1.32-3.44-.133-.324-.571-1.627.125-3.393 0 0 1.075-.343 3.524 1.315a12.286 12.286 0 0 1 3.21-.431c1.09.005 2.185.147 3.21.43 2.447-1.657 3.52-1.314 3.52-1.314.7 1.766.26 3.07.127 3.393.821.898 1.32 2.041 1.32 3.44 0 4.923-3 6.006-5.853 6.323.46.399.869 1.179.869 2.374 0 1.715-.016 3.096-.016 3.517 0 .342.232.741.882.615 5.089-1.695 8.757-6.5 8.757-12.16C25.634 5.736 19.895 0 12.818 0M6.996 20.687c-.03.101.066.218.21.263.145.042.29-.004.32-.104.031-.103-.064-.219-.209-.262-.146-.046-.29.002-.321.103m1.03.245c0 .104.124.19.278.187.152-.002.275-.09.271-.195 0-.106-.125-.19-.277-.188-.153.004-.273.09-.273.196m.982-.077c.02.103.157.166.306.14.15-.03.257-.135.24-.238-.02-.105-.156-.166-.308-.141-.15.028-.257.134-.238.24"
+            fillRule="evenodd"
+          />
+        </svg>
+        <span
+          className="visuallyhidden"
+        >
+          github
+        </span>
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Storyshots WorkItem default 1`] = `
+<div>
+  <div
+    className="relative"
+  >
+    <img
+      alt="straightline"
+      src={Object {}}
+    />
+    <div
+      className="absolute pin flex flex-col items-center justify-center bg-dark-85"
+    >
+      <h2
+        className="text-md-lg text-white"
+      >
+        <span
+          className="text-brand"
+        >
+          &lt; 
+        </span>
+        straightline
+        <span
+          className="text-brand"
+        >
+           &gt;
+        </span>
+      </h2>
+      <div
+        className="h-1 w-7 bg-brand my-4"
+      />
+      <p>
+        Frontend web development
+      </p>
+    </div>
+  </div>
+</div>
+`;

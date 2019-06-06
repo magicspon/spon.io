@@ -1,3 +1,7 @@
+// https://github.com/storybookjs/storybook/tree/master/addons/storyshots/storyshots-core
+import registerRequireContextHook from 'babel-plugin-require-context-hook/register'
+registerRequireContextHook()
+
 // this is the jest setupTestFrameworkScriptFile
 
 // here we set up a fake localStorage because jsdom doesn't support it
