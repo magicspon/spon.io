@@ -56,19 +56,19 @@ module.exports = {
 				]
 			}
 		},
-		// {
-		// 	resolve: `gatsby-plugin-manifest`,
-		// 	options: {
-		// 		name: `Spon | Frontend Developer`,
-		// 		short_name: `spon.io`,
-		// 		start_url: `/`,
-		// 		background_color: `#ffffff`,
-		// 		theme_color: `#141C39`,
-		// 		display: `minimal-ui`,
-		// 		icon: `content/assets/gatsby-icon.png`
-		// 	}
-		// },
-		// `gatsby-plugin-offline`,
+		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				name: `Spon | Frontend Developer`,
+				short_name: `spon.io`,
+				start_url: `/`,
+				background_color: `#ffffff`,
+				theme_color: `#141C39`,
+				display: `minimal-ui`,
+				icon: `static/favicon.png`
+			}
+		},
+		`gatsby-plugin-offline`,
 		`gatsby-plugin-react-helmet`
 	]
 }

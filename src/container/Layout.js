@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useMemo, Fragment } from 'react'
+import React, { useState, useEffect, useRef, useMemo } from 'react'
 import { node } from 'prop-types'
 import {
 	disableBodyScroll,

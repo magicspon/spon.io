@@ -148,8 +148,8 @@
 	"scripts": {
 		"dev": "gatsby develop",
 		"start": "npm run dev",
-		"storybook": "start-storybook -s ./static -p 6006",
-		"storybook:build": "build-storybook -s ./static -c .storybook -o docs/storybook",
+		"storybook": "STORYBOOK_ENV=storybook start-storybook -s ./static -p 6006",
+		"storybook:build": "STORYBOOK_ENV=storybook build-storybook -s ./static -c .storybook -o docs/storybook",
 		"build": "gatsby build",
 		"test": "jest",
 		"test:watch": "jest --watch",
