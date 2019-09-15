@@ -5,7 +5,7 @@ import Github from '@/icons/github.inline.svg'
 import VisuallyHidden from '@/helpers/VisuallyHidden'
 
 const Social = ({ linkedin, github }) => (
-	<ul className="list-reset flex items-center justify-center">
+	<ul className="flex items-center justify-center">
 		<li className="mx-3">
 			<a href={linkedin} className="text-white md:text-white-40">
 				<Linkedin className="fill-current" />

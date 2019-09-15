@@ -49,12 +49,10 @@ Wrapper.propTypes = {
 
 function Layout({ children }) {
 	return (
-		<Fragment>
-			<Wrapper>
-				<Header />
-				{children}
-			</Wrapper>
-		</Fragment>
+		<Wrapper>
+			<Header />
+			{children}
+		</Wrapper>
 	)
 }
 

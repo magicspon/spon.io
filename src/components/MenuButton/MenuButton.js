@@ -17,7 +17,7 @@ function MenuButton({ className }) {
 			type="button"
 			className={classNames(
 				styles.container,
-				'absolute flex flex-col items-center justify-center pin-r mr-4',
+				'absolute flex flex-col items-center justify-center right-0 mr-4',
 				className
 			)}
 		>
@@ -26,7 +26,7 @@ function MenuButton({ className }) {
 					styles.line,
 					{ [styles.topClosed]: !isOpen },
 					{ [styles.topOpen]: isOpen },
-					'bg-brand absolute pin-y my-auto'
+					'bg-brand absolute top-0 bottom-0 my-auto'
 				)}
 			/>
 			<span
@@ -34,7 +34,7 @@ function MenuButton({ className }) {
 					styles.line,
 					{ [styles.middleClosed]: !isOpen },
 					{ [styles.middleOpen]: isOpen },
-					'bg-brand absolute pin-y my-auto'
+					'bg-brand absolute top-0 bottom-0 my-auto'
 				)}
 			/>
 			<span
@@ -42,7 +42,7 @@ function MenuButton({ className }) {
 					styles.line,
 					{ [styles.bottomClosed]: !isOpen },
 					{ [styles.bottomOpen]: isOpen },
-					'bg-brand absolute pin-y my-auto'
+					'bg-brand absolute top-0 bottom-0 my-auto'
 				)}
 			/>
 			<VisuallyHidden>Menu</VisuallyHidden>

@@ -1,7 +1,23 @@
 {
-	"extends": ["airbnb", "plugin:jest/recommended", "prettier"],
-	"plugins": ["react", "jsx-a11y", "import", "react-hooks", "cypress"],
+	"extends": ["airbnb", "prettier", "plugin:jest/recommended"],
+	"plugins": [
+		"react",
+		"jsx-a11y",
+		"import",
+		"react-hooks",
+		"cypress",
+		"compat"
+	],
+	"overrides": [
+		{
+			"files": ["*.spec.js"],
+			"rules": {
+				"jest/valid-expect": "off"
+			}
+		}
+	],
 	"rules": {
+		"compat/compat": "error",
 		"no-nested-ternary": "off",
 		"consistent-return": "off",
 		"func-names": "off",
@@ -13,14 +29,19 @@
 		"import/no-extraneous-dependencies": "off",
 		"import/no-unresolved": "off",
 		"import/prefer-default-export": "off",
+		"react/require-default-props": "off",
 		"react/jsx-filename-extension": "off",
 		"react/jsx-indent": "off",
 		"no-unused-vars": "warn",
 		"react/jsx-indent-props": "off",
-		"react/require-default-props": "off",
 		"react/jsx-one-expression-per-line": "off",
+		"react/no-unescaped-entities": "off",
 		"react/jsx-wrap-multilines": "off",
 		"react/no-array-index-key": "warn",
+		"react/prop-types": "warn",
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn",
+		"react/jsx-props-no-spreading": "off",
 		"jsx-a11y/label-has-for": [
 			2,
 			{
@@ -41,18 +62,28 @@
 			}
 		]
 	},
-	"parser": "babel-eslint",
 	"settings": {
-		"import/core-modules": []
+		"import/core-modules": [],
+		"polyfills": [
+			"Object.entries",
+			"Object.values",
+			"Array.from",
+			"Promise",
+			"Number.isNaN"
+		]
 	},
 	"env": {
 		"cypress/globals": true,
-		"browser": true,
-		"es6": true
+		"browser": true
 	},
 	"globals": {
-		"css": true
+		"css": true,
+		"API_URL": true,
+		"RELEASE_MVP": true,
+		"RELEASE_ROCK": true,
+		"RELEASE_LAVA": true
 	},
+	"parser": "babel-eslint",
 	"parserOptions": {
 		"ecmaFeatures": {
 			"experimentalObjectRestSpread": true,

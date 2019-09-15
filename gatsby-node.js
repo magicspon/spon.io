@@ -1,5 +1,6 @@
 const path = require(`path`)
 const glob = require('glob')
+const hash = require('string-hash')
 const merge = require('webpack-merge')
 const PurgeCssPlugin = require('purgecss-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
@@ -23,8 +24,31 @@ const purgeConfig = {
 	whitelistPatterns: [/headroom/, /module--/]
 }
 
-exports.onCreateWebpackConfig = ({ actions, stage, getConfig }) => {
+exports.onCreateWebpackConfig = ({ actions, stage, getConfig, rules }) => {
 	const prevConfig = getConfig()
+	const imgsRule = rules.images()
+
+	const newUrlLoaderRule = {
+		...imgsRule,
+		test: new RegExp(
+			imgsRule.test
+				.toString()
+				.replace('svg|', '')
+				.slice(1, -1)
+		)
+	}
+
+	prevConfig.module.rules = [
+		// Remove the base url-loader images rule entirely
+		...prevConfig.module.rules.filter(rule => {
+			if (rule.test) {
+				return rule.test.toString() !== imgsRule.test.toString()
+			}
+			return true
+		}),
+		// Put it back without SVG loading
+		newUrlLoaderRule
+	]
 
 	actions.replaceWebpackConfig(
 		merge(prevConfig, {
@@ -34,7 +58,7 @@ exports.onCreateWebpackConfig = ({ actions, stage, getConfig }) => {
 
 			resolve: {
 				alias: {
-					'@': path.resolve(__dirname, '/src/')
+					'@': path.resolve(__dirname, 'src')
 				},
 				mainFields: ['browser', 'module', 'main']
 			},
@@ -42,18 +66,30 @@ exports.onCreateWebpackConfig = ({ actions, stage, getConfig }) => {
 			module: {
 				rules: [
 					{
-						test: /\.(ttf|woff|woff2|eot|svg)$/,
+						test: /\.(ttf|woff|woff2|eot)$/,
 						use: 'file-loader?name=[name].[ext]',
-						exclude: /\.inline.svg$/
+						exclude: /icons/,
+						include: path.resolve(__dirname, 'static')
 					},
 					{
-						test: /\.inline.svg$/,
-						use: [
-							{ loader: 'babel-loader' },
+						test: /\.svg$/,
+						include: path.resolve(__dirname, 'src/icons'),
+						use: ({ resource }) => [
 							{
-								loader: 'react-svg-loader',
+								loader: ['svg-react-loader'],
 								options: {
-									jsx: true
+									jsx: true,
+									svgo: {
+										plugins: [
+											{
+												cleanupIDs: {
+													prefix: `svg${hash(
+														path.relative(__dirname, resource)
+													)}`
+												}
+											}
+										]
+									}
 								}
 							}
 						]
@@ -73,12 +109,6 @@ exports.onCreateWebpackConfig = ({ actions, stage, getConfig }) => {
 			]
 		})
 	}
-}
-
-exports.onCreateBabelConfig = ({ actions }) => {
-	actions.setBabelPlugin({
-		name: 'babel-plugin-inline-react-svg'
-	})
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {

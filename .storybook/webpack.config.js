@@ -2,10 +2,13 @@
 
 const path = require('path')
 const webpack = require('webpack')
+const hash = require('string-hash')
 
 // Export a function. Accept the base config as the only param.
 module.exports = async ({ config, mode }) => {
 	const isProduction = mode
+	// const src = path.resolve(__dirname, '../src')
+	const { rules } = config.module
 
 	// Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
 	config.module.rules[0].exclude = [/node_modules\/(?!(gatsby)\/)/]
@@ -19,28 +22,28 @@ module.exports = async ({ config, mode }) => {
 		require.resolve('@babel/preset-env')
 	]
 
-	// use @babel/plugin-proposal-class-properties for class arrow functions
+	/*
 	config.module.rules[0].use[0].options.plugins = [
 		require.resolve('@babel/plugin-proposal-class-properties'),
 		require.resolve('babel-plugin-remove-graphql-queries')
 	]
+	*/
 
-	config.module.rules = config.module.rules.filter(
-		f => f.test.toString() !== '/\\.css$/'
-	)
+	config.module.rules = rules
+		.filter(f => f.test.toString() !== '/\\.css$/')
+		.filter(f => f.test.toString() !== '/\\.module\\.css$/')
+		.map(f => {
+			if (f.test.toString().includes('svg')) {
+				return {
+					...f,
+					exclude: /icons/
+				}
+			}
+
+			return f
+		})
 
 	config.module.rules.push(
-		{
-			test: /\.(ttf|woff|woff2|eot|svg)$/,
-			use: 'file-loader?name=[name].[ext]',
-			exclude: /\.inline.svg$/
-		},
-		{
-			test: /\.(jpg|png|jpeg|jpg)$/,
-			loader: 'file-loader',
-			include: path.resolve(__dirname, '../static/')
-		},
-
 		{
 			test: /\.css$/,
 			exclude: /\.module\.css$/,
@@ -49,8 +52,8 @@ module.exports = async ({ config, mode }) => {
 				{
 					loader: 'css-loader',
 					options: {
-						importLoaders: 1,
-						localIdentName: 'mod-[hash:base64:8]'
+						importLoaders: 1
+						// localIdentName: 'mod-[hash:base64:8]'
 					}
 				},
 				'postcss-loader'
@@ -66,13 +69,35 @@ module.exports = async ({ config, mode }) => {
 					loader: 'css-loader',
 					options: {
 						importLoaders: 1,
-						modules: true,
-						localIdentName: '[local]-[hash:base64:5]'
+						modules: true
+						// localIdentName: '[local]-[hash:base64:5]'
 					}
 				},
 				'postcss-loader'
 			],
 			include: path.resolve(__dirname, '../src')
+		},
+
+		{
+			test: /\.svg$/,
+			include: path.resolve(__dirname, '../src/icons'),
+			use: ({ resource }) => [
+				{
+					loader: ['svg-react-loader'],
+					options: {
+						jsx: true,
+						svgo: {
+							plugins: [
+								{
+									cleanupIDs: {
+										prefix: `svg${hash(path.relative(__dirname, resource))}`
+									}
+								}
+							]
+						}
+					}
+				}
+			]
 		}
 	)
 
@@ -84,6 +109,7 @@ module.exports = async ({ config, mode }) => {
 	)
 
 	config.resolve.alias['@'] = path.resolve(__dirname, '../src/')
+	config.resolve.alias['~'] = path.resolve(__dirname, '../static/')
 
 	config.resolve.mainFields = ['browser', 'module', 'main']
 

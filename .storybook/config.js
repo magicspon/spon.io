@@ -1,54 +1,44 @@
 /* eslint-disable no-underscore-dangle */
+
 import React from 'react'
-import { configure, addDecorator } from '@storybook/react'
-import { withNotes } from '@storybook/addon-notes'
-// import { configureViewport } from '@storybook/addon-viewport'
+import { configure, addDecorator, addParameters } from '@storybook/react'
+import { withA11y } from '@storybook/addon-a11y'
+import { jsxDecorator } from 'storybook-addon-jsx'
+import { withKnobs } from '@storybook/addon-knobs'
 
-import '@/styles/style.css'
-import { Wrapper } from '@/container/Layout'
+import { Wrapper } from '../src/container/Layout'
+import '../src/style/main.css'
+import theme from './theme'
 
-const req = require.context('../src', true, /.story.[jt]sx?$/)
-function loadStories() {
-	req.keys().forEach(req)
-}
-
-addDecorator(withNotes)
-
-addDecorator(story => {
-	const vh = window.innerHeight * 0.01
-	// Then we set the value in the --vh custom property to the root of the document
-	document.documentElement.style.setProperty('--vh', `${vh}px`)
-	window.addEventListener('resize', () => {
-		document.documentElement.style.setProperty(
-			'--vh',
-			`${window.innerHeight * 0.01}px`
-		)
-	})
-	return story()
-})
-
-addDecorator(story => <Wrapper>{story()}</Wrapper>)
-
-// Gatsby's Link overrides:
-// Gatsby defines a global called ___loader to prevent its method calls from creating console errors you override it here
+global.__BASE_PATH__ = ``
+global.__PATH_PREFIX__ = ``
 global.___loader = {
 	enqueue: () => {},
 	hovering: () => {}
 }
 
-// Gatsby internal mocking to prevent unnecessary errors in storybook testing environment
-global.__PATH_PREFIX__ = ''
+global.RELEASE_DEMO = true
+global.RELEASE_MVP = false
+global.RELEASE_LAVA = false
+global.RELEASE_ROCK = false
 
-// This is to utilized to override the window.___navigate method Gatsby defines and uses to report what path a Link would be taking us to if it wasn't inside a storybook
-window.___navigate = pathname => {
-	action('NavigateTo:')(pathname) // eslint-disable-line
-}
+addParameters({
+	options: {
+		theme
+	}
+})
+addDecorator(jsxDecorator)
+addDecorator(withA11y)
+addDecorator(withKnobs)
+addDecorator(story => {
+	return <Wrapper>{story()}</Wrapper>
+})
 
-configure(loadStories, module)
-
-// configureViewport({
-// 	defaultViewport: 'ipad'
-// })
-
-// https://github.com/storybooks/addon-jsx
-// setAddon(JSXAddon)
+// automatically import all files ending in *.stories.js
+configure(
+	[
+		require.context('../src', true, /\.stories\.js$/),
+		require.context('../src', true, /\.stories\.mdx$/)
+	],
+	module
+)

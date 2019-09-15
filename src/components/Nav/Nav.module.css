@@ -1,5 +1,5 @@
 .nav {
-	@apply list-reset bg-brand perf-fixed pin-x pin-b h-screen flex flex-col justify-between py-6 items-center invisible opacity-0;
+	@apply bg-brand perf-fixed inset-x-0 bottom-0 h-screen flex flex-col justify-between py-6 items-center invisible opacity-0;
 
 	top: config('height.7');
 	height: calc(config('height.1vh') * 100 - config('height.7'));
@@ -20,7 +20,7 @@
 
 @screen md {
 	.nav {
-		@apply flex-row ml-auto relative bg-transparent h-auto pin-t py-0 visible opacity-100;
+		@apply flex-row ml-auto relative bg-transparent h-auto top-0 py-0 visible opacity-100;
 	}
 }
 

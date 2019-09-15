@@ -53,7 +53,7 @@ function Nav() {
 			aria-hidden={isOpen}
 			className={classNames(styles.nav, { [styles.isOpen]: isOpen })}
 		>
-			<ul className="list-reset md:flex md:mr-6">
+			<ul className="md:flex md:mr-6">
 				<MemoItem ref={$firstNode} title="About" />
 				<MemoItem title="Work" />
 				<MemoItem title="Skills" />

@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '@/container/Layout'
-import '@/styles/style.css'
+import '@/style/main.css'
 import Logo from '@/components/Logo/'
 
 function BlogIndex() {

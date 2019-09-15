@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind screens;
+
+body {
+	@apply font-serif bg-accent text-white text-rg leading-normal;
+}
+
+body::after {
+	@apply visuallyhidden;
+	content: 'root';
+}
+
+a {
+	@apply text-brand;
+
+	text-decoration: none;
+}
+
+img,
+svg {
+	display: block;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+@screen sm {
+	body::after {
+		content: 'sm';
+	}
+}
+
+@screen md {
+	body::after {
+		content: 'md';
+	}
+}
+
+@screen lg {
+	body::after {
+		content: 'lg';
+	}
+}
+
+@screen xl {
+	body::after {
+		content: 'xl';
+	}
+}
