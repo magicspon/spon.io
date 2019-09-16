@@ -15,22 +15,6 @@ module.exports = {
 			}
 		},
 		{
-			type: 'list',
-			name: 'type',
-			message: 'Select the type of component',
-			default: 'buttons',
-			choices: () => [
-				'buttons',
-				'cards',
-				'formFields',
-				'panels',
-				'product',
-				'screens',
-				'user',
-				'widgets'
-			]
-		},
-		{
 			type: 'confirm',
 			name: 'cssModules',
 			default: true,
@@ -46,7 +30,7 @@ module.exports = {
 	actions: data => {
 		const base = path.resolve(
 			process.cwd(),
-			`src/components/${data.type}/{{properCase name}}/`
+			`src/components/{{properCase name}}/`
 		)
 
 		const actions = [

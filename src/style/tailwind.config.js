@@ -1,6 +1,7 @@
 const { px2rem } = require('./utils')
 
 const colors = {
+	currentColor: 'currentColor',
 	transparent: 'transparent',
 	black: '#010206',
 	dark: '#070E25',
@@ -37,6 +38,8 @@ module.exports = {
 			colors,
 			spacing,
 			opacity,
+			alpha: opacity,
+
 			fontFamily: {
 				serif: ['Roboto Slab', 'serif']
 			},
@@ -52,16 +55,11 @@ module.exports = {
 			}
 		}
 	},
-	variants: {},
+	variants: {
+		alpha: ['responsive']
+	},
 	plugins: [
-		require('tailwindcss-alpha')({
-			modules: {
-				backgroundColors: true,
-				textColors: true,
-				borderColors: true
-			},
-			alpha: opacity
-		}),
+		require('./plugins/tailwindcss-alpha')(),
 
 		require('tailwindcss-visuallyhidden')(),
 

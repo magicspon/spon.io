@@ -17,32 +17,38 @@ function MenuButton({ className }) {
 			type="button"
 			className={classNames(
 				styles.container,
-				'absolute flex flex-col items-center justify-center right-0 mr-4',
+				'absolute flex flex-col items-center justify-center right-0 mr-4 text-white',
 				className
 			)}
 		>
 			<span
 				className={classNames(
 					styles.line,
-					{ [styles.topClosed]: !isOpen },
-					{ [styles.topOpen]: isOpen },
-					'bg-brand absolute top-0 bottom-0 my-auto'
+					{
+						[styles.topClosed]: !isOpen,
+						[styles.topOpen]: isOpen
+					},
+					'absolute top-0 bottom-0 my-auto bg-currentColor'
 				)}
 			/>
 			<span
 				className={classNames(
 					styles.line,
-					{ [styles.middleClosed]: !isOpen },
-					{ [styles.middleOpen]: isOpen },
-					'bg-brand absolute top-0 bottom-0 my-auto'
+					{
+						[styles.middleClosed]: !isOpen,
+						[styles.middleOpen]: isOpen
+					},
+					'absolute top-0 bottom-0 my-auto bg-currentColor'
 				)}
 			/>
 			<span
 				className={classNames(
 					styles.line,
-					{ [styles.bottomClosed]: !isOpen },
-					{ [styles.bottomOpen]: isOpen },
-					'bg-brand absolute top-0 bottom-0 my-auto'
+					{
+						[styles.bottomClosed]: !isOpen,
+						[styles.bottomOpen]: isOpen
+					},
+					'absolute top-0 bottom-0 my-auto bg-currentColor'
 				)}
 			/>
 			<VisuallyHidden>Menu</VisuallyHidden>

@@ -45,8 +45,6 @@ module.exports = api => {
 			[
 				isStoryBook ? '@babel/preset-env' : 'babel-preset-gatsby',
 				{
-					useBuiltIns: 'usage',
-					corejs: 3,
 					modules: isTest ? 'commonjs' : false,
 					targets: {
 						browsers: ['safari 9', 'ie 11', '> 0.5%']

@@ -46,7 +46,7 @@ function Nav() {
 		if (width >= 768 && isOpen) {
 			setOpen(false)
 		}
-	}, [mq])
+	}, [isOpen, mq, setOpen, width])
 
 	return (
 		<nav

@@ -3,7 +3,7 @@ import { string, arrayOf } from 'prop-types'
 import { isLast } from '@/utils'
 
 const Skill = ({ category, list }) => (
-	<ul className="flex flex-wrap justify-center">
+	<ul className="flex flex-wrap justify-center mb-3">
 		<li className="mr-3 text-brand">{category}_</li>
 		{list.map((item, index) => (
 			<li key={item} className="whitespace-no-wrap">

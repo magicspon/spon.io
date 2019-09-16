@@ -30,7 +30,3 @@
 .bottomOpen {
 	transform: rotate(-45deg);
 }
-
-.test-hello {
-	display: block;
-}

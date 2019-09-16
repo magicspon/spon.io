@@ -7,11 +7,11 @@
 		"allowSyntheticDefaultImports": true,
 		"moduleResolution": "node",
 		"paths": {
-			"@/*": ["./*"]
+			"@/*": ["./src/*"]
 		},
 		"lib": ["es2015", "es2017", "dom", "dom.iterable"],
 		"noImplicitAny": false
 	},
-	"exclude": ["/node_modules/"],
-	"include": ["/src/**/**/*.js"]
+	"exclude": ["./node_modules/"],
+	"include": ["./src/**/*.js"]
 }

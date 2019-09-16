@@ -1,26 +1,22 @@
-import React, { useState, useEffect, useRef, useMemo } from 'react'
-import { node } from 'prop-types'
+import React, { useState, useEffect, useRef } from 'react'
+import { node, string } from 'prop-types'
 import {
 	disableBodyScroll,
 	enableBodyScroll,
 	clearAllBodyScrollLocks
 } from 'body-scroll-lock'
-
+import { Helmet } from 'react-helmet'
+import { StaticQuery, graphql } from 'gatsby'
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import Device from '@/helpers/Device'
+import '@/style/main.css'
 
 export const MenuStatus = React.createContext()
 
 export function Wrapper({ children }) {
 	const [isOpen, setOpen] = useState(false)
 	const $body = useRef(null)
-
-	const value = useMemo(() => {
-		return {
-			isOpen,
-			setOpen
-		}
-	}, [isOpen])
 
 	useEffect(() => {
 		if (isOpen) {
@@ -36,7 +32,7 @@ export function Wrapper({ children }) {
 
 	return (
 		<Device>
-			<MenuStatus.Provider value={value}>
+			<MenuStatus.Provider value={{ isOpen, setOpen }}>
 				<div ref={$body}>{children}</div>
 			</MenuStatus.Provider>
 		</Device>
@@ -47,17 +43,49 @@ Wrapper.propTypes = {
 	children: node.isRequired
 }
 
-function Layout({ children }) {
+function Layout({ children, title }) {
 	return (
-		<Wrapper>
-			<Header />
-			{children}
-		</Wrapper>
+		<StaticQuery
+			query={graphql`
+				query HeadingQuery {
+					site {
+						siteMetadata {
+							title
+							description
+							year
+							siteTitle
+							social {
+								github
+								linkedin
+							}
+						}
+					}
+				}
+			`}
+			render={({ site: { siteMetadata } }) => (
+				<Wrapper>
+					<Helmet>
+						<title>
+							{title} | {siteMetadata.siteTitle}
+						</title>
+					</Helmet>
+					<Header />
+					{children}
+					<Footer
+						text={siteMetadata.description}
+						year={siteMetadata.year}
+						linkedin={siteMetadata.social.linkedin}
+						github={siteMetadata.social.github}
+					/>
+				</Wrapper>
+			)}
+		/>
 	)
 }
 
 Layout.propTypes = {
-	children: node.isRequired
+	children: node.isRequired,
+	title: string.isRequired
 }
 
 export default Layout

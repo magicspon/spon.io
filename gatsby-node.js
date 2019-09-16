@@ -5,6 +5,7 @@ const merge = require('webpack-merge')
 const PurgeCssPlugin = require('purgecss-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 
 const purgeConfig = {
 	paths: glob.sync(path.join(__dirname, '/src/**/**/**/*.js'), {
@@ -113,6 +114,8 @@ exports.onCreateWebpackConfig = ({ actions, stage, getConfig, rules }) => {
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
 	const { createNodeField } = actions
+	// https://www.npmjs.com/package/gatsby-remark-relative-images#to-convert-frontmatter-images
+	fmImagesToRelative(node)
 
 	if (node.internal.type === `MarkdownRemark`) {
 		const value = createFilePath({ node, getNode })
