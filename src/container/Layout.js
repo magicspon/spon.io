@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { node, string, shape } from 'prop-types'
 import { motion, AnimatePresence } from 'framer-motion'
-
 import {
 	disableBodyScroll,
 	enableBodyScroll,
@@ -23,13 +22,12 @@ const variants = {
 		opacity: 1,
 		transition: {
 			duration,
-			delay: duration,
 			when: 'beforeChildren'
 		}
 	},
 	exit: {
 		opacity: 0,
-		transition: { duration }
+		transition: { duration, when: 'beforeChildren' }
 	}
 }
 
@@ -64,7 +62,7 @@ Wrapper.propTypes = {
 	children: node.isRequired
 }
 
-function Layout({ children, location: { pathname } }) {
+function Layout({ children, location: { pathname, href, ...rest } }) {
 	return (
 		<StaticQuery
 			query={graphql`
@@ -86,7 +84,37 @@ function Layout({ children, location: { pathname } }) {
 			render={({ site: { siteMetadata } }) => (
 				<Wrapper>
 					<Helmet>
-						<title>{siteMetadata.siteTitle}</title>
+						<meta charSet="utf-8" />
+						<meta
+							name="description"
+							content="Bristol based freelance developer. Javascript, React, Node etc"
+						/>
+						<meta name="image" content="/favicon.png" />
+						<meta itemProp="name" content="Spon IO" />
+						<meta
+							itemProp="description"
+							content="Bristol based freelance developer. Javascript, React, Node etc"
+						/>
+						<meta itemProp="image" content="/favicon.png" />
+						<meta name="twitter:card" content="summary" />
+						<meta name="twitter:title" content="Spon IO" />
+						<meta
+							name="twitter:description"
+							content="Bristol based freelance developer. Javascript, React, Node etc"
+						/>
+						<meta name="twitter:site" content="@magicspon" />
+						<meta name="twitter:creator" content="@magicspon" />
+						<meta name="twitter:image:src" content="/favicon.png" />
+						<meta name="og:title" content="Spon IO" />
+						<meta
+							name="og:description"
+							content="Bristol based freelance developer. Javascript, React, Node etc"
+						/>
+						<meta name="og:image" content="/favicon.png" />
+						<meta name="og:url" content={href} />
+						<meta name="og:site_name" content="Spon IO" />
+						<meta name="og:locale" content="en_GB" />
+						<meta name="og:type" content="website" />
 					</Helmet>
 					<Header />
 					<AnimatePresence exitBeforeEnter>

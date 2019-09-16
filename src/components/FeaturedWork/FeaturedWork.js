@@ -1,5 +1,5 @@
 import React from 'react'
-import { string, arrayOf, object, shape } from 'prop-types'
+import { arrayOf, object } from 'prop-types'
 import { Link } from 'gatsby'
 import { motion } from 'framer-motion'
 
