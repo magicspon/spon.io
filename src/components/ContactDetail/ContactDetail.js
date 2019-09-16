@@ -30,8 +30,8 @@ Text.propTypes = {
 function ContactDetail({ link = undefined, label, value }) {
 	return (
 		<>
-			<dt className="visuallyhidden mb-3">{label}</dt>
-			<dd className="mb-3">
+			<dt className="visuallyhidden mb-4">{label}</dt>
+			<dd className="mb-4">
 				<span aria-hidden="true">
 					{'<'}
 					{label}

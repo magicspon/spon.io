@@ -27,7 +27,12 @@ const variants = {
 	},
 	exit: {
 		opacity: 0,
-		transition: { duration, when: 'beforeChildren' }
+		transition: {
+			duration,
+			delay: 0.3,
+			when: 'afterChildren',
+			staggerChildren: 0.3
+		}
 	}
 }
 
@@ -124,7 +129,7 @@ function Layout({ children, location: { pathname, href, ...rest } }) {
 							initial="initial"
 							animate="enter"
 							exit="exit"
-							className="flex-grow w-full"
+							className="flex-grow w-full mx-auto max-w-6xl"
 						>
 							{children}
 						</motion.main>

@@ -22,16 +22,6 @@ const opacity = {
 	'100': '1'
 }
 
-const spacing = {
-	'1': px2rem('2px'),
-	'2': px2rem('4px'),
-	'3': px2rem('8px'),
-	'4': px2rem('16px'),
-	'5': px2rem('24px'),
-	'6': px2rem('36px'),
-	'7': px2rem('64px')
-}
-
 module.exports = {
 	theme: {
 		extend: {
@@ -43,7 +33,7 @@ module.exports = {
 			},
 
 			colors,
-			spacing,
+			// spacing,
 			opacity,
 			alpha: opacity,
 

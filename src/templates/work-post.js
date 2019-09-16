@@ -72,9 +72,9 @@ function WorkPost({
 				initial="hidden"
 				animate="visible"
 				variants={banner}
-				className="px-4 md:px-6 mb-8 mx-auto max-w-6xl"
+				className="px-4 md:px-6 mb-8"
 			>
-				<div className="py-8 border-b border-light-30 lg:border-0">
+				<div className="py-8 lg:py-12 border-b border-light-30 lg:border-0">
 					<div className="relative">
 						<Image className="hidden md:block" fluid={hero} />
 						<div className="md:absolute bottom-0 right-0 w-full md:w-1/5">
@@ -83,7 +83,7 @@ function WorkPost({
 					</div>
 				</div>
 			</motion.div>
-			<div className="mx-auto max-w-6xl" ref={ref}>
+			<div ref={ref}>
 				<motion.section
 					variants={container}
 					initial="hidden"
@@ -96,8 +96,8 @@ function WorkPost({
 						animate={inView ? 'visible' : 'hidden'}
 						className="lg:w-1/3 pl-12"
 					>
-						<div className="lg:border-t lg:border-light-30 lg:pt-6">
-							<Heading as="h1" className="mb-4 text-lg">
+						<div className="lg:border-t lg:border-light-30 lg:pt-12">
+							<Heading as="h1" className="mb-6 text-lg">
 								{title}
 							</Heading>
 							<aside className="mb-8 ">
@@ -132,7 +132,7 @@ function WorkPost({
 						className="mb-8 lg:w-2/3 pl-12"
 					>
 						<article
-							className="lg:border-t lg:border-light-30  lg:pt-6"
+							className="lg:border-t lg:border-light-30  lg:pt-12"
 							dangerouslySetInnerHTML={{ __html: html }}
 						/>
 					</TextArea>

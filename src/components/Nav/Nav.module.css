@@ -14,7 +14,7 @@
 
 @screen sm {
 	.nav {
-		@apply py-7;
+		@apply py-8;
 	}
 }
 

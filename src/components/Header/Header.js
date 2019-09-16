@@ -9,6 +9,7 @@ function Header() {
 	const { innerStyle, wrapper } = useHeadroom(node)
 	return (
 		<header
+			id="top"
 			ref={node}
 			className="h-7"
 			style={{ ...wrapper, position: 'relative', zIndex: '90' }}

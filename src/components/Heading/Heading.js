@@ -5,7 +5,7 @@ import Node from '@/helpers/Node'
 
 function Heading({ children, as = 'h2', className = 'text-md-lg' }) {
 	return (
-		<Node as={as} className={classNames(className, 'text-white')}>
+		<Node as={as} className={classNames(className, 'text-white leading-none')}>
 			<span className="text-brand">{'< '}</span>
 			{children}
 			<span className="text-brand">{' >'}</span>
