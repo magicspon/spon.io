@@ -35,6 +35,13 @@ const spacing = {
 module.exports = {
 	theme: {
 		extend: {
+			screens: {
+				sm: '560px',
+				md: '736px',
+				lg: '1024px',
+				xl: '1280px'
+			},
+
 			colors,
 			spacing,
 			opacity,

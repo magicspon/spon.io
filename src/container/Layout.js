@@ -31,7 +31,9 @@ export function Wrapper({ children }) {
 
 	return (
 		<MenuStatus.Provider value={{ isOpen, setOpen }}>
-			<div ref={$body}>{children}</div>
+			<div className="flex flex-col min-h-screen w-full" ref={$body}>
+				{children}
+			</div>
 		</MenuStatus.Provider>
 	)
 }
@@ -67,7 +69,7 @@ function Layout({ children, title }) {
 						</title>
 					</Helmet>
 					<Header />
-					{children}
+					<main className="flex-grow w-full">{children}</main>
 					<Footer
 						text={siteMetadata.description}
 						year={siteMetadata.year}

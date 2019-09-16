@@ -126,3 +126,38 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 		})
 	}
 }
+
+exports.createPages = async ({ graphql, actions }) => {
+	const { createPage } = actions
+	const {
+		data: {
+			allMarkdownRemark: { edges }
+		}
+	} = await graphql(`
+		query {
+			allMarkdownRemark(
+				filter: { frontmatter: { templateKey: { eq: "work" } } }
+			) {
+				edges {
+					node {
+						fields {
+							slug
+						}
+					}
+				}
+			}
+		}
+	`)
+
+	edges.forEach(({ node }) => {
+		createPage({
+			path: node.fields.slug,
+			component: path.resolve(`./src/templates/work-post.js`),
+			context: {
+				// Data passed to context is available
+				// in page queries as GraphQL variables.
+				slug: node.fields.slug
+			}
+		})
+	})
+}

@@ -6,7 +6,7 @@ import { isLast } from '@/utils'
 function Credits({ visit, stack, details = {} }) {
 	return (
 		<dl>
-			<div className="flex mb-4">
+			<div className="flex mb-4 justify-center lg:justify-start">
 				<dt>Visit:&nbsp;</dt>
 				<dd>
 					<a href={visit.link}>{visit.name}</a>
@@ -16,7 +16,7 @@ function Credits({ visit, stack, details = {} }) {
 				<div
 					key={value.name}
 					className={classNames(
-						'flex',
+						'flex justify-center lg:justify-start',
 						{
 							'mb-1': !isLast(index, arr)
 						},
@@ -32,16 +32,16 @@ function Credits({ visit, stack, details = {} }) {
 				</div>
 			))}
 
-			<div className="flex mb-4">
+			<div className="flex flex-wrap justify-center mb-4 lg:justify-start">
 				<dt>Stack:&nbsp;</dt>
-				<dd className="flex">
+				<dd>
 					{stack.map((item, index) => (
-						<div key={item}>
+						<span className="whitespace-no-wrap" key={item}>
 							{item}{' '}
 							{!isLast(index, stack) && (
 								<span className="text-brand">/&nbsp;</span>
 							)}
-						</div>
+						</span>
 					))}
 				</dd>
 			</div>

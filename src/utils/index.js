@@ -37,9 +37,11 @@ export function getContent(content) {
 
 	return compose(
 		map(filter(identity)),
-		mapIndexed(({ image, ...rest }, index) => ({
+		mapIndexed(({ image, teaser, mobile, ...rest }, index) => ({
 			...rest,
+			teaser: teaser && getImage(teaser),
 			image: image && getImage(image),
+			mobile: mobile && getImage(mobile),
 			slug: fields[index],
 			id: node[index].id,
 			html: html[index]

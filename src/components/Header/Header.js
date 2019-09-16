@@ -1,14 +1,26 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Logo from '@/components/Logo'
 import Nav from '@/components/Nav'
 import MenuButton from '@/components/MenuButton'
+import useHeadroom from '@/hooks/useHeadroom'
 
 function Header() {
+	const node = useRef()
+	const { innerStyle, wrapper } = useHeadroom(node)
 	return (
-		<header className="p-4 md:p-6 h-7 flex items-center justify-start w-full border-b border-light-30 z-20 relative">
-			<Logo />
-			<Nav />
-			<MenuButton className="md:hidden" />
+		<header
+			ref={node}
+			className="h-7"
+			style={{ ...wrapper, position: 'relative', zIndex: '90' }}
+		>
+			<div
+				style={innerStyle}
+				className="p-4 md:p-6 h-7 flex bg-accent items-center justify-start w-full border-b border-light-30 z-20 relative w-full"
+			>
+				<Logo />
+				<Nav />
+				<MenuButton className="md:hidden" />
+			</div>
 		</header>
 	)
 }

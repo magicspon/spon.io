@@ -1,20 +1,22 @@
 import React from 'react'
 import { node, string } from 'prop-types'
 import classNames from 'classnames'
+import Node from '@/helpers/Node'
 
-function Heading({ children, className = 'text-md-lg' }) {
+function Heading({ children, as = 'h2', className = 'text-md-lg' }) {
 	return (
-		<h2 className={classNames(className, 'text-white')}>
+		<Node as={as} className={classNames(className, 'text-white')}>
 			<span className="text-brand">{'< '}</span>
 			{children}
 			<span className="text-brand">{' >'}</span>
-		</h2>
+		</Node>
 	)
 }
 
 Heading.propTypes = {
 	children: node.isRequired,
-	className: string
+	className: string,
+	as: string
 }
 
 export default Heading
