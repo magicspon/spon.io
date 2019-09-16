@@ -5,7 +5,6 @@ import { string, bool } from 'prop-types'
 import classNames from 'classnames'
 import { Link } from 'gatsby'
 import Social from '@/components/Social/Social'
-import { DeviceContext } from '@/helpers/Device'
 import { MenuStatus } from '@/container/Layout'
 import styles from './Nav.module.css'
 
@@ -33,7 +32,6 @@ const MemoItem = memo(Item)
 
 function Nav() {
 	const { isOpen, setOpen } = useContext(MenuStatus)
-	const { mq, width } = useContext(DeviceContext)
 	const $firstNode = useRef(null)
 
 	useEffect(() => {
@@ -41,12 +39,6 @@ function Nav() {
 			$firstNode.current.focus()
 		}
 	}, [isOpen])
-
-	useEffect(() => {
-		if (width >= 768 && isOpen) {
-			setOpen(false)
-		}
-	}, [isOpen, mq, setOpen, width])
 
 	return (
 		<nav

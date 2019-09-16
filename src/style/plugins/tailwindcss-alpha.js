@@ -31,7 +31,7 @@ module.exports = function(pluginOptions = {}) {
 					'borderBottomColor',
 					'borderLeftColor'
 				],
-				process: false
+				process: true
 			},
 			fill: {
 				names: ['fill', 'svgFill'],

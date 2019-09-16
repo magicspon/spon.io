@@ -9,7 +9,6 @@ import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import Device from '@/helpers/Device'
 import '@/style/main.css'
 
 export const MenuStatus = React.createContext()
@@ -31,11 +30,9 @@ export function Wrapper({ children }) {
 	}, [isOpen])
 
 	return (
-		<Device>
-			<MenuStatus.Provider value={{ isOpen, setOpen }}>
-				<div ref={$body}>{children}</div>
-			</MenuStatus.Provider>
-		</Device>
+		<MenuStatus.Provider value={{ isOpen, setOpen }}>
+			<div ref={$body}>{children}</div>
+		</MenuStatus.Provider>
 	)
 }
 
