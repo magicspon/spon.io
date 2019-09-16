@@ -3,7 +3,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Image from 'gatsby-image'
-import Layout from '@/container/Layout'
 import Credits from '@/components/Credits'
 import Heading from '@/components/Heading'
 import RichText from '@/components/RichText'
@@ -21,7 +20,7 @@ function WorkPost({
 	const mHero = getImage(mobile)
 
 	return (
-		<Layout title="hello">
+		<>
 			<div className="px-4 md:px-6 mb-8">
 				<div className="py-8 border-b border-light-30 lg:border-0">
 					<div className="relative">
@@ -73,7 +72,7 @@ function WorkPost({
 			<div className="mb-12">
 				<BackToTop />
 			</div>
-		</Layout>
+		</>
 	)
 }
 

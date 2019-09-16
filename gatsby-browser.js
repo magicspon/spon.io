@@ -1,5 +1,8 @@
-import 'typeface-roboto-slab'
+/* eslint-disable react/prop-types */
+import React from 'react'
 import raf from 'raf-throttle'
+import 'typeface-roboto-slab'
+import Layout from '@/container/Layout'
 
 export const onClientEntry = () => {
 	const vh = window.innerHeight * 0.01
@@ -15,4 +18,8 @@ export const onClientEntry = () => {
 			)
 		})
 	)
+}
+
+export const wrapPageElement = ({ element, props }) => {
+	return <Layout {...props}>{element}</Layout>
 }

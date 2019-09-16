@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { node, string } from 'prop-types'
+import { node, string, shape } from 'prop-types'
+import { motion, AnimatePresence } from 'framer-motion'
+
 import {
 	disableBodyScroll,
 	enableBodyScroll,
@@ -10,6 +12,26 @@ import { StaticQuery, graphql } from 'gatsby'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import '@/style/main.css'
+
+const duration = 0.5
+
+const variants = {
+	initial: {
+		opacity: 0
+	},
+	enter: {
+		opacity: 1,
+		transition: {
+			duration,
+			delay: duration,
+			when: 'beforeChildren'
+		}
+	},
+	exit: {
+		opacity: 0,
+		transition: { duration }
+	}
+}
 
 export const MenuStatus = React.createContext()
 
@@ -42,7 +64,7 @@ Wrapper.propTypes = {
 	children: node.isRequired
 }
 
-function Layout({ children, title }) {
+function Layout({ children, location: { pathname } }) {
 	return (
 		<StaticQuery
 			query={graphql`
@@ -64,12 +86,21 @@ function Layout({ children, title }) {
 			render={({ site: { siteMetadata } }) => (
 				<Wrapper>
 					<Helmet>
-						<title>
-							{title} | {siteMetadata.siteTitle}
-						</title>
+						<title>{siteMetadata.siteTitle}</title>
 					</Helmet>
 					<Header />
-					<main className="flex-grow w-full">{children}</main>
+					<AnimatePresence exitBeforeEnter>
+						<motion.main
+							key={pathname}
+							variants={variants}
+							initial="initial"
+							animate="enter"
+							exit="exit"
+							className="flex-grow w-full"
+						>
+							{children}
+						</motion.main>
+					</AnimatePresence>
 					<Footer
 						text={siteMetadata.description}
 						year={siteMetadata.year}
@@ -84,7 +115,7 @@ function Layout({ children, title }) {
 
 Layout.propTypes = {
 	children: node.isRequired,
-	title: string.isRequired
+	location: shape({ pathname: string.isRequired })
 }
 
 export default Layout

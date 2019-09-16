@@ -1,7 +1,6 @@
 /* eslint-disable react/no-danger, react/prop-types */
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '@/container/Layout'
 import FeaturedWork from '@/components/FeaturedWork'
 import Heading from '@/components/Heading'
 import Skill from '@/components/Skill'
@@ -25,7 +24,7 @@ function Index({ data }) {
 	}))
 
 	return (
-		<Layout title={title}>
+		<>
 			<div className="p-4 md:p-6 text-white mb-5 max-w-4xl">
 				<h1 className="mb-4 text-md md:text-md-lg lg:text-lg">
 					Good {getGreeting()}...
@@ -71,7 +70,7 @@ function Index({ data }) {
 					/>
 				</dl>
 			</div>
-		</Layout>
+		</>
 	)
 }
 
