@@ -36,16 +36,12 @@ function FeaturedWork({ work }) {
 					className="sm:w-1/2 lg:w-1/3 relative"
 					variants={item}
 				>
-					<WorkItem
-						title={feature.title}
-						image={feature.teaser}
-						slug={feature.slug}
-					/>
-					<Link
-						to={feature.slug}
-						className="absolute z-10 block inset-0 opacity-0"
-					>
-						{feature.title}
+					<Link to={feature.slug} className="block">
+						<WorkItem
+							title={feature.title}
+							image={feature.teaser}
+							slug={feature.slug}
+						/>
 					</Link>
 				</motion.li>
 			))}

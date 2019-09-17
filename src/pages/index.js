@@ -171,7 +171,6 @@ export const pageQuery = graphql`
 									src
 									aspectRatio
 									sizes
-									base64
 									presentationWidth
 									presentationHeight
 								}

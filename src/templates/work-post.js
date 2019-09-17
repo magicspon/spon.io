@@ -80,11 +80,39 @@ function WorkPost({
 		design,
 		title,
 		site,
-		role
+		role,
+		stack
 	} = frontmatter
 
 	const hero = getImage(image)
 	const mHero = getImage(mobile)
+
+	const clientObj = client
+		? {
+				Client: {
+					name: client.text,
+					link: client.url
+				}
+		  }
+		: {}
+
+	const agencyObj = agency
+		? {
+				[agency.label]: {
+					name: agency.text,
+					link: agency.url
+				}
+		  }
+		: {}
+
+	const designObj = design
+		? {
+				[design.label]: {
+					name: design.text,
+					link: design.url
+				}
+		  }
+		: {}
 
 	return (
 		<motion.div
@@ -133,20 +161,11 @@ function WorkPost({
 										name: site.text,
 										link: site.url
 									}}
-									stack={['Craft', 'React', 'Craftql', 'Gatsby']}
+									stack={stack.split(',')}
 									details={{
-										Client: {
-											name: client.text,
-											link: client.url
-										},
-										[agency.label]: {
-											name: agency.text,
-											link: agency.url
-										},
-										[design.label]: {
-											name: design.text,
-											link: design.url
-										}
+										...clientObj,
+										...agencyObj,
+										...designObj
 									}}
 								/>
 							</aside>
@@ -158,25 +177,27 @@ function WorkPost({
 						className="mb-8 lg:w-2/3 pl-12"
 					>
 						<div className="lg:border-t lg:border-light-30 lg:pt-12">
-							<dl className="flex text-sm mb-8">
-								<dt className="mr-4 text-brand">Role: </dt>
-								<dd>
-									{role.title}
-									{role.at && (
-										<>
-											{' '}
-											at{' '}
-											<a
-												target="_blank"
-												rel="noopener noreferrer"
-												href={role.link}
-											>
-												{role.at}
-											</a>
-										</>
-									)}
-								</dd>
-							</dl>
+							{role && (
+								<dl className="flex text-sm mb-8">
+									<dt className="mr-4 text-brand">Role: </dt>
+									<dd>
+										{role.title}
+										{role.at && (
+											<>
+												{' '}
+												at{' '}
+												<a
+													target="_blank"
+													rel="noopener noreferrer"
+													href={role.link}
+												>
+													{role.at}
+												</a>
+											</>
+										)}
+									</dd>
+								</dl>
+							)}
 							<RichText
 								className="mb-8"
 								dangerouslySetInnerHTML={{ __html: html }}

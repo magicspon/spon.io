@@ -102,7 +102,7 @@ function scrollTo(hash, delay) {
 	if (node) {
 		setTimeout(() => {
 			window.scroll({
-				top: node.offsetTop,
+				top: node.offsetTop - 80,
 				behavior: 'smooth'
 			})
 		}, delay)
