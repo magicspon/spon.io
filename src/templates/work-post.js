@@ -38,14 +38,6 @@ const mobileAnimation = {
 	}
 }
 
-const container = {
-	visible: {
-		transition: {
-			staggerChildren: 0.2
-		}
-	}
-}
-
 const fade = {
 	exit: {
 		opacity: 0
@@ -247,7 +239,6 @@ export const query = graphql`
 							src
 							aspectRatio
 							sizes
-							base64
 							presentationWidth
 							presentationHeight
 						}
@@ -262,7 +253,6 @@ export const query = graphql`
 							src
 							aspectRatio
 							sizes
-							base64
 							presentationWidth
 							presentationHeight
 						}
