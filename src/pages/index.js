@@ -25,10 +25,10 @@ const textVariants = {
 
 function Index({ data }) {
 	const [skillsRef, skillsInview] = useInView({
-		threshold: 0.3
+		threshold: 0.15
 	})
 	const [contactRef, contactInview] = useInView({
-		threshold: 0.3
+		threshold: 0.15
 	})
 
 	const {
@@ -96,7 +96,7 @@ function Index({ data }) {
 				ref={skillsRef}
 				variants={textVariants}
 				animate={skillsInview ? 'enter' : 'exit'}
-				className="flex flex-col justify-center items-center py-5 px-4 md:px-6 md:py-12 lg:py-20  md:items-start border-b border-light-30 "
+				className="flex flex-col justify-center items-center py-8 px-4 md:px-6 md:py-12 lg:py-20  md:items-start border-b border-light-30 "
 			>
 				<Heading className="text-lg mb-5">Skills</Heading>
 				{skills.map((skill, index, { length }) => (
@@ -113,7 +113,7 @@ function Index({ data }) {
 				ref={contactRef}
 				variants={textVariants}
 				animate={contactInview ? 'enter' : 'exit'}
-				className="flex flex-col justify-center items-center py-5 px-4 md:px-6 md:py-12 lg:py-20  md:items-start"
+				className="flex flex-col justify-center items-center py-8 px-4 md:px-6 md:py-12 lg:py-20  md:items-start"
 			>
 				<Heading className="text-lg mb-5">Contact</Heading>
 				<dl className="text-center md:text-left">

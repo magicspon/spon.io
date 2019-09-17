@@ -15,4 +15,10 @@ image: ../assets/honest_desktop.png
 mobile: ../assets/honest_mobile.png
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo aliquam metus, et finibus nisl consectetur ac. Nulla mattis suscipit commodo. Aenean vel urna maximus, pretium nisi ac, malesuada est. In ultricies mi vitae lacus mattis euismod. Fusce id volutpat diam, volutpat pretium lorem. In risus est, ultricies eget odio sed, consectetur elementum libero. Donec in augue tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac.
+The splendid folk over at <a href="https://www.honeststudio.co.uk/">Honest Studio</a> approach me to see if I could help build their new agency website. Evidently I was more than happy to help!
+
+The authoring requirements were simple enough for me to be able to use <a href="https://www.netlifycms.org/">Netlify CMS</a>, which is a great open source CMS ideal for simple static websites. 
+
+I choose <a href="https://www.gatsbyjs.org/">Gatsby</a> for the frontend. It's a fantastic tool for creating static websites from <a href="https://reactjs.org/">react</a> components.
+
+And of course I choose <a href="https://www.netlify.com/">Netlify</a> to host the site.

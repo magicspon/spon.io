@@ -28,4 +28,8 @@ image: ../assets/searchstar_desktop.png
 mobile: ../assets/searchstar_mobile.png
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo aliquam metus, et finibus nisl consectetur ac. Nulla mattis suscipit commodo. Aenean vel urna maximus, pretium nisi ac, malesuada est. In ultricies mi vitae lacus mattis euismod. Fusce id volutpat diam, volutpat pretium lorem. In risus est, ultricies eget odio sed, consectetur elementum libero. Donec in augue tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac.
+This was fun to build! The design champs over at <a href="http://www.supplestudio.com/">Supple Studios</a> created a smashing new brand for PPC agency <a href="https://www.search-star.co.uk">Search Star</a>. 
+
+<a href="https://ournameismud.co.uk/">Our Name is Mud</a> were tasked with building the new website with all the fancy new branding.  This included 100's of animated stars flying all over the shop. A video was used for the home page hero and all of the other arrow's darting about the place, forming various shapes, with built using the canvas API.
+
+The backend is built using the incredible <a href="https://craftcms.com">Craft CMS</a>.

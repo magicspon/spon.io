@@ -71,7 +71,7 @@ const WorkItem = forwardRef(({ title, image, stack }, ref) => {
 					<motion.div
 						initial="closed"
 						variants={text}
-						className="text-sm font-bold lg:text-rg"
+						className="text-sm font-bold lg:text-rg text-center"
 					>
 						{stack}
 					</motion.div>

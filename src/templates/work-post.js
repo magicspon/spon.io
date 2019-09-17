@@ -178,7 +178,7 @@ function WorkPost({
 					>
 						<div className="lg:border-t lg:border-light-30 lg:pt-12">
 							{role && (
-								<dl className="flex text-sm mb-8">
+								<dl className="flex justify-center lg:justify-start text-sm mb-8">
 									<dt className="mr-4 text-brand">Role: </dt>
 									<dd>
 										{role.title}
@@ -199,7 +199,7 @@ function WorkPost({
 								</dl>
 							)}
 							<RichText
-								className="mb-8"
+								className="mb-8 mx-auto lg:mx-0 max-w-2xl"
 								dangerouslySetInnerHTML={{ __html: html }}
 							/>
 							<div className="flex justify-between">

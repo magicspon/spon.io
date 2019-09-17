@@ -25,15 +25,15 @@ function Credits({ visit, stack, details = {} }) {
 						}
 					)}
 				>
-					<dt>{key}:&nbsp;</dt>
+					<dt className="mr-3">{key}:</dt>
 					<dd>
 						<a href={value.link}>{value.name}</a>
 					</dd>
 				</div>
 			))}
 
-			<div className="flex flex-wrap justify-center mb-4 lg:justify-start">
-				<dt>Stack:&nbsp;</dt>
+			<div className="flex flex-wrap items-baseline justify-center mb-4 lg:justify-start">
+				<dt className="mr-3 text-sm">Stack:</dt>
 				<dd>
 					{stack.map((item, index) => (
 						<span className="whitespace-no-wrap" key={item}>

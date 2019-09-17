@@ -17,9 +17,11 @@ design:
   label: Agency
   text: Mr B & Friends
   url: https://mrbandfriends.co.uk/
-stack: Craft CMS, Fractal
+stack: Craft CMS, Fractal, TailwindCSS
 image: ../assets/truespeed_desktop.png
 mobile: ../assets/truespeed_mobile.png
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo aliquam metus, et finibus nisl consectetur ac. Nulla mattis suscipit commodo. Aenean vel urna maximus, pretium nisi ac, malesuada est. In ultricies mi vitae lacus mattis euismod. Fusce id volutpat diam, volutpat pretium lorem. In risus est, ultricies eget odio sed, consectetur elementum libero. Donec in augue tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac.
+Whilst contracting at Creative Design and Branding agency <a href="https://mrbandfriends.co.uk/">Mr B & Friends</a> I built this website for high speed internet providers <a href="https://www.truespeed.com/">Truespeed</a>.
+
+With a new brand in place I was tasked with upgrading their existig <a href="https://craftcms.com">Craft CMS</a> site to the newly released version 3. I also refactored the frontend codebase using <a href="https://tailwindcss.com">Tailwind CSS</a> and my own light weight javascript framework <a href="https://github.com/magicspon/spon-core/tree/v1">@spon/core.</a>

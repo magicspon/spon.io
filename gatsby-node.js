@@ -138,6 +138,7 @@ exports.createPages = async ({ graphql, actions }) => {
 		query {
 			allMarkdownRemark(
 				filter: { frontmatter: { templateKey: { eq: "work" } } }
+				sort: { fields: frontmatter___date, order: DESC }
 			) {
 				edges {
 					previous {
@@ -174,6 +175,9 @@ exports.createPages = async ({ graphql, actions }) => {
 	const nodes = R.pluck('node')(edges)
 
 	nodes.forEach(({ fields: { slug } }, index, { length }) => {
+		const p = previous[index] ? previous[index] : next[length - 2]
+		const n = next[index] ? next[index] : previous[1]
+
 		createPage({
 			path: slug,
 			component: path.resolve(`./src/templates/work-post.js`),
@@ -181,8 +185,8 @@ exports.createPages = async ({ graphql, actions }) => {
 				// Data passed to context is available
 				// in page queries as GraphQL variables.
 				slug,
-				previous: previous[index] || previous[length - 1],
-				next: next[index] || next[0]
+				previous: p,
+				next: n
 			}
 		})
 	})
