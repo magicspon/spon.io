@@ -7,11 +7,11 @@ client:
   text: Warner Bros Studios Leavesden
   url: https://www.wbsl.com/
 agency:
-  label: agency
+  label: Agency
   text: Blast
   url: http://www.blast.co.uk/
 design:
-  label: agency/dev
+  label: Agency/Dev
   text: Mud
   url: https://ournameismud.co.uk/
 stack: Wordpress, Twig, Barba JS, React\

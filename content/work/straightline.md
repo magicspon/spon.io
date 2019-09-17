@@ -13,7 +13,7 @@ agency:
   url: http://www.supplestudio.com/
 
 design:
-  label: Agency/design
+  label: Agency/Design
   text: Mud
   url: https://ournameismud.co.uk/
 stack: Gatsby, React, Craft CMS, TailwindCSS

@@ -53,7 +53,7 @@ export function getGreeting() {
 	const time = format(Date.now(), 'H')
 	return time > 2 && time < 12
 		? 'morning'
-		: time > 12 && time < 18
+		: time >= 12 && time < 18
 		? 'afternoon'
 		: 'evening'
 }

@@ -1,10 +1,10 @@
 ---
 title: Welcome to spon.io
 templateKey: home
-Languages: HTML, Javascript, Node, CSS, SCSS
-Tools: Webpack, Gulp, Fractal, Storybook
+Languages: HTML, Javascript, Node, CSS, SCSS, Twig
+Tools: Git, npm, Webpack, Gulp, Fractal, Storybook
 Libraries: React, Gatsby, Vue, Redux, Ramda, jQuery
 CMS: Craft CMS, Expression Engine, Netlify CMS, Wordpress
 ---
 
-I'm Dave. I'm a freelance frontend web developer based in Bristol UK, with over 8 years of experience in building for the web. I help agencies and SMB's build beautiful website and apps.
+I'm Dave. I'm a freelance frontend web developer based in Bristol UK, with over 8 years of experience in building for the web. I help agencies and SMB's build beautiful websites and apps.

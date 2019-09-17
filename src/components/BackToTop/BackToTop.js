@@ -6,6 +6,12 @@ function BackToTop() {
 		<button
 			type="button"
 			className="flex m-auto flex-col items-center justify-center"
+			onClick={() => {
+				window.scroll({
+					top: 0,
+					behavior: 'smooth'
+				})
+			}}
 		>
 			<Hat width={20} className="pb-3" />
 			<span className="text-sm text-white">Back to top</span>

@@ -7,11 +7,11 @@ client:
   text: Leading Edge
   url: https://theleadingedge.com/
 agency:
-  label: agency
+  label: Agency
   text: Our Design Agency
   url: http://our-design-agency.com/clients/
 design:
-  label: agency/dev
+  label: Agency/Dev
   text: Mud
   url: https://ournameismud.co.uk/
 stack: Craft CMS, Twig, Barba JS, Vue JS

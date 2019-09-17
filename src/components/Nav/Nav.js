@@ -37,6 +37,19 @@ Item.propTypes = {
 
 const MemoItem = memo(Item)
 
+function scrollTo(hash, delay) {
+	if (!hash) return
+	const node = document.querySelector(hash)
+	if (node) {
+		setTimeout(() => {
+			window.scroll({
+				top: node.offsetTop,
+				behavior: 'smooth'
+			})
+		}, delay)
+	}
+}
+
 function Nav() {
 	const { isOpen, setOpen } = useContext(MenuStatus)
 	const $firstNode = useRef(null)
@@ -47,7 +60,12 @@ function Nav() {
 		}
 	}, [isOpen])
 
-	const onClick = () => setOpen(false)
+	const onClick = e => {
+		const { target } = e
+		const delay = target.pathname === window.location.pathname
+		scrollTo(target.hash, delay)
+		if (isOpen) setOpen(false)
+	}
 
 	return (
 		<nav
@@ -55,7 +73,12 @@ function Nav() {
 			className={classNames(styles.nav, { [styles.isOpen]: isOpen })}
 		>
 			<ul className="md:flex md:mr-6">
-				<MemoItem onClick={onClick} slug="/" ref={$firstNode} title="About" />
+				<MemoItem
+					onClick={onClick}
+					slug="/#about"
+					ref={$firstNode}
+					title="About"
+				/>
 				<MemoItem onClick={onClick} slug="/#work" title="Work" />
 				<MemoItem onClick={onClick} slug="/#skills" title="Skills" />
 				<MemoItem onClick={onClick} slug="/#contact" title="Contact" last />

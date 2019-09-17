@@ -12,30 +12,6 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import '@/style/main.css'
 
-const duration = 0.5
-
-const variants = {
-	initial: {
-		opacity: 0
-	},
-	enter: {
-		opacity: 1,
-		transition: {
-			duration,
-			when: 'beforeChildren'
-		}
-	},
-	exit: {
-		opacity: 0,
-		transition: {
-			duration,
-			delay: 0.3,
-			when: 'afterChildren',
-			staggerChildren: 0.3
-		}
-	}
-}
-
 export const MenuStatus = React.createContext()
 
 export function Wrapper({ children }) {
@@ -67,7 +43,7 @@ Wrapper.propTypes = {
 	children: node.isRequired
 }
 
-function Layout({ children, location: { pathname, href, ...rest } }) {
+function Layout({ children, location: { pathname, href } }) {
 	return (
 		<StaticQuery
 			query={graphql`
@@ -78,9 +54,11 @@ function Layout({ children, location: { pathname, href, ...rest } }) {
 							description
 							year
 							siteTitle
+							logo
 							social {
 								github
 								linkedin
+								twitterHandle
 							}
 						}
 					}
@@ -90,50 +68,40 @@ function Layout({ children, location: { pathname, href, ...rest } }) {
 				<Wrapper>
 					<Helmet>
 						<meta charSet="utf-8" />
-						<meta
-							name="description"
-							content="Bristol based freelance developer. Javascript, React, Node etc"
-						/>
-						<meta name="image" content="/favicon.png" />
-						<meta itemProp="name" content="Spon IO" />
-						<meta
-							itemProp="description"
-							content="Bristol based freelance developer. Javascript, React, Node etc"
-						/>
-						<meta itemProp="image" content="/favicon.png" />
-						<meta name="twitter:card" content="summary" />
-						<meta name="twitter:title" content="Spon IO" />
+						<meta name="description" content={siteMetadata.description} />
+						<meta name="image" content={siteMetadata.logo} />
+						<meta itemProp="name" content={siteMetadata.siteTitle} />
+						<meta itemProp="description" content={siteMetadata.description} />
+						<meta itemProp="image" content={siteMetadata.logo} />
+						<meta name="twitter:card" content={siteMetadata.description} />
+						<meta name="twitter:title" content={siteMetadata.siteTitle} />
 						<meta
 							name="twitter:description"
-							content="Bristol based freelance developer. Javascript, React, Node etc"
+							content={siteMetadata.description}
 						/>
-						<meta name="twitter:site" content="@magicspon" />
-						<meta name="twitter:creator" content="@magicspon" />
-						<meta name="twitter:image:src" content="/favicon.png" />
-						<meta name="og:title" content="Spon IO" />
 						<meta
-							name="og:description"
-							content="Bristol based freelance developer. Javascript, React, Node etc"
+							name="twitter:site"
+							content={siteMetadata.social.twitterHandle}
 						/>
-						<meta name="og:image" content="/favicon.png" />
+						<meta
+							name="twitter:creator"
+							content={siteMetadata.social.twitterHandle}
+						/>
+						<meta name="twitter:image:src" content={siteMetadata.logo} />
+						<meta name="og:title" content={siteMetadata.siteTitle} />
+						<meta name="og:description" content={siteMetadata.description} />
+						<meta name="og:image" content={siteMetadata.logo} />
 						<meta name="og:url" content={href} />
-						<meta name="og:site_name" content="Spon IO" />
+						<meta name="og:site_name" content={siteMetadata.siteTitle} />
 						<meta name="og:locale" content="en_GB" />
 						<meta name="og:type" content="website" />
 					</Helmet>
 					<Header />
-					<AnimatePresence exitBeforeEnter>
-						<motion.main
-							key={pathname}
-							variants={variants}
-							initial="initial"
-							animate="enter"
-							exit="exit"
-							className="flex-grow w-full mx-auto max-w-6xl"
-						>
+					<main className="w-full flex-grow">
+						<AnimatePresence exitBeforeEnter initial={false}>
 							{children}
-						</motion.main>
-					</AnimatePresence>
+						</AnimatePresence>
+					</main>
 					<Footer
 						text={siteMetadata.description}
 						year={siteMetadata.year}

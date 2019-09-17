@@ -28,11 +28,22 @@ export const shouldUpdateScroll = ({
 	routerProps: { location },
 	getSavedScrollPosition
 }) => {
-	if (location.action === 'PUSH') {
-		window.setTimeout(() => window.scrollTo(0, 0), 300)
-	} else {
-		const savedPosition = getSavedScrollPosition(location)
-		window.setTimeout(() => window.scrollTo(...(savedPosition || [0, 0])), 300)
+	if (!location.hash) {
+		if (location.action === 'PUSH') {
+			window.setTimeout(() => {
+				window.scroll({
+					top: 0,
+					behavior: 'smooth'
+				})
+			}, 300)
+		} else {
+			const savedPosition = getSavedScrollPosition(location)
+			window.setTimeout(
+				() => window.scrollTo(...(savedPosition || [0, 0])),
+				300
+			)
+		}
 	}
+
 	return false
 }

@@ -58,7 +58,19 @@ const fade = {
 	}
 }
 
-function Index({ data, location: { pathname } }) {
+const transition = { duration: 0.3, ease: [0.43, 0.13, 0.23, 0.96] }
+
+const textVariants = {
+	initial: { y: 20, opacity: 0 },
+	enter: { y: 0, opacity: 1, transition },
+	exit: {
+		y: 20,
+		opacity: 0,
+		transition: { duration: 0.3, ...transition }
+	}
+}
+
+function Index({ data }) {
 	const [skillsRef, skillsInview] = useInView({
 		threshold: 0.1
 	})
@@ -89,45 +101,46 @@ function Index({ data, location: { pathname } }) {
 	}))
 
 	return (
-		<>
+		<motion.div
+			initial="initial"
+			animate="enter"
+			exit="exit"
+			variants={{
+				exit: { transition: { staggerChildren: 0.1 } },
+				enter: { transition: { staggerChildren: 0.1 } }
+			}}
+		>
 			<Helmet>
 				<title>home | {siteTitle}</title>
 			</Helmet>
-			<div className="px-4 py-5 md:px-6 md:py-12 lg:py-20 text-white max-w-4xl">
-				<AnimatePresence>
-					<motion.h1
-						key={pathname}
-						initial="hidden"
-						animate="visible"
-						variants={heading}
-						className="mb-4 text-md md:text-md-lg lg:text-lg block"
-					>
-						Good {getGreeting()}...
-					</motion.h1>
-				</AnimatePresence>
+			<section
+				id="about"
+				className="px-4 py-5 md:px-6 md:py-12 lg:py-20 text-white max-w-4xl"
+			>
+				<motion.h1
+					variants={textVariants}
+					className="mb-4 text-md md:text-md-lg lg:text-lg block"
+				>
+					Good {getGreeting()}...
+				</motion.h1>
 				<motion.div
-					initial="hidden"
-					animate="visible"
-					variants={intro}
+					variants={textVariants}
 					className="text-md text-brand mb-5 md:text-md-lg lg:text-lg"
 					dangerouslySetInnerHTML={{ __html: html }}
 				/>
 				<motion.span
-					initial="hidden"
-					animate="visible"
-					variants={subtext}
+					variants={textVariants}
 					className="text-sm text-light mb-3 block"
 				>
 					Current availability: {availability}
 				</motion.span>
-			</div>
+			</section>
 			<FeaturedWork work={work} />
 			<motion.div
 				id="skills"
 				ref={skillsRef}
-				variants={fade}
-				initial="hidden"
-				animate={skillsInview ? 'visible' : 'hidden'}
+				variants={textVariants}
+				animate={skillsInview ? 'enter' : 'exit'}
 				className="flex flex-col justify-center items-center py-5 px-4 md:px-6 md:py-12 lg:py-20  md:items-start border-b border-light-30 "
 			>
 				<Heading className="text-lg mb-5">Skills</Heading>
@@ -143,9 +156,8 @@ function Index({ data, location: { pathname } }) {
 			<motion.div
 				id="contact"
 				ref={contactRef}
-				variants={fade}
-				initial="hidden"
-				animate={contactInview ? 'visible' : 'hidden'}
+				variants={textVariants}
+				animate={contactInview ? 'enter' : 'exit'}
 				className="flex flex-col justify-center items-center py-5 px-4 md:px-6 md:py-12 lg:py-20  md:items-start"
 			>
 				<Heading className="text-lg mb-5">Contact</Heading>
@@ -165,7 +177,7 @@ function Index({ data, location: { pathname } }) {
 					/>
 				</dl>
 			</motion.div>
-		</>
+		</motion.div>
 	)
 }
 

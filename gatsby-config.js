@@ -9,7 +9,8 @@ module.exports = {
 		description: 'Frontend Web Developer based in Bristol, UK',
 		social: {
 			linkedin: 'https://www.linkedin.com/in/dave-stockley-102a4863/',
-			github: 'https://github.com/magicspon'
+			github: 'https://github.com/magicspon',
+			twitterHandle: '@magicspon'
 		},
 		author: 'Dave Stockley',
 		email: 'hello@spon.io',
@@ -17,9 +18,17 @@ module.exports = {
 		siteUrl: 'https://spon.io/',
 		github: 'github.com/magicspon',
 		year,
-		availability: 'Q1 2020'
+		availability: 'Q1 2020',
+		logo: '/favicon.png'
 	},
 	plugins: [
+		{
+			resolve: `gatsby-plugin-nprogress`,
+			options: {
+				color: `#35D3DB`,
+				showSpinner: false
+			}
+		},
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {

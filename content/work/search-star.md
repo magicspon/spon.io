@@ -8,12 +8,12 @@ client:
   url: https://www.search-star.co.uk
 
 agency:
-  label: branding
+  label: Branding
   text: Supple Studios
   url: http://www.supplestudio.com/
 
 design:
-  label: agency/design
+  label: Agency/Design
   text: Mud
   url: https://ournameismud.co.uk/
 stack: Craft CMS, twig, jQuery

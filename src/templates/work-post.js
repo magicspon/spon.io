@@ -1,5 +1,4 @@
-/* eslint-disable react/no-danger */
-/* eslint-disable react/prop-types */
+/* eslint-disable react/no-danger, react/prop-types */
 import React from 'react'
 import { graphql } from 'gatsby'
 import Image from 'gatsby-image'
@@ -62,7 +61,12 @@ function WorkPost({
 	const mHero = getImage(mobile)
 
 	return (
-		<>
+		<motion.div
+			initial="hidden"
+			animate="visible"
+			exit="hidden"
+			variants={fade}
+		>
 			<Helmet>
 				<title>
 					{title} | {siteTitle}
@@ -141,7 +145,7 @@ function WorkPost({
 			<div className="mb-12">
 				<BackToTop />
 			</div>
-		</>
+		</motion.div>
 	)
 }
 
