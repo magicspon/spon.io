@@ -33,7 +33,6 @@ function Social({ linkedin, github }) {
 	)
 }
 
-Social.defaultProps = {}
 Social.propTypes = {
 	linkedin: string.isRequired,
 	github: string.isRequired

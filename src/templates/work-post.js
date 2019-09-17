@@ -11,6 +11,8 @@ import RichText from '@/components/RichText'
 import BackToTop from '@/components/BackToTop'
 import { getImage } from '@/utils'
 
+const AnimatedImage = motion.custom(Image)
+
 const TextArea = motion.custom(RichText)
 
 const banner = {
@@ -18,6 +20,33 @@ const banner = {
 	visible: {
 		opacity: 1,
 		y: 0,
+		transition: {
+			delay: 0.05
+		}
+	}
+}
+
+const desktop = {
+	initial: { opacity: 0, x: -40 },
+	exit: {
+		opacity: 0,
+		y: 40
+	},
+	enter: {
+		opacity: 1,
+		x: 0,
+		transition: {
+			delay: 0.05
+		}
+	}
+}
+
+const mobileAnimation = {
+	initial: { opacity: 0, x: 40 },
+	exit: { opacity: 0, y: 40 },
+	enter: {
+		opacity: 1,
+		x: 0,
 		transition: {
 			delay: 0.05
 		}
@@ -62,31 +91,34 @@ function WorkPost({
 
 	return (
 		<motion.div
-			initial="hidden"
-			animate="visible"
-			exit="hidden"
-			variants={fade}
+			initial="initial"
+			animate="enter"
+			exit="exit"
+			variants={{
+				exit: { transition: { staggerChildren: 0.1 } },
+				enter: { transition: { staggerChildren: 0.1 } }
+			}}
 		>
 			<Helmet>
 				<title>
 					{title} | {siteTitle}
 				</title>
 			</Helmet>
-			<motion.div
-				initial="hidden"
-				animate="visible"
-				variants={banner}
-				className="px-4 md:px-6 mb-8"
-			>
+			<div className="px-4 md:px-6 mb-8">
 				<div className="py-8 lg:py-12 border-b border-light-30 lg:border-0">
 					<div className="relative">
-						<Image className="hidden md:block" fluid={hero} />
-						<div className="md:absolute bottom-0 right-0 w-full md:w-1/5">
+						<motion.div variants={desktop}>
+							<Image className="hidden md:block" fluid={hero} />
+						</motion.div>
+						<motion.div
+							variants={mobileAnimation}
+							className="md:absolute bottom-0 right-0 w-full md:w-1/5"
+						>
 							<Image fluid={mHero} />
-						</div>
+						</motion.div>
 					</div>
 				</div>
-			</motion.div>
+			</div>
 			<div ref={ref}>
 				<motion.section
 					variants={container}

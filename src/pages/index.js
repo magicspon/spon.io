@@ -3,60 +3,13 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import classNames from 'classnames'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import FeaturedWork from '@/components/FeaturedWork'
 import Heading from '@/components/Heading'
 import Skill from '@/components/Skill'
 import ContactDetail from '@/components/ContactDetail'
 import { getContent, getGreeting } from '@/utils'
-
-const heading = {
-	hidden: { opacity: 0 },
-	visible: {
-		opacity: 1,
-		y: 0,
-		transition: {
-			delay: 0.05
-		}
-	},
-	exit: {
-		opacity: 0,
-		y: 100,
-		transition: { duration: 300 }
-	}
-}
-
-const intro = {
-	hidden: { opacity: 0, y: 30 },
-	visible: {
-		opacity: 1,
-		y: 0,
-		transition: {
-			delay: 0.15
-		}
-	}
-}
-
-const subtext = {
-	hidden: { opacity: 0 },
-	visible: {
-		opacity: 1,
-		transition: {
-			delay: 0.3
-		}
-	}
-}
-
-const fade = {
-	hidden: { opacity: 0 },
-	visible: {
-		opacity: 1,
-		transition: {
-			delay: 0.05
-		}
-	}
-}
 
 const transition = { duration: 0.3, ease: [0.43, 0.13, 0.23, 0.96] }
 
@@ -72,10 +25,10 @@ const textVariants = {
 
 function Index({ data }) {
 	const [skillsRef, skillsInview] = useInView({
-		threshold: 0.1
+		threshold: 0.3
 	})
 	const [contactRef, contactInview] = useInView({
-		threshold: 0.1
+		threshold: 0.3
 	})
 
 	const {

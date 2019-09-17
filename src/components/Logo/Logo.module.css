@@ -1,3 +1,6 @@
 .Logo {
-  width: 140px;
+	@apply z-20;
+
+	transition: color 300ms ease;
+	width: 140px;
 }

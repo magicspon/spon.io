@@ -56,10 +56,6 @@ function MenuButton({ className }) {
 	)
 }
 
-MenuButton.defaultProps = {
-	className: undefined
-}
-
 MenuButton.propTypes = {
 	className: string
 }

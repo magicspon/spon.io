@@ -6,19 +6,15 @@ import { motion } from 'framer-motion'
 import WorkItem from '@/components/WorkItem'
 import { getContent } from '@/utils'
 
-const container = {
-	visible: {
-		transition: {
-			when: 'beforeChildren',
-			staggerChildren: 0.1
-		}
-	}
-}
+const transition = { duration: 0.1, ease: [0.43, 0.13, 0.23, 0.96] }
+
 const item = {
-	hidden: { y: 20, opacity: 0 },
-	visible: {
-		y: 0,
-		opacity: 1
+	initial: { y: 20, scale: 0.4, opacity: 0 },
+	enter: { y: 0, opacity: 1, scale: 1, transition },
+	exit: {
+		opacity: 0,
+		scale: 0,
+		transition: { duration: 0.1, ...transition }
 	}
 }
 
@@ -27,9 +23,10 @@ function FeaturedWork({ work }) {
 
 	return (
 		<motion.ul
-			variants={container}
-			initial="hidden"
-			animate="visible"
+			variants={{
+				exit: { transition: { staggerChildren: 0.05 } },
+				enter: { transition: { staggerChildren: 0.3 } }
+			}}
 			id="work"
 			className="sm:flex sm:flex-wrap"
 		>

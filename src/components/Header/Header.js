@@ -1,7 +1,6 @@
 import React, { useRef } from 'react'
 import Logo from '@/components/Logo'
 import Nav from '@/components/Nav'
-import MenuButton from '@/components/MenuButton'
 import useHeadroom from '@/hooks/useHeadroom'
 
 function Header() {
@@ -20,7 +19,6 @@ function Header() {
 			>
 				<Logo />
 				<Nav />
-				<MenuButton className="md:hidden" />
 			</div>
 		</header>
 	)

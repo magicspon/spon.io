@@ -81,7 +81,6 @@ function useHeight(ref, calcHeightOnResize = true) {
 			setHeight(ref.current.offsetHeight)
 		})
 
-		// console.log(ref.current.offsetHeight)
 		setHeight(ref.current.offsetHeight)
 
 		if (calcHeightOnResize) window.addEventListener('resize', handle)

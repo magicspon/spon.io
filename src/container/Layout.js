@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { node, string, shape } from 'prop-types'
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
 import {
 	disableBodyScroll,
 	enableBodyScroll,

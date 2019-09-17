@@ -24,12 +24,22 @@ const opacity = {
 
 module.exports = {
 	theme: {
+		inset: theme => ({
+			'0': '0',
+			auto: 'auto',
+			...theme('spacing')
+		}),
+
 		extend: {
 			screens: {
 				sm: '560px',
 				md: '736px',
 				lg: '1024px',
 				xl: '1280px'
+			},
+
+			height: {
+				window: 'calc(var(--vh) * 100)'
 			},
 
 			colors,

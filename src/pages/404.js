@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { Helmet } from 'react-helmet'
 import { motion } from 'framer-motion'
 import Heading from '@/components/Heading'
 
@@ -17,23 +18,28 @@ const textVariants = {
 
 function NotFoundPage() {
 	return (
-		<motion.div
-			initial="initial"
-			animate="enter"
-			exit="exit"
-			variants={{
-				exit: { transition: { staggerChildren: 0.1 } },
-				enter: { transition: { staggerChildren: 0.1 } }
-			}}
-			className="text-center"
-		>
-			<motion.div variants={textVariants}>
-				<Heading className="text-xl mb-10">
-					Oh god no... Where are you going?
-				</Heading>
-				<Link to="/">Take me home</Link>
+		<>
+			<Helmet>
+				<title>Shit! 404... with apologies</title>
+			</Helmet>
+			<motion.div
+				initial="initial"
+				animate="enter"
+				exit="exit"
+				variants={{
+					exit: { transition: { staggerChildren: 0.1 } },
+					enter: { transition: { staggerChildren: 0.1 } }
+				}}
+				className="text-center"
+			>
+				<motion.div variants={textVariants}>
+					<Heading className="text-xl mb-10">
+						Oh god no... Where are you going?
+					</Heading>
+					<Link to="/">Take me home</Link>
+				</motion.div>
 			</motion.div>
-		</motion.div>
+		</>
 	)
 }
 
