@@ -97,7 +97,7 @@ function Layout({ children, location: { pathname, href } }) {
 						<meta name="og:type" content="website" />
 					</Helmet>
 					<Header />
-					<main className="w-full flex-grow">
+					<main className="w-full flex-grow max-w-6xl">
 						<AnimatePresence exitBeforeEnter initial={false}>
 							{children}
 						</AnimatePresence>
