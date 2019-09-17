@@ -1,6 +1,6 @@
 /* eslint-disable react/require-default-props */
 
-import React from 'react'
+import React, { memo } from 'react'
 import { string, node } from 'prop-types'
 
 function Text({ link, children }) {
@@ -54,4 +54,4 @@ ContactDetail.propTypes = {
 	value: string.isRequired
 }
 
-export default ContactDetail
+export default memo(ContactDetail)

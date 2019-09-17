@@ -163,6 +163,7 @@ export const pageQuery = graphql`
 					}
 					frontmatter {
 						title
+						stack
 						teaser {
 							id
 							childImageSharp {

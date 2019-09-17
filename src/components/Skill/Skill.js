@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { string, arrayOf } from 'prop-types'
 import classNames from 'classnames'
 import { isLast } from '@/utils'
@@ -21,4 +21,4 @@ Skill.propTypes = {
 	className: string
 }
 
-export default Skill
+export default memo(Skill)

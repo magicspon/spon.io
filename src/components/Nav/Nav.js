@@ -61,6 +61,27 @@ const socialVariant = {
 	}
 }
 
+const sidebar = {
+	open: (height = 1000) => ({
+		clipPath: `circle(${height * 2 + 200}px at 100% 0)`,
+		opacity: 1,
+		transition: {
+			type: 'spring',
+			stiffness: 20
+		}
+	}),
+	closed: {
+		clipPath: 'circle(30px at 100% 0)',
+		opacity: 0,
+		transition: {
+			delay: 0.1,
+			type: 'spring',
+			stiffness: 400,
+			damping: 40
+		}
+	}
+}
+
 const Item = forwardRef(
 	({ title, onClick, last = false, slug, shouldAnimate = false }, ref) => {
 		return (
@@ -98,36 +119,15 @@ const MemoItem = memo(Item)
 
 function scrollTo(hash, delay) {
 	if (!hash) return
-	const node = document.querySelector(hash)
-	if (node) {
-		setTimeout(() => {
+	setTimeout(() => {
+		const node = document.querySelector(hash)
+		if (node) {
 			window.scroll({
 				top: node.offsetTop - 80,
 				behavior: 'smooth'
 			})
-		}, delay)
-	}
-}
-
-const sidebar = {
-	open: (height = 1000) => ({
-		clipPath: `circle(${height * 2 + 200}px at 100% 0)`,
-		opacity: 1,
-		transition: {
-			type: 'spring',
-			stiffness: 20
 		}
-	}),
-	closed: {
-		clipPath: 'circle(30px at 100% 0)',
-		opacity: 0,
-		transition: {
-			delay: 0.1,
-			type: 'spring',
-			stiffness: 400,
-			damping: 40
-		}
-	}
+	}, delay)
 }
 
 function Nav() {
@@ -150,7 +150,7 @@ function Nav() {
 
 	const onClick = e => {
 		const { target } = e
-		const delay = target.pathname === window.location.pathname ? 0 : 2000
+		const delay = target.pathname === window.location.pathname ? 0 : 1000
 		scrollTo(target.hash, delay)
 		if (isOpen) setOpen(false)
 	}
