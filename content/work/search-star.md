@@ -3,6 +3,13 @@ title: Search Star
 date: '2019-02-01T22:12:03.284Z'
 teaser: ../assets/searchstar_cover.png
 templateKey: work
+site:
+  text: search-star.co.uk
+  url: https://search-star.co.uk
+role:
+  title: Sr Frontend Developer
+  at: Our Name is Mud
+  link: https://ournameismud.co.uk/
 client:
   text: Search Star
   url: https://www.search-star.co.uk

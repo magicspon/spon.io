@@ -6,6 +6,7 @@ const PurgeCssPlugin = require('purgecss-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const { fmImagesToRelative } = require('gatsby-remark-relative-images')
+const R = require('ramda')
 
 const purgeConfig = {
 	paths: glob.sync(path.join(__dirname, '/src/**/**/**/*.js'), {
@@ -139,9 +140,28 @@ exports.createPages = async ({ graphql, actions }) => {
 				filter: { frontmatter: { templateKey: { eq: "work" } } }
 			) {
 				edges {
+					previous {
+						fields {
+							slug
+						}
+						frontmatter {
+							title
+						}
+					}
+					next {
+						fields {
+							slug
+						}
+						frontmatter {
+							title
+						}
+					}
 					node {
 						fields {
 							slug
+						}
+						frontmatter {
+							title
 						}
 					}
 				}
@@ -149,14 +169,20 @@ exports.createPages = async ({ graphql, actions }) => {
 		}
 	`)
 
-	edges.forEach(({ node }) => {
+	const previous = R.pluck('previous')(edges)
+	const next = R.pluck('next')(edges)
+	const nodes = R.pluck('node')(edges)
+
+	nodes.forEach(({ fields: { slug } }, index, { length }) => {
 		createPage({
-			path: node.fields.slug,
+			path: slug,
 			component: path.resolve(`./src/templates/work-post.js`),
 			context: {
 				// Data passed to context is available
 				// in page queries as GraphQL variables.
-				slug: node.fields.slug
+				slug,
+				previous: previous[index] || previous[length - 1],
+				next: next[index] || next[0]
 			}
 		})
 	})

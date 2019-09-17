@@ -10,12 +10,12 @@ function Header() {
 		<header
 			id="top"
 			ref={node}
-			className="h-7"
+			className="max-h-mh md:h-dh md:max-h-dh"
 			style={{ ...wrapper, position: 'relative', zIndex: '90' }}
 		>
 			<div
 				style={innerStyle}
-				className="p-4 md:p-6 h-7 flex bg-accent items-center justify-start w-full border-b border-light-30 z-20 relative w-full"
+				className="p-4 md:p-6 flex bg-accent items-center justify-start w-full border-b border-light-30 z-20 relative w-full"
 			>
 				<Logo />
 				<Nav />

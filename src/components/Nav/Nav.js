@@ -25,15 +25,24 @@ const variants = {
 		transition: {
 			y: { stiffness: 1000 }
 		}
+	},
+	initial: {
+		opacity: 1,
+		y: 0
 	}
 }
 
 const listVariants = {
 	open: {
+		opacity: 1,
 		transition: { staggerChildren: 0.07, delayChildren: 0.2 }
 	},
 	closed: {
-		transition: { staggerChildren: 0.05, staggerDirection: -1 }
+		transition: { staggerChildren: 0.05, staggerDirection: -1 },
+		opacity: 0
+	},
+	initial: {
+		opacity: 1
 	}
 }
 
@@ -46,6 +55,9 @@ const socialVariant = {
 	},
 	closed: {
 		opacity: 0
+	},
+	initial: {
+		opacity: 1
 	}
 }
 
@@ -53,7 +65,7 @@ const Item = forwardRef(
 	({ title, onClick, last = false, slug, shouldAnimate = false }, ref) => {
 		return (
 			<motion.li
-				variants={shouldAnimate ? variants : {}}
+				variants={variants}
 				whileHover={{ scale: shouldAnimate ? 1.1 : 1 }}
 				whileTap={{ scale: shouldAnimate ? 0.95 : 1 }}
 				className={classNames('text-lg md:text-rg text-center', {
@@ -138,7 +150,7 @@ function Nav() {
 
 	const onClick = e => {
 		const { target } = e
-		const delay = target.pathname === window.location.pathname
+		const delay = target.pathname === window.location.pathname ? 0 : 2000
 		scrollTo(target.hash, delay)
 		if (isOpen) setOpen(false)
 	}
@@ -149,7 +161,7 @@ function Nav() {
 		<motion.nav
 			ref={navRef}
 			initial={false}
-			animate={isOpen ? 'open' : 'closed'}
+			animate={isOpen ? 'open' : shouldAnimate ? 'closed' : 'initial'}
 			custom={height}
 			aria-hidden={isOpen}
 			className="w-full"
@@ -195,7 +207,8 @@ function Nav() {
 				</motion.ul>
 
 				<motion.aside
-					variants={shouldAnimate && socialVariant}
+					initial="closed"
+					variants={socialVariant}
 					className="mt-12 md:mt-0"
 				>
 					<Social linkedin="#0" github="#0" />

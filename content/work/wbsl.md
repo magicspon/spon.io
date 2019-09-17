@@ -3,6 +3,13 @@ title: WB Studios
 date: '2019-02-01T22:12:03.284Z'
 teaser: ../assets/WB_cover.png
 templateKey: work
+site:
+  text: wbsl.com
+  url: https://www.wbsl.com/
+role:
+  title: Sr Frontend Developer
+  at: Our Name is Mud
+  link: https://ournameismud.co.uk/
 client:
   text: Warner Bros Studios Leavesden
   url: https://www.wbsl.com/

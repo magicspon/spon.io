@@ -3,6 +3,13 @@ title: The Leading Edge
 date: '2019-02-01T22:12:03.284Z'
 teaser: ../assets/the_leading_edge_cover.jpg
 templateKey: work
+site:
+  text: theleadingedge.com
+  url: https://theleadingedge.com/
+role:
+  title: Sr Frontend Developer
+  at: Our Name is Mud
+  link: https://ournameismud.co.uk/
 client:
   text: Leading Edge
   url: https://theleadingedge.com/

@@ -3,6 +3,13 @@ title: straightline
 date: '2019-01-01T22:12:03.284Z'
 teaser: ../assets/straightline_cover.png
 templateKey: work
+site:
+  text: wearestraightline.co.uk
+  url: https://wearestraightline.com
+role:
+  title: Sr Frontend Developer
+  at: Our Name is Mud
+  link: https://ournameismud.co.uk/
 client:
   text: National Prison Radio
   url: https://prison.radio/national-prison-radio/

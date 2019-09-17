@@ -39,7 +39,14 @@ module.exports = {
 			},
 
 			height: {
+				mh: px2rem(60),
+				dh: px2rem(76),
 				window: 'calc(var(--vh) * 100)'
+			},
+
+			maxHeight: {
+				mh: px2rem(60),
+				dh: px2rem(76)
 			},
 
 			colors,

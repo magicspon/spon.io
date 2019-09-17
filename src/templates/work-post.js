@@ -1,6 +1,6 @@
 /* eslint-disable react/no-danger, react/prop-types */
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Image from 'gatsby-image'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
@@ -11,26 +11,11 @@ import RichText from '@/components/RichText'
 import BackToTop from '@/components/BackToTop'
 import { getImage } from '@/utils'
 
-const AnimatedImage = motion.custom(Image)
-
-const TextArea = motion.custom(RichText)
-
-const banner = {
-	hidden: { opacity: 0, y: 40 },
-	visible: {
-		opacity: 1,
-		y: 0,
-		transition: {
-			delay: 0.05
-		}
-	}
-}
-
 const desktop = {
 	initial: { opacity: 0, x: -40 },
 	exit: {
 		opacity: 0,
-		y: 40
+		x: -40
 	},
 	enter: {
 		opacity: 1,
@@ -43,7 +28,7 @@ const desktop = {
 
 const mobileAnimation = {
 	initial: { opacity: 0, x: 40 },
-	exit: { opacity: 0, y: 40 },
+	exit: { opacity: 0, x: 40 },
 	enter: {
 		opacity: 1,
 		x: 0,
@@ -56,17 +41,18 @@ const mobileAnimation = {
 const container = {
 	visible: {
 		transition: {
-			when: 'beforeChildren',
-			delayChildren: 0.1,
-			staggerChildren: 0.5
+			staggerChildren: 0.2
 		}
 	}
 }
 
 const fade = {
-	hidden: { opacity: 0 },
-	visible: {
+	exit: {
+		opacity: 0
+	},
+	enter: {
 		opacity: 1,
+		y: 0,
 		transition: {
 			delay: 0.05
 		}
@@ -79,12 +65,31 @@ function WorkPost({
 		site: {
 			siteMetadata: { siteTitle }
 		}
+	},
+	pageContext: {
+		next: {
+			fields: { slug: nextSlug },
+			frontmatter: { title: nextTitle }
+		},
+		previous: {
+			fields: { slug: prevSlug },
+			frontmatter: { title: prevTitle }
+		}
 	}
 }) {
 	const [ref, inView] = useInView({
 		threshold: 0.1
 	})
-	const { image, mobile, agency, client, design, title } = frontmatter
+	const {
+		image,
+		mobile,
+		agency,
+		client,
+		design,
+		title,
+		site,
+		role
+	} = frontmatter
 
 	const hero = getImage(image)
 	const mHero = getImage(mobile)
@@ -120,16 +125,10 @@ function WorkPost({
 				</div>
 			</div>
 			<div ref={ref}>
-				<motion.section
-					variants={container}
-					initial="hidden"
-					animate="visible"
-					className="px-4 md:px-6 text-center lg:text-left lg:flex lg:flex-wrap -ml-12 lg:mb-12"
-				>
+				<section className="px-4 md:px-6 text-center lg:text-left lg:flex lg:flex-wrap -ml-12 lg:mb-12">
 					<motion.div
 						variants={fade}
-						initial="hidden"
-						animate={inView ? 'visible' : 'hidden'}
+						animate={inView ? 'enter' : 'exit'}
 						className="lg:w-1/3 pl-12"
 					>
 						<div className="lg:border-t lg:border-light-30 lg:pt-12">
@@ -139,8 +138,8 @@ function WorkPost({
 							<aside className="mb-8 ">
 								<Credits
 									visit={{
-										name: 'wearestraightline.com',
-										link: 'https://wearestraightline.com'
+										name: site.text,
+										link: site.url
 									}}
 									stack={['Craft', 'React', 'Craftql', 'Gatsby']}
 									details={{
@@ -161,18 +160,46 @@ function WorkPost({
 							</aside>
 						</div>
 					</motion.div>
-					<TextArea
+					<motion.div
 						variants={fade}
-						initial="hidden"
-						animate={inView ? 'visible' : 'hidden'}
+						animate={inView ? 'enter' : 'exit'}
 						className="mb-8 lg:w-2/3 pl-12"
 					>
-						<article
-							className="lg:border-t lg:border-light-30  lg:pt-12"
-							dangerouslySetInnerHTML={{ __html: html }}
-						/>
-					</TextArea>
-				</motion.section>
+						<div className="lg:border-t lg:border-light-30 lg:pt-12">
+							<dl className="flex text-sm mb-8">
+								<dt className="mr-4 text-brand">Role: </dt>
+								<dd>
+									{role.title}
+									{role.at && (
+										<>
+											{' '}
+											at{' '}
+											<a
+												target="_blank"
+												rel="noopener noreferrer"
+												href={role.link}
+											>
+												{role.at}
+											</a>
+										</>
+									)}
+								</dd>
+							</dl>
+							<RichText
+								className="mb-8"
+								dangerouslySetInnerHTML={{ __html: html }}
+							/>
+							<div className="flex justify-between">
+								<Link title={prevTitle} to={prevSlug}>
+									{'<'} Previous
+								</Link>
+								<Link title={nextTitle} to={nextSlug}>
+									Next {'>'}
+								</Link>
+							</div>
+						</div>
+					</motion.div>
+				</section>
 			</div>
 			<div className="mb-12">
 				<BackToTop />
@@ -188,6 +215,10 @@ export const query = graphql`
 			frontmatter {
 				title
 				stack
+				site {
+					text
+					url
+				}
 				design {
 					text
 					url
@@ -201,6 +232,11 @@ export const query = graphql`
 				client {
 					text
 					url
+				}
+				role {
+					title
+					at
+					link
 				}
 				image {
 					childImageSharp {
