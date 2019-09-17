@@ -49,11 +49,35 @@ export function getContent(content) {
 	)(frontmatter)
 }
 
+const times = {
+	1: `It's late, time for bed...`,
+	2: `It's 2 in the morning, turn it all off...`,
+	3: `This is not a 3 in the morning type of site...`,
+	4: `Why are you awake...`,
+	5: `I hope you're not getting up for work at this hour...`,
+	6: `It's still to early, go back to bed...`,
+	7: `Morning, coffee, face, now...`,
+	8: `Good morning, more coffee please...`,
+	9: `Good morning...`,
+	10: `Good morning...`,
+	11: `Good morning, it's nearly lunch...`,
+	12: `Lunch o'clock, belly rumbles...`,
+	13: `Lunch o'clock, belly joys...`,
+	14: `Good afternoon, how was lunch?`,
+	15: `Good afternoon, thinking about dinner?`,
+	16: `Good afternoon...`,
+	17: `Good afternoon, dinner designs?`,
+	18: `Good evening, it's nearly dinner time...`,
+	19: `Good evening, dinner is ready...`,
+	20: `Good evening, how was dinner?`,
+	21: `Good evening...`,
+	22: `Good evening, how's the moon looking tonight?`,
+	23: `Good evening...`,
+	24: `Good night, I'll be here in the morning...`
+}
+
 export function getGreeting() {
-	const time = format(Date.now(), 'H')
-	return time > 2 && time < 12
-		? 'morning'
-		: time >= 12 && time < 18
-		? 'afternoon'
-		: 'evening'
+	const now = Date.now()
+	const time = format(now, 'H')
+	return times[time]
 }

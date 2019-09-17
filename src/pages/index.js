@@ -53,6 +53,8 @@ function Index({ data }) {
 		value: value.split(',')
 	}))
 
+	const greeting = getGreeting()
+
 	return (
 		<motion.div
 			initial="initial"
@@ -74,7 +76,7 @@ function Index({ data }) {
 					variants={textVariants}
 					className="mb-4 text-md md:text-md-lg lg:text-lg block"
 				>
-					Good {getGreeting()}...
+					{greeting}
 				</motion.h1>
 				<motion.div
 					variants={textVariants}
@@ -151,7 +153,7 @@ export const pageQuery = graphql`
 		}
 		work: allMarkdownRemark(
 			filter: { frontmatter: { templateKey: { eq: "work" } } }
-			sort: { fields: frontmatter___date }
+			sort: { fields: frontmatter___date, order: DESC }
 		) {
 			edges {
 				node {

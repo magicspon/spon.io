@@ -1,6 +1,6 @@
 ---
 title: Search Star
-date: '2019-02-01T22:12:03.284Z'
+date: '2017-02-01T22:12:03.284Z'
 teaser: ../assets/searchstar_cover.png
 templateKey: work
 site:

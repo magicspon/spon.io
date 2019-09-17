@@ -1,6 +1,6 @@
 ---
 title: The Leading Edge
-date: '2019-02-01T22:12:03.284Z'
+date: '2018-02-01T22:12:03.284Z'
 teaser: ../assets/the_leading_edge_cover.jpg
 templateKey: work
 site:

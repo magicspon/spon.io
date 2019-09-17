@@ -1,6 +1,6 @@
 ---
 title: Honest Studio
-date: '2019-02-01T22:12:03.284Z'
+date: '2018-12-01T22:12:03.284Z'
 teaser: ../assets/honest_cover.png
 templateKey: work
 site:

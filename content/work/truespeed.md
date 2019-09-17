@@ -1,6 +1,6 @@
 ---
 title: Truespeed
-date: '2019-02-01T22:12:03.284Z'
+date: '2019-05-01T22:12:03.284Z'
 teaser: ../assets/truespeed_cover.png
 templateKey: work
 site:
