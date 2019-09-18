@@ -10,7 +10,14 @@ function Footer({ year, text, linkedin, github }) {
 			</div>
 
 			<p className="m-0 text-white-40 text-sm text-center md:text-left">
-				&copy; {year} Spon.io LTD - {text}
+				&copy; {year} Spon.io LTD - {text} | Built with 🍺 and Gatsby,{' '}
+				<a
+					href="https://github.com/magicspon/spon.io"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					Source
+				</a>
 			</p>
 		</div>
 	)
