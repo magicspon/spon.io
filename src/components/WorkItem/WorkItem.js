@@ -59,7 +59,7 @@ const WorkItem = forwardRef(({ title, image, stack }, ref) => {
 				whileHover="open"
 				whileTap="open"
 			>
-				<Title initial="closed" variants={text} className="lg:text-lg">
+				<Title initial="closed" variants={text} className="md:text-lg">
 					{title}
 				</Title>
 				<div className="relative">

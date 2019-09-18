@@ -23,7 +23,7 @@ design:
   label: Agency/Design
   text: Mud
   url: https://ournameismud.co.uk/
-stack: Craft CMS, twig, jQuery
+stack: Craft CMS, Canvas API, jQuery
 image: ../assets/searchstar_desktop.png
 mobile: ../assets/searchstar_mobile.png
 ---

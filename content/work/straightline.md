@@ -23,7 +23,7 @@ design:
   label: Agency/Design
   text: Mud
   url: https://ournameismud.co.uk/
-stack: Gatsby, React, Craft CMS
+stack: Gatsby, Graphql, Craft CMS
 image: ../assets/straightline_desktop.png
 mobile: ../assets/straightline_mobile.png
 ---

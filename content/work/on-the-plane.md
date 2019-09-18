@@ -21,8 +21,6 @@ mobile: ../assets/ontheplane_mobile.png
 
 Football! This was an internal project at [Our Name is Mud](https://ournameismud.co.uk/) to celebrate the 2018 World Cup.
 
-We built a bunch of charts and graphics using [Recharts](http://recharts.org/en-US/) to illustrate various world cup statistics.
-
-We built a live voting system and a spot spot the ball competition with [Firebase](https://firebase.google.com/).
+We built a bunch of charts and graphics using [Recharts](http://recharts.org/en-US/) to illustrate various world cup statistics and a live voting system and a spot spot the ball competition with [Firebase](https://firebase.google.com/).
 
 It was all put together with the wonderful [Gatsby](https://www.gatsbyjs.org/).

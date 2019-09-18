@@ -21,7 +21,7 @@ design:
   label: Agency/Dev
   text: Mud
   url: https://ournameismud.co.uk/
-stack: Craft CMS, Barba JS, Vue JS
+stack: Craft CMS, Canvas API, Vue JS
 image: ../assets/the_leading_edge_desktop.png
 mobile: ../assets/the_leading_edge_mobile.png
 ---
