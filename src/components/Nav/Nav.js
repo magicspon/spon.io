@@ -130,7 +130,7 @@ function scrollTo(hash, delay) {
 	}, delay)
 }
 
-function Nav() {
+function Nav({ github, linkedin }) {
 	const { isOpen, setOpen } = useContext(MenuStatus)
 	const $firstNode = useRef(null)
 	const shouldAnimate = useMediaQuery('(max-width: 736px)')
@@ -212,13 +212,18 @@ function Nav() {
 					variants={socialVariant}
 					className="mt-12 md:mt-0"
 				>
-					<Social linkedin="#0" github="#0" />
+					<Social linkedin={linkedin} github={github} />
 				</motion.aside>
 			</div>
 
 			<MenuButton className="md:hidden absolute top-3 my-auto right-0" />
 		</motion.nav>
 	)
+}
+
+Nav.propTypes = {
+	github: string,
+	linkedin: string
 }
 
 export default memo(Nav)

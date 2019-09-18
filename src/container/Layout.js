@@ -96,7 +96,10 @@ function Layout({ children, location: { pathname, href } }) {
 						<meta name="og:locale" content="en_GB" />
 						<meta name="og:type" content="website" />
 					</Helmet>
-					<Header />
+					<Header
+						github={siteMetadata.social.github}
+						linkedin={siteMetadata.social.github}
+					/>
 					<main className="w-full flex-grow max-w-6xl mx-auto">
 						<AnimatePresence exitBeforeEnter initial={false}>
 							{children}
