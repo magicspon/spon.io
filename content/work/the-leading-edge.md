@@ -26,8 +26,8 @@ image: ../assets/the_leading_edge_desktop.png
 mobile: ../assets/the_leading_edge_mobile.png
 ---
 
-<a href="https://ournameismud.co.uk/">Our Name is Mud</a> teamed up with <a href="http://our-design-agency.com/clients/">Our Design Agency</a> to build this site for global strategy consultants <a href="https://theleadingedge.com/">The Leading Edge</a>.
+[Our Name is Mud]("https://ournameismud.co.uk/") teamed up with [Our Design Agency](http://our-design-agency.com/) to build this site for global strategy consultants [The Leading Edge](https://theleadingedge.com/).
 
 The site has got some funky canvas animations which were a lot of fun to build.
 
-As is standard with Mud, the backend was built using <a href="https://craftcms.com">Craft CMS</a>
+As is standard with Mud, the backend was built using [Craft CMS]("https://craftcms.com")

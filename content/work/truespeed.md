@@ -22,6 +22,6 @@ image: ../assets/truespeed_desktop.png
 mobile: ../assets/truespeed_mobile.png
 ---
 
-Whilst contracting at Creative Design and Branding agency <a href="https://mrbandfriends.co.uk/">Mr B & Friends</a> I built this website for high speed internet providers <a href="https://www.truespeed.com/">Truespeed</a>.
+Whilst contracting at Creative Design and Branding agency [Mr B & Friends](https://mrbandfriends.co.uk/) I built this website for high speed internet providers [Truespeed](https://www.truespeed.com/).
 
-With a new brand in place I was tasked with upgrading their existig <a href="https://craftcms.com">Craft CMS</a> site to the newly released version 3. I also refactored the frontend codebase using <a href="https://tailwindcss.com">Tailwind CSS</a> and my own light weight javascript framework <a href="https://github.com/magicspon/spon-core/tree/v1">@spon/core.</a>
+With a new brand in place I was tasked with upgrading their existig [Craft CMS]("https://craftcms.com") site to the newly released version 3. I also refactored the frontend codebase using [Tailwind CSS](https://tailwindcss.com) and my own light weight javascript framework [@spon/core](https://github.com/magicspon/spon-core/tree/v1).
