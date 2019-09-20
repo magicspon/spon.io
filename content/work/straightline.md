@@ -28,8 +28,6 @@ image: ../assets/straightline_desktop.png
 mobile: ../assets/straightline_mobile.png
 ---
 
-This one is another collaboration between [Supple Studios]("http://www.supplestudio.com/") and [Our Name is Mud]("https://ournameismud.co.uk/"). This is the second version of the website.
+This site is a collaboration between [Supple Studios]("http://www.supplestudio.com/") and [Our Name is Mud]("https://ournameismud.co.uk/").
 
-The site is full of rich media, including audio, podcasts, and video, as well as an extensive catelogue of articles. The site also serves as a platfrom for friends and relativites to request songs for loved ones currently serving time in prison.
-
-The frontend is built using [Gatsby](https://www.gatsbyjs.org/), with the content being pulled in from a [Craft CMS]("https://craftcms.com") backend. We used the [CraftQL](https://github.com/markhuot/craftql) plugin which allowed us to take advange of Gatsby's [graphql](https://graphql.org/) interface.
+The frontend is built using [Gatsby](https://www.gatsbyjs.org/), with the content being authored in [Craft CMS]("https://craftcms.com"). I used the [CraftQL](https://github.com/markhuot/craftql) plugin, which implements Crafts api as a graphql schema, to take full advange of Gatsby's [graphql](https://graphql.org/) interface.

@@ -17,11 +17,11 @@ design:
   label: Agency
   text: Mr B & Friends
   url: https://mrbandfriends.co.uk/
-stack: Craft CMS, Fractal, TailwindCSS
+stack: Craft CMS, Fractal, Tailwind
 image: ../assets/truespeed_desktop.png
 mobile: ../assets/truespeed_mobile.png
 ---
 
-Whilst contracting at Creative Design and Branding agency [Mr B & Friends](https://mrbandfriends.co.uk/) I built this website for high speed internet providers [Truespeed](https://www.truespeed.com/).
+Whilst contracting at Creative Design and Branding agency [Mr B & Friends](https://mrbandfriends.co.uk/) I helped build this website for high speed internet providers [Truespeed](https://www.truespeed.com/).
 
-With a new brand in place I was tasked with upgrading their existig [Craft CMS]("https://craftcms.com") site to the newly released version 3. I also refactored the frontend codebase using [Tailwind CSS](https://tailwindcss.com) and my own light weight javascript framework [@spon/core](https://github.com/magicspon/spon-core/tree/v1).
+With a new brand in place I was tasked with upgrading their existing [Craft CMS]("https://craftcms.com") to the latest major release. I refactored the frontend codebase using [Tailwind CSS](https://tailwindcss.com) and my own lightweight javascript framework [@spon/core](https://github.com/magicspon/spon-core/tree/v1). The resulting codebase included a design system and component library, powered by [Fractal](https://fractal.build/), which is seamlessly integrated with the backend system.

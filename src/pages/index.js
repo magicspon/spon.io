@@ -3,6 +3,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import classNames from 'classnames'
+import { toPairs, compose, map } from 'ramda'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import FeaturedWork from '@/components/FeaturedWork'
@@ -48,10 +49,13 @@ function Index({ data }) {
 
 	const [{ title, html, ...rest }] = getContent(home)
 
-	const skills = Object.entries(rest).map(([key, value]) => ({
-		key,
-		value: value.split(',')
-	}))
+	const skills = compose(
+		map(([key, value]) => ({
+			key,
+			value: value.split(',')
+		})),
+		toPairs
+	)(rest)
 
 	const greeting = getGreeting()
 

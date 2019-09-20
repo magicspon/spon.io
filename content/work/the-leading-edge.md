@@ -21,13 +21,11 @@ design:
   label: Agency/Dev
   text: Mud
   url: https://ournameismud.co.uk/
-stack: Craft CMS, Canvas API, Vue JS
+stack: Craft CMS, Canvas API, Vue
 image: ../assets/the_leading_edge_desktop.png
 mobile: ../assets/the_leading_edge_mobile.png
 ---
 
 [Our Name is Mud]("https://ournameismud.co.uk/") teamed up with [Our Design Agency](http://our-design-agency.com/) to build this site for global strategy consultants [The Leading Edge](https://theleadingedge.com/).
 
-The site has got some funky canvas animations which were a lot of fun to build.
-
-As is standard with Mud, the backend was built using [Craft CMS]("https://craftcms.com")
+The frontend was built using Muds internal framework that integrates nicely with [Barba JS](https://barba.js.org/v1/) (a small library for handling page transitions). The backend was built using [Craft CMS]("https://craftcms.com")

@@ -64,13 +64,7 @@
 	},
 	"settings": {
 		"import/core-modules": [],
-		"polyfills": [
-			"Object.entries",
-			"Object.values",
-			"Array.from",
-			"Promise",
-			"Number.isNaN"
-		]
+		"polyfills": []
 	},
 	"env": {
 		"cypress/globals": true,

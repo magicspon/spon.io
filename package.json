@@ -162,9 +162,9 @@
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"coverage": "jest --coverage",
-		"lint:js": "eslint --ext src/js/** .",
-		"lint:css": "stylelint './src/**/*.js'",
-		"pretty": "prettier 'src/**/*.{js,jsx}' --write",
+		"lint:js": "eslint --ext src/**/*.js",
+		"lint:css": "stylelint './src/**/*.css'",
+		"pretty": "prettier 'src/**/*.{js,jsx,css}' --write",
 		"cy:run": "cypress run",
 		"cy:open": "cypress open"
 	}
