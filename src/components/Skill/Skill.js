@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { string, arrayOf } from 'prop-types'
+import classNames from 'classnames'
 import { isLast } from '@/utils'
 
-const Skill = ({ category, list }) => (
-	<ul className="list-reset flex flex-wrap justify-center">
+const Skill = ({ category, list, className }) => (
+	<ul className={classNames('flex flex-wrap justify-center', className)}>
 		<li className="mr-3 text-brand">{category}_</li>
 		{list.map((item, index) => (
 			<li key={item} className="whitespace-no-wrap">
@@ -14,10 +15,10 @@ const Skill = ({ category, list }) => (
 	</ul>
 )
 
-Skill.defaultProps = {}
 Skill.propTypes = {
 	category: string.isRequired,
-	list: arrayOf(string).isRequired
+	list: arrayOf(string).isRequired,
+	className: string
 }
 
-export default Skill
+export default memo(Skill)

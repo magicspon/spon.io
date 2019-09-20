@@ -1,25 +1,49 @@
+/* eslint-disable no-param-reassign */
+
 const path = require('path')
 const webpack = require('webpack')
-const PurgeCssPlugin = require('purgecss-webpack-plugin')
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
-const generateWebpackConfig = require('../scripts/generateWebpackConfig')
-const purgeConfig = require('../scripts/purge')
+const hash = require('string-hash')
 
 // Export a function. Accept the base config as the only param.
-module.exports = (storybookBaseConfig, configType) => {
-	const isProduction = configType === 'PRODUCTION'
+module.exports = async ({ config, mode }) => {
+	const isProduction = mode
+	// const src = path.resolve(__dirname, '../src')
+	const { rules } = config.module
 
-	const rules = [
-		{
-			test: /\.(jpg|png|jpeg|jpg)$/,
-			loader: 'file-loader',
-			include: path.resolve(__dirname, '../static/')
-		},
-		{
-			test: /\.story\.js?$/,
-			loaders: [require.resolve('@storybook/addon-storysource/loader')],
-			enforce: 'pre'
-		},
+	// Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
+	config.module.rules[0].exclude = [/node_modules\/(?!(gatsby)\/)/]
+
+	// use installed babel-loader which is v8.0-beta (which is meant to work with @babel/core@7)
+	config.module.rules[0].use[0].loader = require.resolve('babel-loader')
+
+	// use @babel/preset-react for JSX and env (instead of staged presets)
+	config.module.rules[0].use[0].options.presets = [
+		require.resolve('@babel/preset-react'),
+		require.resolve('@babel/preset-env')
+	]
+
+	/*
+	config.module.rules[0].use[0].options.plugins = [
+		require.resolve('@babel/plugin-proposal-class-properties'),
+		require.resolve('babel-plugin-remove-graphql-queries')
+	]
+	*/
+
+	config.module.rules = rules
+		.filter(f => f.test.toString() !== '/\\.css$/')
+		.filter(f => f.test.toString() !== '/\\.module\\.css$/')
+		.map(f => {
+			if (f.test.toString().includes('svg')) {
+				return {
+					...f,
+					exclude: /icons/
+				}
+			}
+
+			return f
+		})
+
+	config.module.rules.push(
 		{
 			test: /\.css$/,
 			exclude: /\.module\.css$/,
@@ -28,8 +52,8 @@ module.exports = (storybookBaseConfig, configType) => {
 				{
 					loader: 'css-loader',
 					options: {
-						importLoaders: 1,
-						localIdentName: 'mod-[hash:base64:8]'
+						importLoaders: 1
+						// localIdentName: 'mod-[hash:base64:8]'
 					}
 				},
 				'postcss-loader'
@@ -45,34 +69,49 @@ module.exports = (storybookBaseConfig, configType) => {
 					loader: 'css-loader',
 					options: {
 						importLoaders: 1,
-						modules: true,
-						localIdentName: '[local]-[hash:base64:5]'
+						modules: true
+						// localIdentName: '[local]-[hash:base64:5]'
 					}
 				},
 				'postcss-loader'
 			],
 			include: path.resolve(__dirname, '../src')
-		}
-	]
+		},
 
-	const plugins = [
+		{
+			test: /\.svg$/,
+			include: path.resolve(__dirname, '../src/icons'),
+			use: ({ resource }) => [
+				{
+					loader: ['svg-react-loader'],
+					options: {
+						jsx: true,
+						svgo: {
+							plugins: [
+								{
+									cleanupIDs: {
+										prefix: `svg${hash(path.relative(__dirname, resource))}`
+									}
+								}
+							]
+						}
+					}
+				}
+			]
+		}
+	)
+
+	config.plugins.push(
 		new webpack.DefinePlugin({
 			STORYBOOK: JSON.stringify(true),
 			PRODUCTION: JSON.stringify(isProduction)
 		})
-	]
+	)
 
-	if (isProduction) {
-		console.log(isProduction)
-		plugins.push(
-			new PurgeCssPlugin(purgeConfig),
-			new OptimizeCSSAssetsPlugin({})
-		)
-	}
+	config.resolve.alias['@'] = path.resolve(__dirname, '../src/')
+	config.resolve.alias['~'] = path.resolve(__dirname, '../static/')
 
-	// Return the altered config
-	return generateWebpackConfig(storybookBaseConfig, {
-		rules,
-		plugins
-	})
+	config.resolve.mainFields = ['browser', 'module', 'main']
+
+	return config
 }

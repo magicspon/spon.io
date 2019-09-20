@@ -1,1 +1,1 @@
-module.exports = require('react-generator-templates')
+module.exports = require('./scaffold')

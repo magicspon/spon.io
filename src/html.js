@@ -1,7 +1,8 @@
 /* eslint-disable react/require-default-props, react/forbid-prop-types, react/no-danger */
 
 import React from 'react'
-import PropTypes from 'prop-types'
+import { object, array, string } from 'prop-types'
+import 'typeface-roboto-slab'
 
 const HTML = ({
 	htmlAttributes,
@@ -34,12 +35,12 @@ const HTML = ({
 )
 
 HTML.propTypes = {
-	htmlAttributes: PropTypes.object,
-	headComponents: PropTypes.array,
-	bodyAttributes: PropTypes.object,
-	preBodyComponents: PropTypes.array,
-	body: PropTypes.string,
-	postBodyComponents: PropTypes.array
+	htmlAttributes: object,
+	headComponents: array,
+	bodyAttributes: object,
+	preBodyComponents: array,
+	body: string,
+	postBodyComponents: array
 }
 
 export default HTML

@@ -1,22 +1,33 @@
 import React from 'react'
-import { number, string } from 'prop-types'
+import { number, string, oneOfType } from 'prop-types'
 import Social from '@/components/Social/Social'
 
-const Footer = ({ year, text }) => (
-	<div className="bg-dark p-6 md:flex justify-between items-center flex-row-reverse">
-		<div className="mb-7 md:mb-0">
-			<Social linkedin="#0" github="#0" />
-		</div>
+function Footer({ year, text, linkedin, github }) {
+	return (
+		<div className="bg-dark p-6 md:flex justify-between items-center flex-row-reverse w-full">
+			<div className="mb-6 md:mb-0">
+				<Social linkedin={linkedin} github={github} />
+			</div>
 
-		<p className="m-0 text-white-40 text-sm text-center md:text-left">
-			&copy; 2018 - Dave Stockley, Frontend Web Developer based in Bristol
-		</p>
-	</div>
-)
+			<p className="m-0 text-white-40 text-sm text-center md:text-left">
+				&copy; {year} Spon.io LTD - {text} | Built with 🍺 and Gatsby,{' '}
+				<a
+					href="https://github.com/magicspon/spon.io"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					Source
+				</a>
+			</p>
+		</div>
+	)
+}
 
 Footer.propTypes = {
-	year: number.isRequired,
-	text: string.isRequired
+	year: oneOfType([number, string]).isRequired,
+	text: string.isRequired,
+	github: string.isRequired,
+	linkedin: string.isRequired
 }
 
 export default Footer
