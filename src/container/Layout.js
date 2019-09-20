@@ -98,7 +98,7 @@ function Layout({ children, location: { pathname, href } }) {
 					</Helmet>
 					<Header
 						github={siteMetadata.social.github}
-						linkedin={siteMetadata.social.github}
+						linkedin={siteMetadata.social.linkedin}
 					/>
 					<main className="w-full flex-grow max-w-6xl mx-auto flex flex-col">
 						<AnimatePresence exitBeforeEnter initial={false}>
