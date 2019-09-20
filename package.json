@@ -30,6 +30,7 @@
 		"gatsby-source-filesystem": "^2.1.22",
 		"gatsby-transformer-remark": "^2.6.22",
 		"gatsby-transformer-sharp": "^2.2.14",
+		"intersection-observer": "^0.7.0",
 		"prop-types": "^15.7.2",
 		"raf-throttle": "^2.0.3",
 		"ramda": "^0.26.1",
