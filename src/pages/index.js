@@ -180,6 +180,7 @@ export const pageQuery = graphql`
 									sizes
 									presentationWidth
 									presentationHeight
+									tracedSVG
 								}
 							}
 						}

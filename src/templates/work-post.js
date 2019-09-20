@@ -254,6 +254,7 @@ export const query = graphql`
 				image {
 					childImageSharp {
 						fluid {
+							tracedSVG
 							srcSet
 							srcWebp
 							srcSetWebp
@@ -268,6 +269,7 @@ export const query = graphql`
 				mobile {
 					childImageSharp {
 						fluid {
+							tracedSVG
 							srcSet
 							srcWebp
 							srcSetWebp
