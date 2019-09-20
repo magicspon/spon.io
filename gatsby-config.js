@@ -22,6 +22,7 @@ module.exports = {
 		logo: '/favicon.png'
 	},
 	plugins: [
+		'gatsby-plugin-sitemap',
 		{
 			resolve: `gatsby-plugin-nprogress`,
 			options: {
