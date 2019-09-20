@@ -30,7 +30,7 @@ function NotFoundPage() {
 					exit: { transition: { staggerChildren: 0.1 } },
 					enter: { transition: { staggerChildren: 0.1 } }
 				}}
-				className="text-center"
+				className="text-center flex justify-center items-center flex-grow"
 			>
 				<motion.div variants={textVariants}>
 					<Heading className="text-xl mb-10">

@@ -61,6 +61,7 @@ function Index({ data }) {
 
 	return (
 		<motion.div
+			className="w-full"
 			initial="initial"
 			animate="enter"
 			exit="exit"

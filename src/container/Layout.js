@@ -100,7 +100,7 @@ function Layout({ children, location: { pathname, href } }) {
 						github={siteMetadata.social.github}
 						linkedin={siteMetadata.social.github}
 					/>
-					<main className="w-full flex-grow max-w-6xl mx-auto">
+					<main className="w-full flex-grow max-w-6xl mx-auto flex flex-col">
 						<AnimatePresence exitBeforeEnter initial={false}>
 							{children}
 						</AnimatePresence>
