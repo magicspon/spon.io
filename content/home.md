@@ -7,4 +7,4 @@ Libraries: React, Gatsby, Vue, Redux, Ramda, jQuery
 CMS: Craft CMS, Expression Engine, Netlify CMS, Wordpress
 ---
 
-I'm Dave. I'm a freelance frontend web developer based in Bristol, UK. With over 8 years of experience in building for the web, I help agencies and SMB's build beautiful websites and apps.
+I'm Dave. I'm a freelance frontend web developer based in Bristol, UK. With over 8 years of experience in building for the web, I help agencies and SMBs build beautiful websites and apps.
