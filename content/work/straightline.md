@@ -1,6 +1,6 @@
 ---
 title: straightline
-date: '2019-01-01T22:12:03.284Z'
+date: '2019-09-01T22:12:03.284Z'
 teaser: ../assets/straightline_cover.png
 templateKey: work
 site:
