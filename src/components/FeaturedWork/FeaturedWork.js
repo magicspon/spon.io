@@ -46,6 +46,7 @@ function FeaturedWork({ work }) {
 								slug={feature.slug}
 								stack={feature.stack}
 							/>
+							{feature.title}
 						</Link>
 					</motion.li>
 				)

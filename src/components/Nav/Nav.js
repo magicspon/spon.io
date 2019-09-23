@@ -167,7 +167,7 @@ function Nav({ github, linkedin }) {
 			className="w-full"
 		>
 			<motion.div
-				className="absolute bg-brand opacity-0 top-0 h-window right-0 w-full md:hidden"
+				className="absolute pointer-events-none bg-brand opacity-0 top-0 h-window right-0 w-full md:hidden"
 				variants={sidebar}
 				initial="closed"
 			/>
