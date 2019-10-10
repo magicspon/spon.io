@@ -28,8 +28,8 @@ image: ../assets/searchstar_desktop.png
 mobile: ../assets/searchstar_mobile.png
 ---
 
-This was fun to build! The design champs over at [Supple Studios]("http://www.supplestudio.com/") created a smashing new brand for PPC agency [Search Star](https://www.search-star.co.uk).
+This was fun to build! The design champs over at [Supple Studios](http://www.supplestudio.com/) created a smashing new brand for PPC agency [Search Star](https://www.search-star.co.uk).
 
-[Our Name is Mud]("https://ournameismud.co.uk/") were tasked with building the new website. Part of the brief was to create a series of animations of 100's of arrows forming various shapes.
+[Our Name is Mud](https://ournameismud.co.uk/) were tasked with building the new website. Part of the brief was to create a series of animations of 100's of arrows forming various shapes.
 
-The backend is built with [Craft CMS]("https://craftcms.com").
+The backend is built with [Craft CMS](https://craftcms.com).
