@@ -8,7 +8,7 @@ module.exports = {
 		siteTitle: 'spon.io web development',
 		description: 'Frontend Web Developer based in Bristol, UK',
 		social: {
-			linkedin: 'https://www.linkedin.com/in/spon/',
+			linkedin: 'https://www.linkedin.com/in/magicspon/',
 			github: 'https://github.com/magicspon',
 			twitterHandle: '@magicspon'
 		},
