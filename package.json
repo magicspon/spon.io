@@ -157,6 +157,7 @@
 	},
 	"scripts": {
 		"dev": "gatsby develop",
+		"clean": "gatsby clean",
 		"start": "npm run dev",
 		"storybook": "STORYBOOK_ENV=storybook start-storybook -s ./static -p 6006",
 		"storybook:build": "STORYBOOK_ENV=storybook build-storybook -s ./static -c .storybook -o docs",

@@ -103,14 +103,14 @@ exports.onCreateWebpackConfig = ({ actions, stage, getConfig, rules }) => {
 
 	// Add PurgeCSS in production
 	// See: https://github.com/gatsbyjs/gatsby/issues/5778#issuecomment-402481270
-	if (stage.includes('build')) {
-		actions.setWebpackConfig({
-			plugins: [
-				new PurgeCssPlugin(purgeConfig),
-				new OptimizeCSSAssetsPlugin({})
-			]
-		})
-	}
+	// if (stage.includes('build')) {
+	// 	actions.setWebpackConfig({
+	// 		plugins: [
+	// 			new PurgeCssPlugin(purgeConfig),
+	// 			new OptimizeCSSAssetsPlugin({})
+	// 		]
+	// 	})
+	// }
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {

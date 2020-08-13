@@ -9,8 +9,7 @@ module.exports = {
 		description: 'Frontend Web Developer based in Bristol, UK',
 		social: {
 			linkedin: 'https://www.linkedin.com/in/magicspon/',
-			github: 'https://github.com/magicspon',
-			twitterHandle: '@magicspon'
+			github: 'https://github.com/magicspon'
 		},
 		author: 'Dave Stockley',
 		email: 'hello@spon.io',

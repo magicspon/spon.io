@@ -2,7 +2,7 @@ module.exports = {
 	plugins: [
 		require('precss'),
 		require('postcss-nested'),
-		require('tailwindcss')('./src/style/tailwind.config.js'),
+		require('tailwindcss'),
 		require(`postcss-preset-env`)({ stage: 0 })
 	]
 }
