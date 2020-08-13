@@ -4,7 +4,7 @@ import { AnimatePresence } from 'framer-motion'
 import {
 	disableBodyScroll,
 	enableBodyScroll,
-	clearAllBodyScrollLocks
+	clearAllBodyScrollLocks,
 } from 'body-scroll-lock'
 import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
@@ -32,7 +32,7 @@ export function Wrapper({ children }) {
 
 	return (
 		<MenuStatus.Provider value={{ isOpen, setOpen }}>
-			<div className="flex flex-col min-h-screen w-full" ref={$body}>
+			<div className="flex flex-col w-full min-h-screen" ref={$body}>
 				{children}
 			</div>
 		</MenuStatus.Provider>
@@ -40,7 +40,7 @@ export function Wrapper({ children }) {
 }
 
 Wrapper.propTypes = {
-	children: node.isRequired
+	children: node.isRequired,
 }
 
 function Layout({ children, location: { pathname, href } }) {
@@ -58,7 +58,6 @@ function Layout({ children, location: { pathname, href } }) {
 							social {
 								github
 								linkedin
-								twitterHandle
 							}
 						}
 					}
@@ -79,14 +78,6 @@ function Layout({ children, location: { pathname, href } }) {
 							name="twitter:description"
 							content={siteMetadata.description}
 						/>
-						<meta
-							name="twitter:site"
-							content={siteMetadata.social.twitterHandle}
-						/>
-						<meta
-							name="twitter:creator"
-							content={siteMetadata.social.twitterHandle}
-						/>
 						<meta name="twitter:image:src" content={siteMetadata.logo} />
 						<meta name="og:title" content={siteMetadata.siteTitle} />
 						<meta name="og:description" content={siteMetadata.description} />
@@ -100,7 +91,7 @@ function Layout({ children, location: { pathname, href } }) {
 						github={siteMetadata.social.github}
 						linkedin={siteMetadata.social.linkedin}
 					/>
-					<main className="w-full flex-grow max-w-6xl mx-auto flex flex-col">
+					<main className="flex flex-col flex-grow w-full max-w-6xl mx-auto">
 						<AnimatePresence exitBeforeEnter initial={false}>
 							{children}
 						</AnimatePresence>
@@ -119,7 +110,7 @@ function Layout({ children, location: { pathname, href } }) {
 
 Layout.propTypes = {
 	children: node.isRequired,
-	location: shape({ pathname: string.isRequired })
+	location: shape({ pathname: string.isRequired }),
 }
 
 export default Layout
