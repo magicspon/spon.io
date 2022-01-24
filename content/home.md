@@ -1,9 +1,9 @@
 ---
 title: Welcome to spon.io
 templateKey: home
-Languages: HTML, Javascript, Node, CSS, SCSS, Twig
+Languages: HTML, Typescript, Node, CSS, SCSS, Twig
 Tools: Git, npm, Webpack, Gulp, Fractal, Storybook
-Libraries: React, Gatsby, Vue, Redux, Ramda, jQuery
+Libraries: React, Nextjs, Gatsby, Vue, Redux, Ramda, jQuery
 CMS: Craft CMS, Expression Engine, Netlify CMS, Wordpress
 ---
 
