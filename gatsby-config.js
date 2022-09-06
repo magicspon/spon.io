@@ -17,7 +17,7 @@ module.exports = {
 		siteUrl: 'https://spon.io/',
 		github: 'github.com/magicspon',
 		year,
-		availability: 'Q3 2022',
+		availability: 'Q1 2023',
 		logo: '/favicon.png'
 	},
 	plugins: [
