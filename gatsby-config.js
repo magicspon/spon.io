@@ -87,7 +87,7 @@ module.exports = {
 		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {
-				name: 'Spon | Frontend Developer',
+				name: 'Spon | Fullstack Developer',
 				short_name: 'spon.io',
 				start_url: '/',
 				background_color: '#ffffff',
