@@ -10,29 +10,68 @@ const { title } = Astro.props;
 <html lang="en" class="bg-zinc-50 dark:bg-black">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<meta name="msapplication-TileColor" content="#2b5797">
+		<meta name="theme-color" content="#ffffff">
+		<meta name="title" content="South West UK Freelance Web Developer">
+		<meta name="description" content="Freelance web developer based in South West UK.  Specialising in React, Next, Typescript, Headless CMS. Always learning">
+		<meta name="keywords" content="web developer, developer south west, developer bristol, developer stroud, react developer, typescript.">
+		<meta name="robots" content="index, follow">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="language" content="English">
+		<meta name="revisit-after" content="21 days">
+		<meta name="author" content="David Stockley">
 		<title>{title}</title>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "ProfessionalService",
+				"name": "Spon.io",
+				"image": "https://spon.io/favicon.png",
+				"@id": "",
+				"url": "https://spon.io",
+				"telephone": "07807781379",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "Slad Road",
+					"addressLocality": "Stroud",
+					"postalCode": "GL5",
+					"addressCountry": "GB"
+				},
+				"geo": {
+					"@type": "GeoCoordinates",
+					"latitude": 51.74844,
+					"longitude": -2.2103915
+				},
+				"openingHoursSpecification": {
+					"@type": "OpeningHoursSpecification",
+					"dayOfWeek": [
+						"Monday",
+						"Tuesday",
+						"Wednesday",
+						"Thursday",
+						"Friday",
+						"Saturday",
+						"Sunday"
+					],
+					"opens": "00:00",
+					"closes": "23:59"
+				},
+				"sameAs": "https://spon.io" 
+			}
+			</script>
 	</head>
 	<body class="min-h-screen flex flex-col">
 		<slot />
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
-	}
 	html {
 		font-family: system-ui, sans-serif;
-		background-size: 224px;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
 </style>
+
