@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="spon.io">
+	<main class="max-w-5xl mx-auto w-full py-8 self-center flex-1 flex justify-center flex-col px-6">
+		<p class="spon mb-6 text-6xl md:text-9xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 self-start">spon.io</p>
+		<p class="text-sm text-zinc-600 dark:text-zinc-500 mb-24">Massive text seems to be popular these days</p>
+		<div class="max-w-xl mb-12">
+			<div class="text-lg font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">Hello, I’m Dave. <h1 class="spon inline">Freelance web developer/consultant</h1> based in the <h2 class="spon inline">South West, UK</h2>. With over 10 years of experience in building for the web, <h2 class="inline">I help agencies and SMBs build beautiful websites and apps</h2>.</div>
+		</div>
+		<h3 class="text-lg font-semibold tracking-tight spon inline-block self-start">Clients:</h3>
+		<p class="max-w-xl text-zinc-800 text-sm dark:text-zinc-100">Spring, Oomph, Healthwave, Capsule Cover, Mr B and Friends, Mud, Blast, Fiasco, Super User Studio, Sifted, Anything World, Cloud 8, Jetpack, More soda and more</p>
+	</main>
+</Layout>
+
+
+<style>
+	.spon {
+		-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+		background-image: linear-gradient(
+			294deg,
+			hsl(330, 100%, 45.1%) 0%,
+			hsl(330.39, 78.74%, 49.09%) 8.4%,
+			hsl(328.14, 69.81%, 50.06%) 15.5%,
+			hsl(324.73, 63.17%, 50.4%) 21.4%,
+			hsl(320.04, 56.08%, 50.34%) 26.5%,
+			hsl(313.65, 48.79%, 49.93%) 31%,
+			hsl(304.79, 42.31%, 49.23%) 35.2%,
+			hsl(292.85, 39.58%, 50.58%) 39.3%,
+			hsl(280.71, 42.89%, 53.41%) 43.5%,
+			hsl(268.79, 46.44%, 56.06%) 48.2%,
+			hsl(257.04, 50.21%, 58.52%) 53.6%,
+			hsl(245.36, 54.14%, 60.78%) 60%,
+			hsl(234.18, 60.62%, 60.51%) 67.5%,
+			hsl(225.7, 68.33%, 57.8%) 76.5%,
+			hsl(218.85, 75.04%, 54.16%) 87.3%,
+			hsl(210, 100%, 45.1%) 100%
+		);
+	}
+
+</style>
