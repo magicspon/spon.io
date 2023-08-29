@@ -10,17 +10,23 @@ import Layout from '../layouts/Layout.astro';
 			<div class="text-lg font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">Hello, I’m Dave. <h1 class="spon inline">Freelance web developer/consultant</h1> based in the <h2 class="spon inline">South West, UK</h2>. With over 10 years of experience in building for the web, <h2 class="inline">I help agencies and SMBs build beautiful websites and apps</h2>.</div>
 		</div>
 		<h3 class="text-lg font-semibold tracking-tight spon inline-block self-start">Clients:</h3>
-		<p class="max-w-xl text-zinc-800 text-sm dark:text-zinc-100">Spring, Oomph, Healthwave, Capsule Cover, Mr B and Friends, Mud, Blast, Fiasco, Super User Studio, Sifted, Anything World, Cloud 8, Jetpack, More soda and more</p>
+		<p class="max-w-xl text-zinc-800 text-sm dark:text-zinc-100 mb-12">Spring, Oomph, Healthwave, Capsule Cover, Sifted, Anything World, Cloud 8, Jetpack, Super User Studio, Mr B and Friends, Mud, More soda, Fiasco, Blast and more</p>
+		<a href="mailto:hello@spon.io" class="spon spon--reverse mb-6 text-4xl md:text-6xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 self-start">hello@spon.io</a>
 	</main>
 </Layout>
 
 
 <style>
+
+	:root {
+		--angle: 294deg
+	}
+
 	.spon {
 		-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
 		background-image: linear-gradient(
-			294deg,
+			var(--angle),
 			hsl(330, 100%, 45.1%) 0%,
 			hsl(330.39, 78.74%, 49.09%) 8.4%,
 			hsl(328.14, 69.81%, 50.06%) 15.5%,
@@ -38,6 +44,10 @@ import Layout from '../layouts/Layout.astro';
 			hsl(218.85, 75.04%, 54.16%) 87.3%,
 			hsl(210, 100%, 45.1%) 100%
 		);
+	}
+
+	.spon--reverse {
+		--angle: 45deg;
 	}
 
 </style>
