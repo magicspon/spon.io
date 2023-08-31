@@ -4,14 +4,38 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="spon.io">
 	<main class="max-w-5xl mx-auto w-full py-8 self-center flex-1 flex justify-center flex-col px-6">
-		<p class="spon mb-6 text-6xl md:text-9xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 self-start">spon.io</p>
+		<p class="spon mb-6 text-7xl sm:text-9xl md:text-10xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 self-start">spon.io</p>
 		<p class="text-sm text-zinc-600 dark:text-zinc-500 mb-24">Massive text seems to be popular these days</p>
 		<div class="max-w-xl mb-12">
-			<div class="text-lg font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">Hello, I’m Dave. <h1 class="spon inline">Freelance web developer/consultant</h1> based in the <h2 class="spon inline">South West, UK</h2>. With over 10 years of experience in building for the web, <h2 class="inline">I help agencies and SMBs build beautiful websites and apps</h2>.</div>
+			<div class="text-lg font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">Hello, I’m Dave. <h1 style="--angle: 90deg" class="spon inline">Freelance web developer/consultant</h1> based in the <h2 style="--angle: 140deg" class="spon inline">South West, UK</h2>. With over 10 years of experience in building for the web, <h2 class="inline">I help agencies and SMBs build beautiful websites and apps</h2>.</div>
 		</div>
-		<h3 class="text-lg font-semibold tracking-tight spon inline-block self-start">Clients:</h3>
-		<p class="max-w-xl text-zinc-800 text-sm dark:text-zinc-100 mb-12">Spring, Oomph, Healthwave, Capsule Cover, Sifted, Anything World, Cloud 8, Jetpack, Super User Studio, Mr B and Friends, Mud, More soda, Fiasco, Blast and more</p>
-		<a href="mailto:hello@spon.io" class="spon spon--reverse mb-6 text-4xl md:text-6xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 self-start">hello@spon.io</a>
+		<h3 style="--angle: 25deg" class="text-lg font-semibold tracking-tight spon inline-block self-start">Clients:</h3>
+		<p class="max-w-xl text-zinc-800 text-sm dark:text-zinc-100 mb-6">
+			<a class="underline" target="_blank" rel="noopener noreferrer" href="https://springmeto.com">Spring</a>, <a class="underline" target="_blank" rel="noopener noreferrer" href="https://oomphmade.com">Oomph</a>, <a class="underline" target="_blank" rel="noopener noreferrer" href="https://healthwavehub.com">Healthwave</a>, <a class="underline" target="_blank" rel="noopener noreferrer" href="https://capsulecover.com">Capsule Cover</a>, Sifted, Anything World, Cloud 8, Jetpack, Super User Studio, Mr B & Friends, Mud, More soda, Fiasco, Blast and more
+		</p>
+		<h3 style="--angle: 275deg" class="text-lg font-semibold tracking-tight spon inline-block self-start">Languages:</h3>
+		<p class="max-w-xl text-zinc-800 text-sm dark:text-zinc-100 mb-6">
+			HTML, CSS, Javascript/Typescript, Node, Graphql, <span class="text-xs">(learning go)</span>
+		</p>
+		<h3 style="--angle: 125deg" class="text-lg font-semibold tracking-tight spon inline-block self-start">Libraries/Frameworks/Tools:</h3>
+		<p class="max-w-xl text-zinc-800 text-sm dark:text-zinc-100 mb-6">
+			React, Next, Gatsby, Astro, Vue (v2), Svelte, jQuery, Ramda, Three.js, Zustand, @tanstack/query, Prisma, Redis, Git, AWS
+		</p>
+		<h3 style="--angle: 210deg" class="text-lg font-semibold tracking-tight spon inline-block self-start">Headless CMS</h3>
+		<p class="max-w-xl text-zinc-800 text-sm dark:text-zinc-100 mb-6">
+			Sanity, CraftCMS, NetlifyCMS, <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=-QPJoRWz8Sc">Wordpress</a>
+		</p>
+
+		<h3 style="--angle: 35deg" class="text-lg font-semibold tracking-tight spon inline-block self-start">Current stack:</h3>
+		<p class="max-w-xl text-zinc-800 text-sm dark:text-zinc-100 mb-12">
+			Next, Typescript, TRPC, Prisma, Tailwind & Radix Primitives
+		</p>
+
+		
+		<p class="mb-6 text-2xl md:text-4xl  font-bold tracking-tight text-zinc-800 dark:text-zinc-100 self-start">
+			Let's have a chat:
+			<a href="mailto:hello@spon.io" class="spon text-4xl md:text-6xl spon--reverse">hello@spon.io</a>
+		</p>
 	</main>
 </Layout>
 
@@ -22,6 +46,8 @@ import Layout from '../layouts/Layout.astro';
 		--angle: 294deg
 	}
 
+
+	a:hover,
 	.spon {
 		-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
@@ -45,6 +71,7 @@ import Layout from '../layouts/Layout.astro';
 			hsl(210, 100%, 45.1%) 100%
 		);
 	}
+	
 
 	.spon--reverse {
 		--angle: 45deg;
