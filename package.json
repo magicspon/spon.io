@@ -10,10 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^5.0.0",
-    "@astrojs/vercel": "^6.1.4",
-    "astro": "^3.0.4",
-    "tailwindcss": "^3.0.24"
+    "@astrojs/tailwind": "^5.1.5",
+    "@astrojs/vercel": "^9.0.2",
+    "astro": "^5.16.6",
+    "tailwindcss": "^3.4.19"
   },
   "license": "UNLICENSED"
 }

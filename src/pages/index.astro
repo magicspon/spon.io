@@ -4,10 +4,33 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="spon.io">
 	<main class="max-w-5xl mx-auto w-full py-8 self-center flex-1 flex justify-center flex-col px-6">
-		<p class="spon mb-6 text-7xl  font-bold tracking-tight text-zinc-800 dark:text-zinc-100 self-start">I'm Dave</p>
+		<p class="spon mb-6 text-7xl sm:text-9xl md:text-10xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 self-start">spon.io</p>
+		<p class="text-sm text-zinc-600 dark:text-zinc-500 mb-24">Make the logo bigger</p>
 		<div class="max-w-xl mb-12">
-			<div class="text-lg font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">Senior Developer</div>
+			<div class="text-lg font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">Hello,  <h1 style="--angle: 90deg" class="spon inline">I’m Dave.</h1> Senior Frontend developer, based in the <h2 style="--angle: 140deg" class="spon inline">South West, UK</h2>. With over 12 years of experience in building for the web, <h2 class="inline">I help agencies and SMBs build beautiful websites and apps</h2>.</div>
 		</div>
+
+		<h3 style="--angle: 25deg" class="text-lg font-semibold tracking-tight spon inline-block self-start">Clients:</h3>
+		<p class="max-w-xl text-zinc-800 text-sm dark:text-zinc-100 mb-6">
+			Kinsail, Spring, Oomph, Healthwave, Capsule Cover, Sifted, Anything World, Cloud 8, Jetpack, Super User Studio, Hello Studio&reg;, Mr B & Friends, Mud, More soda, Fiasco, Blast, Kerve and more
+		</p>
+		<h3 style="--angle: 275deg" class="text-lg font-semibold tracking-tight spon inline-block self-start">Languages:</h3>
+		<p class="max-w-xl text-zinc-800 text-sm dark:text-zinc-100 mb-6">
+			HTML, CSS, Javascript/Typescript, Node, Graphql, <span class="text-xs">(learning go)</span>
+		</p>
+		<h3 style="--angle: 125deg" class="text-lg font-semibold tracking-tight spon inline-block self-start">Libraries/Frameworks/Tools:</h3>
+		<p class="max-w-xl text-zinc-800 text-sm dark:text-zinc-100 mb-6">
+			React, Next, Gatsby, Astro, Vue (v2), Svelte, jQuery, Ramda, Three.js, Zustand, @tanstack/query, Prisma, Drizzle, Redis, Git, SST, AWS
+		</p>
+		<h3 style="--angle: 210deg" class="text-lg font-semibold tracking-tight spon inline-block self-start">Headless CMS</h3>
+		<p class="max-w-xl text-zinc-800 text-sm dark:text-zinc-100 mb-6">
+			Sanity, Payload, CraftCMS, NetlifyCMS, <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=-QPJoRWz8Sc">Wordpress</a>
+		</p>
+
+		<h3 style="--angle: 35deg" class="text-lg font-semibold tracking-tight spon inline-block self-start">Current stack:</h3>
+		<p class="max-w-xl text-zinc-800 text-sm dark:text-zinc-100 mb-12">
+			Next, Typescript, TRPC, Drizzle, Payload, Tailwind & Radix Primitives
+		</p>
 
 		<div class="flex gap-5">
 			<a href="mailto:hello@spon.io" class="dark:text-white hover:opacity-75 transition-opacity">
@@ -44,22 +67,22 @@ import Layout from '../layouts/Layout.astro';
   	-webkit-text-fill-color: transparent;
 		background-image: linear-gradient(
 			var(--angle),
-			hsl(330, 100%, 45.1%) 0%,
-			hsl(330.39, 78.74%, 49.09%) 8.4%,
-			hsl(328.14, 69.81%, 50.06%) 15.5%,
-			hsl(324.73, 63.17%, 50.4%) 21.4%,
-			hsl(320.04, 56.08%, 50.34%) 26.5%,
-			hsl(313.65, 48.79%, 49.93%) 31%,
-			hsl(304.79, 42.31%, 49.23%) 35.2%,
-			hsl(292.85, 39.58%, 50.58%) 39.3%,
-			hsl(280.71, 42.89%, 53.41%) 43.5%,
-			hsl(268.79, 46.44%, 56.06%) 48.2%,
-			hsl(257.04, 50.21%, 58.52%) 53.6%,
-			hsl(245.36, 54.14%, 60.78%) 60%,
-			hsl(234.18, 60.62%, 60.51%) 67.5%,
-			hsl(225.7, 68.33%, 57.8%) 76.5%,
-			hsl(218.85, 75.04%, 54.16%) 87.3%,
-			hsl(210, 100%, 45.1%) 100%
+    hsl(156.88, 98.09%, 40.98%) 0%,
+    hsl(157.58, 98.09%, 40.8%) 8.1%,
+    hsl(159.54, 98.1%, 40.28%) 15.5%,
+    hsl(162.58, 98.12%, 39.47%) 22.5%,
+    hsl(166.55, 98.15%, 38.4%) 29%,
+    hsl(171.36, 98.18%, 37.11%) 35.3%,
+    hsl(176.95, 98.23%, 35.62%) 41.2%,
+    hsl(183.12, 98.38%, 35.81%) 47.1%,
+    hsl(188.86, 98.6%, 37.71%) 52.9%,
+    hsl(193.97, 98.82%, 39.47%) 58.8%,
+    hsl(198.46, 99.03%, 41.06%) 64.7%,
+    hsl(202.32, 99.23%, 42.44%) 71%,
+    hsl(205.5, 99.42%, 43.58%) 77.5%,
+    hsl(207.92, 99.61%, 44.42%) 84.5%,
+    hsl(209.47, 99.8%, 44.94%) 91.9%,
+    hsl(210, 100%, 45.1%) 100%
 		);
 	}
 	
@@ -69,3 +92,4 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 </style>
+
