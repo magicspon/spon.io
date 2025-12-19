@@ -56,6 +56,21 @@ import Layout from '../layouts/Layout.astro';
 
 <style>
 
+	@keyframes rotate-angle {
+		0% {
+			--angle: 0deg;
+		}
+		100% {
+			--angle: 360deg;
+		}
+	}
+
+	@property --angle {
+		syntax: '<angle>';
+		initial-value: 294deg;
+		inherits: false;
+	}
+
 	:root {
 		--angle: 294deg
 	}
@@ -84,8 +99,9 @@ import Layout from '../layouts/Layout.astro';
     hsl(209.47, 99.8%, 44.94%) 91.9%,
     hsl(210, 100%, 45.1%) 100%
 		);
+		animation: rotate-angle 10s linear infinite;
 	}
-	
+
 
 	.spon--reverse {
 		--angle: 45deg;
