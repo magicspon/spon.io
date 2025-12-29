@@ -7,9 +7,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
 	integrations: [tailwind()],
 	compressHTML: true,
-	adapter: vercel({
-		webAnalytics: {
-			enabled: true,
-		},
-	}),
+	adapter: vercel(),
 });
